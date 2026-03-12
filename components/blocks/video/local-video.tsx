@@ -237,18 +237,18 @@ export default function LocalVideo() {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="mt-12 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-2xl">
-          <h3 className="text-2xl font-bold mb-4">Ready to Start Your Adventure?</h3>
-          <p className="text-lg mb-6 opacity-90">Join thousands of players in the most magical solitaire experience!</p>
-          <button
-            onClick={() => {
-              window.location.href = 'https://www.superplay.co/games/disney-solitaire';
-            }}
-            className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transform transition-all duration-200 hover:scale-105"
+        {/* Call to Action - Ad for NYT Pips Games Hint */}
+        <div className="mt-12 text-center bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 text-white shadow-2xl">
+          <h3 className="text-2xl font-bold mb-4">NYT pips games hint</h3>
+          <p className="text-lg mb-6 opacity-90">Stuck on your favorite puzzle? Get the hints you need to keep playing.</p>
+          <a
+            href="https://pips-hint.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transform transition-all duration-200 hover:scale-105 inline-block"
           >
-            🎮 Play Game Now
-          </button>
+            Get Hints Now
+          </a>
         </div>
 
         {/* Additional Info */}
