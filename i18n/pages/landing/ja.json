@@ -1,0 +1,468 @@
+{
+  "template": "haluntemplate",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "ディズニーソリティア",
+      "logo": {
+        "src": "/logo.jpg",
+        "alt": "ディズニーソリティア"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "公式ホームページ",
+          "url": "https://www.superplay.co/games/disney-solitaire/",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "ディズニーキャラクター",
+          "url": "https://www.disneystore.com/characters.html",
+          "icon": "BiUser"
+        },
+        {
+          "title": "ブログ",
+          "url": "/posts",
+          "icon": "RiGamepadFill"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "今すぐダウンロード",
+        "url": "https://www.superplay.co/games/disney-solitaire/",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiGamepadFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "クラシックソリティアでディズニーの魔法を体験",
+    "highlight_text": "ディズニーソリティア",
+    "description": "魔法のソリティアカードゲームで、ディズニーキャラクターの魅惑的な世界に飛び込もう！",
+    "announcement": {},
+    "background": {
+      "src": "/imgs/disney/hero-bg.jpg",
+      "alt": "ディズニーソリティアの背景"
+    },
+    "buttons": [
+      {
+        "title": "ディズニーソリティアをダウンロード",
+        "icon": "RiPlayFill",
+        "url": "/play",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "トレーラーを見る",
+        "icon": "RiPlayFill",
+        "url": "https://www.youtube.com/watch?v=GT6l9vMRewo",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "ディズニーソリティアは主要なプラットフォームで利用可能",
+    "items": [
+      {
+        "title": "iOS",
+        "image": {
+          "src": "/imgs/disney/logo.png",
+          "alt": "iOS"
+        }
+      },
+      {
+        "title": "Android",
+        "image": {
+          "src": "/imgs/logos/android.svg",
+          "alt": "Android"
+        }
+      },
+      {
+        "title": "Windows",
+        "image": {
+          "src": "/imgs/logos/windows.svg",
+          "alt": "Windows"
+        }
+      },
+      {
+        "title": "Mac",
+        "image": {
+          "src": "/imgs/logos/apple.svg",
+          "alt": "Mac"
+        }
+      },
+      {
+        "title": "ウェブブラウザ",
+        "image": {
+          "src": "/imgs/logos/chrome.svg",
+          "alt": "ウェブブラウザ"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "ディズニーソリティアとは",
+    "label": "紹介",
+    "description": "ディズニーソリティアは、クラシックなソリティアのゲームプレイと愛されるディズニーキャラクター、テーマを組み合わせた魔法のカードゲームです。",
+    "image": {
+      "src": "/imgs/disney/d01.png"
+    },
+    "items": [
+      {
+        "title": "クラシックなソリティアのゲームプレイ",
+        "description": "ディズニーの魔法と特別なパワーアップで強化された、時代を超えて愛されるカードゲームをお楽しみください。",
+        "icon": "RiCards2Fill"
+      },
+      {
+        "title": "ディズニーキャラクター",
+        "description": "クラシック映画やショーからお気に入りのディズニーキャラクターが描かれたカードでプレイ。",
+        "icon": "RiStarFill"
+      },
+      {
+        "title": "魔法のテーマ",
+        "description": "ユニークなカードデザインと背景で、さまざまなディズニーの世界を体験しましょう。",
+        "icon": "RiSparklingFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "プレイヤーがディズニーソリティアを愛する理由",
+    "label": "特徴",
+    "description": "クラシックなカードゲームとディズニーの魔法が完璧に調和した体験をお楽しみください。",
+    "items": [
+      {
+        "title": "ファミリーフレンドリーな楽しみ",
+        "description": "教育的なカードゲームと愛されるディズニーキャラクターを組み合わせた、全年齢向けのゲーム。",
+        "icon": "RiHeartFill",
+        "image": {
+          "src": "/imgs/disney/d02.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "美しいディズニーアート",
+        "description": "本物のディズニーアートワークとアニメーションを特徴とする、見事なカードデザイン。",
+        "icon": "RiPaletteFill",
+        "image": {
+          "src": "/imgs/disney/d03.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "定期的なアップデート",
+        "description": "新しいディズニーテーマ、キャラクター、特別イベントを定期的に追加。",
+        "icon": "RiRefreshFill",
+        "image": {
+          "src": "/imgs/disney/d04.png",
+          "style": "mx-auto"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "ディズニーソリティアの遊び方",
+    "description": "3つの簡単なステップで魔法のソリティア冒険を始めましょう：",
+    "image": {
+      "src": "/imgs/disney/d05.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "ディズニーテーマを選ぶ",
+        "description": "ユニークなカードデザインと音楽を持つ、様々なディズニー映画テーマから選択。",
+        "image": {
+          "src": "/imgs/disney/image-01.png"
+        }
+      },
+      {
+        "title": "ソリティアの基本を学ぶ",
+        "description": "ディズニーの魔法とパワーアップで強化された、クラシックなソリティアのルールをマスター。",
+        "image": {
+          "src": "/imgs/disney/image-02.png"
+        }
+      },
+      {
+        "title": "ディズニーカードを集める",
+        "description": "プレイしながら、特別なディズニーキャラクターカードと魔法のパワーアップをアンロック。",
+        "image": {
+          "src": "/imgs/disney/image-03.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "ディズニーソリティアの主な特徴",
+    "description": "ディズニーソリティアを魔法のカードゲーム体験にする要素を発見しましょう。",
+    "items": [
+      {
+        "title": "ディズニーカードデザイン",
+        "description": "本物のディズニーアートワークとキャラクターを特徴とする美しいカードデザイン。",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "複数のゲームモード",
+        "description": "クラシックソリティア、スパイダーソリティア、特別なディズニーテーマのバリエーション。",
+        "icon": "RiGamepadFill"
+      },
+      {
+        "title": "魔法のパワーアップ",
+        "description": "チャレンジングなレベルをクリアするのに役立つ、特別なディズニーテーマの能力。",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "実績システム",
+        "description": "進行に応じてバッジを獲得し、新しいディズニーコンテンツをアンロック。",
+        "icon": "RiTrophyFill"
+      },
+      {
+        "title": "デイリーチャレンジ",
+        "description": "毎日異なるディズニーテーマを特徴とする新しいパズル。",
+        "icon": "RiCalendarFill"
+      },
+      {
+        "title": "コレクションアルバム",
+        "description": "ディズニーキャラクターカードと特別アイテムのコレクションを作成。",
+        "icon": "RiBookFill"
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "統計",
+    "title": "ディズニーソリティアの魔法",
+    "description": "ディズニーファンのための魔法のカードゲーム体験！",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "登場キャラクター",
+        "label": "100+",
+        "description": "ディズニーキャラクター"
+      },
+      {
+        "title": "対応言語数",
+        "label": "15+",
+        "description": "言語"
+      },
+      {
+        "title": "収集可能",
+        "label": "200+",
+        "description": "ユニークなカード"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "ダウンロード",
+    "title": "ディズニーソリティアをダウンロード",
+    "description": "今すぐ魔法のカードゲームの冒険を始めましょう！",
+    "groups": [],
+    "items": [
+      {
+        "title": "無料版",
+        "description": "無料で魔法の旅を始めましょう",
+        "features_title": "含まれる機能",
+        "features": [
+          "基本的なゲームアクセス",
+          "クラシックソリティアモード",
+          "選択されたディズニーキャラクター",
+          "デイリーチャレンジ",
+          "基本的なカードコレクション",
+          "実績システム"
+        ],
+        "interval": "free",
+        "amount": 0,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "無料",
+        "original_price": "",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "今すぐプレイ！",
+        "button": {
+          "title": "無料でプレイ",
+          "url": "/play",
+          "icon": "RiPlayFill"
+        },
+        "product_id": "free",
+        "product_name": "ディズニーソリティア無料版",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "プレミアムパス",
+        "description": "すべてのディズニーの魔法をアンロック",
+        "label": "人気",
+        "features_title": "無料版のすべての機能に加えて",
+        "features": [
+          "すべてのディズニーキャラクター",
+          "限定カードデザイン",
+          "特別なパワーアップ",
+          "広告なし体験",
+          "プレミアム背景",
+          "限定イベント",
+          "優先サポート",
+          "クラウドセーブ"
+        ],
+        "interval": "one-time",
+        "amount": 499,
+        "cn_amount": 3499,
+        "currency": "USD",
+        "price": "¥499",
+        "original_price": "¥999",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "ベストバリュー！",
+        "button": {
+          "title": "プレミアムを入手",
+          "url": "/premium",
+          "icon": "RiVipCrownFill"
+        },
+        "product_id": "premium",
+        "product_name": "ディズニーソリティアプレミアム",
+        "credits": 0,
+        "valid_months": 0
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "プレイヤーレビュー",
+    "title": "プレイヤーの声",
+    "description": "この魔法のカードゲームで、何千人もの幸せなプレイヤーと一緒に遊びましょう！",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "マリア S.",
+        "label": "ディズニーファン",
+        "description": "クラシックソリティアとディズニーの魔法の完璧な組み合わせ！カードで大好きなキャラクターを見るのが大好きです。",
+        "image": {
+          "src": "/imgs/users/review1.png"
+        }
+      },
+      {
+        "title": "ジョン D.",
+        "label": "カードゲーム愛好家",
+        "description": "美しいグラフィックスと滑らかなゲームプレイ。ディズニーテーマが伝統的なソリティアをより魅力的にしています！",
+        "image": {
+          "src": "/imgs/users/review2.png"
+        }
+      },
+      {
+        "title": "エミリー R.",
+        "label": "ファミリーゲーマー",
+        "description": "子供たちはディズニーキャラクターが大好きで、私はソリティアを通じて戦略を学べることが気に入っています。Win-Winですね！",
+        "image": {
+          "src": "/imgs/users/review3.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "よくある質問",
+    "title": "ディズニーソリティアについてよくある質問",
+    "description": "他に質問がありますか？サポートチームにお問い合わせください！",
+    "items": [
+      {
+        "title": "ディズニーソリティアとは？",
+        "description": "ディズニーソリティアは、クラシックなソリティアのゲームプレイと愛されるディズニーキャラクター、テーマを組み合わせた魔法のカードゲームです。美しくデザインされたディズニーキャラクターカードと特別なパワーアップで、伝統的なソリティアをプレイできます。"
+      },
+      {
+        "title": "ディズニーソリティアは無料でプレイできますか？",
+        "description": "はい！ディズニーソリティアの基本バージョンは完全に無料でプレイできます。プレミアム機能と追加コンテンツはオプションのアプリ内購入で利用できます。"
+      },
+      {
+        "title": "新しいディズニーキャラクターとカードデザインをどうやってアンロックしますか？",
+        "description": "レベルをクリアし、デイリーチャレンジに参加し、実績を集めることで新しいディズニーコンテンツをアンロックできます。プレミアムコンテンツはプレミアムパスでも利用可能です。"
+      },
+      {
+        "title": "ディズニーソリティアをオフラインでプレイできますか？",
+        "description": "はい！一度ダウンロードすれば、ディズニーソリティアはインターネット接続なしでプレイできます。ただし、リーダーボードやデイリーチャレンジなどの一部機能にはインターネット接続が必要です。"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "ディズニーソリティア",
+      "description": "この魅惑的なソリティアカードゲームでディズニーの魔法を体験しましょう。愛されるディズニーキャラクターと魔法のテーマが満載！",
+      "url": "/"
+    },
+    "copyright": "© 2025 disneysolitaire.net All rights reserved.サードパーティサイト、公式プラットフォームではありません",
+    "nav": {
+      "items": [
+        {
+          "title": "ゲーム",
+          "children": [
+            {
+              "title": "機能",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "遊び方",
+              "url": "https://disney.fandom.com/wiki/Disney_Solitaire",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "サポート",
+          "children": []
+        },
+        {
+          "title": "法的情報",
+          "children": [
+            {
+              "title": "プライバシーポリシー",
+              "url": "/privacy",
+              "target": "_self"
+            },
+            {
+              "title": "利用規約",
+              "url": "/terms",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Facebook",
+          "icon": "RiFacebookFill",
+          "url": "https://facebook.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterFill",
+          "url": "https://twitter.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://instagram.com/disneysolitaire",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+This is a placeholder for a demo video file.
+In a real deployment, this would be an actual MP4 video file showing Disney Solitaire gameplay.
+
+To add a real video:
+1. Replace this file with an actual demo-video.mp4
+2. Or place your video at: /public/imgs/disney/demo-video.mp4
+3. Common video formats: MP4, WebM, OGG
+
+Recommended video specs:
+- Resolution: 1920x1080 or 1280x720
+- Duration: 30-60 seconds
+- File size: Under 10MB
+- Format: H.264 MP4 with AAC audio
+- Bitrate: 2-5 Mbps for HD content
+
+The video component will automatically fall back to this file if YouTube videos fail to load.

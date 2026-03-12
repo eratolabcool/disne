@@ -1,0 +1,479 @@
+{
+  "template": "haluntemplate",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "Disney Solitario",
+      "logo": {
+        "src": "/logo.jpg",
+        "alt": "Disney Solitario"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Página Oficial",
+          "url": "https://www.superplay.co/games/disney-solitaire/",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "Personajes Disney",
+          "url": "https://www.disneystore.com/characters.html",
+          "icon": "BiUser"
+        },
+        {
+          "title": "Blog",
+          "url": "/posts",
+          "icon": "RiGamepadFill"
+        },
+        {
+          "title": "Acerca de",
+          "url": "/about",
+          "icon": "RiInformationFill"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Descargar Ahora",
+        "url": "https://www.superplay.co/games/disney-solitaire/",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiGamepadFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Experimenta la Magia de Disney Solitario",
+    "highlight_text": "Disney Solitario",
+    "description": "¡Únete al encantador mundo de los personajes Disney en esta aventura de juego de cartas solitario mágico!",
+    "announcement": {},
+    "background": {
+      "src": "/imgs/disney/hero-bg.jpg",
+      "alt": "Fondo de Disney Solitario"
+    },
+    "buttons": [
+      {
+        "title": "Descargar Disney Solitario",
+        "icon": "RiPlayFill",
+        "url": "https://www.superplay.co/games/disney-solitaire/",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Ver Tráiler",
+        "icon": "RiPlayFill",
+        "url": "https://www.youtube.com/watch?v=GT6l9vMRewo",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "Disney Solitario está disponible en todas las plataformas principales",
+    "items": [
+      {
+        "title": "iOS",
+        "image": {
+          "src": "/imgs/disney/logo.png",
+          "alt": "iOS"
+        }
+      },
+      {
+        "title": "Android",
+        "image": {
+          "src": "/imgs/logos/android.svg",
+          "alt": "Android"
+        }
+      },
+      {
+        "title": "Windows",
+        "image": {
+          "src": "/imgs/logos/windows.svg",
+          "alt": "Windows"
+        }
+      },
+      {
+        "title": "Mac",
+        "image": {
+          "src": "/imgs/logos/apple.svg",
+          "alt": "Mac"
+        }
+      },
+      {
+        "title": "Navegador Web",
+        "image": {
+          "src": "/imgs/logos/chrome.svg",
+          "alt": "Navegador Web"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Qué es Disney Solitario",
+    "label": "Introducción",
+    "description": "Disney Solitario es un juego de cartas mágico que combina la jugabilidad clásica de solitario con personajes y temas queridos de Disney.",
+    "image": {
+      "src": "/imgs/disney/d01.png"
+    },
+    "items": [
+      {
+        "title": "Jugabilidad Clásica de Solitario",
+        "description": "Disfruta del juego de cartas atemporal mejorado con la magia de Disney y potenciadores especiales.",
+        "icon": "RiCards2Fill"
+      },
+      {
+        "title": "Personajes Disney",
+        "description": "Juega con cartas que presentan tus personajes favoritos de Disney de películas y programas clásicos.",
+        "icon": "RiStarFill"
+      },
+      {
+        "title": "Temas Mágicos",
+        "description": "Experimenta diferentes mundos Disney con diseños de cartas únicos y fondos.",
+        "icon": "RiSparklingFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Por Qué a los Jugadores Les Encanta Disney Solitario",
+    "label": "Beneficios",
+    "description": "Experimenta la combinación perfecta de juego de cartas clásico y magia Disney.",
+    "items": [
+      {
+        "title": "Diversión para Toda la Familia",
+        "description": "Apto para todas las edades, combinando el juego de cartas educativo con personajes queridos de Disney.",
+        "icon": "RiHeartFill",
+        "image": {
+          "src": "/imgs/disney/d02.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "Arte Disney Hermoso",
+        "description": "Diseños de cartas impresionantes presentando arte y animaciones auténticos de Disney.",
+        "icon": "RiPaletteFill",
+        "image": {
+          "src": "/imgs/disney/d03.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "Actualizaciones Regulares",
+        "description": "Nuevos temas, personajes y eventos especiales de Disney agregados regularmente.",
+        "icon": "RiRefreshFill",
+        "image": {
+          "src": "/imgs/disney/d04.png",
+          "style": "mx-auto"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo Jugar Disney Solitario",
+    "description": "Comienza tu aventura de solitario mágico en tres simples pasos:",
+    "image": {
+      "src": "/imgs/disney/d05.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Elige Tu Tema Disney",
+        "description": "Selecciona entre varios temas de películas Disney, cada uno con diseños de cartas y música únicos.",
+        "image": {
+          "src": "/imgs/disney/image-01.png"
+        }
+      },
+      {
+        "title": "Aprende lo Básico del Solitario",
+        "description": "Domina las reglas clásicas del solitario mejoradas con magia Disney y potenciadores.",
+        "image": {
+          "src": "/imgs/disney/image-02.png"
+        }
+      },
+      {
+        "title": "Colecciona Cartas Disney",
+        "description": "Desbloquea cartas especiales de personajes Disney y potenciadores mágicos mientras juegas.",
+        "image": {
+          "src": "/imgs/disney/image-03.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Características Principales de Disney Solitario",
+    "description": "Descubre lo que hace de Disney Solitario una experiencia de juego de cartas mágico.",
+    "items": [
+      {
+        "title": "Diseños de Cartas Disney",
+        "description": "Diseños de cartas hermosos presentando arte y personajes auténticos de Disney.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "Múltiples Modos de Juego",
+        "description": "Solitario clásico, Solitario araña y variaciones especiales temáticas de Disney.",
+        "icon": "RiGamepadFill"
+      },
+      {
+        "title": "Potenciadores Mágicos",
+        "description": "Habilidades especiales temáticas de Disney para ayudarte a resolver niveles desafiantes.",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "Sistema de Logros",
+        "description": "Gana insignias y desbloquea nuevo contenido Disney a medida que progresas.",
+        "icon": "RiTrophyFill"
+      },
+      {
+        "title": "Desafíos Diarios",
+        "description": "Nuevos rompecabezas presentando diferentes temas Disney cada día.",
+        "icon": "RiCalendarFill"
+      },
+      {
+        "title": "Álbum de Colección",
+        "description": "Construye tu colección de cartas de personajes Disney y artículos especiales.",
+        "icon": "RiBookFill"
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "Estadísticas",
+    "title": "La Magia de Disney Solitario",
+    "description": "¡Una experiencia de juego de cartas mágico para los fans de Disney!",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "Personajes Presentados",
+        "label": "100+",
+        "description": "Personajes Disney"
+      },
+      {
+        "title": "Disponible en",
+        "label": "5+",
+        "description": "Idiomas"
+      },
+      {
+        "title": "Colecciona Más de",
+        "label": "200+",
+        "description": "Cartas Únicas"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "Descargar",
+    "title": "Descargar Disney Solitario",
+    "description": "¡Comienza tu aventura de juego de cartas mágico hoy!",
+    "groups": [],
+    "items": [
+      {
+        "title": "Versión Gratuita",
+        "description": "Comienza tu viaje mágico gratis",
+        "features_title": "Incluye",
+        "features": [
+          "Acceso básico al juego",
+          "Modo solitario clásico",
+          "Personajes Disney seleccionados",
+          "Desafíos diarios",
+          "Colecciones de cartas básicas",
+          "Sistema de logros"
+        ],
+        "interval": "free",
+        "amount": 0,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "Gratis",
+        "original_price": "",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "¡Comienza a jugar ahora!",
+        "button": {
+          "title": "Jugar Gratis",
+          "url": "/play",
+          "icon": "RiPlayFill"
+        },
+        "product_id": "free",
+        "product_name": "Disney Solitario Gratis",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "Pase Premium",
+        "description": "Desbloquea toda la magia Disney",
+        "label": "Popular",
+        "features_title": "Todo en la Versión Gratuita, más",
+        "features": [
+          "Todos los personajes Disney",
+          "Diseños de cartas exclusivos",
+          "Potenciadores especiales",
+          "Experiencia sin anuncios",
+          "Fondos premium",
+          "Eventos exclusivos",
+          "Soporte prioritario",
+          "Guardado en la nube"
+        ],
+        "interval": "one-time",
+        "amount": 499,
+        "cn_amount": 3499,
+        "currency": "USD",
+        "price": "$4.99",
+        "original_price": "$9.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "¡Mejor valor!",
+        "button": {
+          "title": "Obtener Premium",
+          "url": "/premium",
+          "icon": "RiVipCrownFill"
+        },
+        "product_id": "premium",
+        "product_name": "Disney Solitario Premium",
+        "credits": 0,
+        "valid_months": 0
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "Reseñas de Jugadores",
+    "title": "Lo Que Dicen los Jugadores Sobre Disney Solitario",
+    "description": "¡Únete a miles de jugadores felices en este juego de cartas mágico!",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "María S.",
+        "label": "Fan de Disney",
+        "description": "¡La combinación perfecta de solitario clásico y magia Disney! Me encanta ver todos mis personajes favoritos en las cartas.",
+        "image": {
+          "src": "/imgs/users/review1.png"
+        }
+      },
+      {
+        "title": "Juan D.",
+        "label": "Entusiasta de Juegos de Cartas",
+        "description": "Gráficos hermosos y jugabilidad suave. Los temas de Disney hacen que el solitario tradicional sea mucho más atractivo.",
+        "image": {
+          "src": "/imgs/users/review2.png"
+        }
+      },
+      {
+        "title": "Emily R.",
+        "label": "Jugadora Familiar",
+        "description": "A mis hijos les encantan los personajes Disney, y me encanta que estén aprendiendo estrategia a través del solitario. ¡Ganar-ganar!",
+        "image": {
+          "src": "/imgs/users/review3.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "Preguntas Frecuentes",
+    "title": "Preguntas Frecuentes Sobre Disney Solitario",
+    "description": "¿Tienes otra pregunta? ¡Contacta nuestro equipo de soporte!",
+    "items": [
+      {
+        "title": "¿Qué es Disney Solitario?",
+        "description": "Disney Solitario es un juego de cartas mágico que combina la jugabilidad clásica de solitario con personajes y temas queridos de Disney. Juega solitario tradicional con cartas de personajes Disney bellamente diseñadas y potenciadores especiales."
+      },
+      {
+        "title": "¿Es gratis jugar Disney Solitario?",
+        "description": "¡Sí! La versión básica de Disney Solitario es completamente gratis para jugar. Las características premium y contenido adicional están disponibles a través de compras opcionales dentro de la aplicación."
+      },
+      {
+        "title": "¿Cómo desbloqueo nuevos personajes Disney y diseños de cartas?",
+        "description": "Puedes desbloquear nuevo contenido Disney completando niveles, participando en desafíos diarios y recolectando logros. El contenido premium también está disponible con el Pase Premium."
+      },
+      {
+        "title": "¿Puedo jugar Disney Solitario sin conexión?",
+        "description": "¡Sí! Una vez descargado, Disney Solitario puede jugarse sin conexión a internet. Sin embargo, algunas características como las tablas de clasificación y desafíos diarios requieren conexión a internet."
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Disney Solitario",
+      "description": "Experimenta la magia de Disney en este encantador juego de cartas solitario. ¡Presentando personajes queridos de Disney y temas mágicos!",
+      "url": "/"
+    },
+    "copyright": "© 2025 disneysolitaire.net Todos los derechos reservados. Sitio de terceros, no es una plataforma oficial",
+    "nav": {
+      "items": [
+        {
+          "title": "Juego",
+          "children": [
+            {
+              "title": "Características",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "Cómo Jugar",
+              "url": "https://disney.fandom.com/wiki/Disney_Solitaire",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Soporte",
+          "children": [
+            {
+              "title": "Acerca de",
+              "url": "/about",
+              "icon": "RiInformationFill"
+            }
+          ]
+        },
+        {
+          "title": "Legal",
+          "children": [
+            {
+              "title": "Política de Privacidad",
+              "url": "/privacy",
+              "target": "_self"
+            },
+            {
+              "title": "Términos de Servicio",
+              "url": "/terms",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Facebook",
+          "icon": "RiFacebookFill",
+          "url": "https://facebook.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterFill",
+          "url": "https://twitter.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://instagram.com/disneysolitaire",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

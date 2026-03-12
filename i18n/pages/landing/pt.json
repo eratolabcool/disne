@@ -1,0 +1,472 @@
+{
+  "template": "haluntemplate",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "Disney Solitaire",
+      "logo": {
+        "src": "/logo.jpg",
+        "alt": "Disney Solitaire"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Página Oficial",
+          "url": "https://www.superplay.co/games/disney-solitaire/",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "Personagens Disney",
+          "url": "https://www.disneystore.com/characters.html",
+          "icon": "BiUser"
+        },
+        {
+          "title": "Blog",
+          "url": "/posts",
+          "icon": "RiGamepadFill"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Baixar Agora",
+        "url": "https://www.superplay.co/games/disney-solitaire/",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiGamepadFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Experimente a Magia da Disney no Solitário Clássico",
+    "highlight_text": "Disney Solitaire",
+    "description": "Junte-se ao mundo encantado dos personagens Disney nesta aventura mágica de cartas solitário!",
+    "announcement": {},
+    
+    "background": {
+      "src": "/imgs/disney/hero-bg.jpg",
+      "alt": "Fundo do Disney Solitaire"
+    },
+    "buttons": [
+      {
+        "title": "Baixar Disney Solitaire",
+        "icon": "RiPlayFill",
+        "url": "/play",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Assistir Trailer",
+        "icon": "RiPlayFill",
+        "url": "https://www.youtube.com/watch?v=GT6l9vMRewo",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "Disney Solitaire está disponível em todas as principais plataformas",
+    "items": [
+      {
+        "title": "iOS",
+        "image": {
+          "src": "/imgs/disney/logo.png",
+          "alt": "iOS"
+        }
+      },
+      {
+        "title": "Android",
+        "image": {
+          "src": "/imgs/logos/android.svg",
+          "alt": "Android"
+        }
+      },
+      {
+        "title": "Windows",
+        "image": {
+          "src": "/imgs/logos/windows.svg",
+          "alt": "Windows"
+        }
+      },
+      {
+        "title": "Mac",
+        "image": {
+          "src": "/imgs/logos/apple.svg",
+          "alt": "Mac"
+        }
+      },
+      {
+        "title": "Navegador Web",
+        "image": {
+          "src": "/imgs/logos/chrome.svg",
+          "alt": "Navegador Web"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "O que é Disney Solitaire",
+    "label": "Introdução",
+    "description": "Disney Solitaire é um jogo de cartas mágico que combina o gameplay clássico do solitário com personagens e temas queridos da Disney.",
+    "image": {
+      "src": "/imgs/disney/d01.png"
+    },
+    "items": [
+      {
+        "title": "Gameplay Clássico do Solitário",
+        "description": "Aproveite o jogo de cartas atemporal aprimorado com magia Disney e power-ups especiais.",
+        "icon": "RiCards2Fill"
+      },
+      {
+        "title": "Personagens Disney",
+        "description": "Jogue com cartas apresentando seus personagens favoritos da Disney de filmes e programas clássicos.",
+        "icon": "RiStarFill"
+      },
+      {
+        "title": "Temas Mágicos",
+        "description": "Experimente diferentes mundos Disney com designs de cartas e fundos únicos.",
+        "icon": "RiSparklingFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Por que os Jogadores Amam Disney Solitaire",
+    "label": "Benefícios",
+    "description": "Experimente a combinação perfeita de jogo de cartas clássico e magia Disney.",
+    "items": [
+      {
+        "title": "Diversão para Toda a Família",
+        "description": "Adequado para todas as idades, combinando jogos de cartas educativos com personagens queridos da Disney.",
+        "icon": "RiHeartFill",
+        "image": {
+          "src": "/imgs/disney/d02.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "Arte Disney Deslumbrante",
+        "description": "Designs de cartas impressionantes com arte e animações autênticas da Disney.",
+        "icon": "RiPaletteFill",
+        "image": {
+          "src": "/imgs/disney/d03.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "Atualizações Regulares",
+        "description": "Novos temas Disney, personagens e eventos especiais adicionados regularmente.",
+        "icon": "RiRefreshFill",
+        "image": {
+          "src": "/imgs/disney/d04.png",
+          "style": "mx-auto"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Como Jogar Disney Solitaire",
+    "description": "Comece sua aventura mágica no solitário em três passos simples:",
+    "image": {
+      "src": "/imgs/disney/d05.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Escolha Seu Tema Disney",
+        "description": "Selecione entre vários temas de filmes Disney, cada um com designs de cartas e músicas únicos.",
+        "image": {
+          "src": "/imgs/disney/image-01.png"
+        }
+      },
+      {
+        "title": "Aprenda o Básico do Solitário",
+        "description": "Domine as regras clássicas do solitário aprimoradas com magia Disney e power-ups.",
+        "image": {
+          "src": "/imgs/disney/image-02.png"
+        }
+      },
+      {
+        "title": "Colecione Cartas Disney",
+        "description": "Desbloqueie cartas especiais de personagens Disney e power-ups mágicos enquanto joga.",
+        "image": {
+          "src": "/imgs/disney/image-03.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Principais Recursos do Disney Solitaire",
+    "description": "Descubra o que torna Disney Solitaire uma experiência mágica de jogo de cartas.",
+    "items": [
+      {
+        "title": "Designs de Cartas Disney",
+        "description": "Belos designs de cartas com arte e personagens autênticos da Disney.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "Múltiplos Modos de Jogo",
+        "description": "Solitário clássico, Spider solitário e variações especiais com tema Disney.",
+        "icon": "RiGamepadFill"
+      },
+      {
+        "title": "Power-ups Mágicos",
+        "description": "Habilidades especiais com tema Disney para ajudar você a resolver níveis desafiadores.",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "Sistema de Conquistas",
+        "description": "Ganhe emblemas e desbloqueie novo conteúdo Disney conforme progride.",
+        "icon": "RiTrophyFill"
+      },
+      {
+        "title": "Desafios Diários",
+        "description": "Novos quebra-cabeças com diferentes temas Disney a cada dia.",
+        "icon": "RiCalendarFill"
+      },
+      {
+        "title": "Álbum de Coleção",
+        "description": "Monte sua coleção de cartas de personagens Disney e itens especiais.",
+        "icon": "RiBookFill"
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "Estatísticas",
+    "title": "A Magia do Disney Solitaire",
+    "description": "Uma experiência mágica de jogo de cartas para fãs da Disney!",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "Personagens em Destaque",
+        "label": "100+",
+        "description": "Personagens Disney"
+      },
+      {
+        "title": "Disponível em",
+        "label": "15+",
+        "description": "Idiomas"
+      },
+      {
+        "title": "Colecione Mais de",
+        "label": "200+",
+        "description": "Cartas Únicas"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "Download",
+    "title": "Baixe Disney Solitaire",
+    "description": "Comece sua aventura mágica de jogo de cartas hoje!",
+    "groups": [],
+    "items": [
+      {
+        "title": "Versão Gratuita",
+        "description": "Comece sua jornada mágica gratuitamente",
+        "features_title": "Inclui",
+        "features": [
+          "Acesso básico ao jogo",
+          "Modo solitário clássico",
+          "Personagens Disney selecionados",
+          "Desafios diários",
+          "Coleções básicas de cartas",
+          "Sistema de conquistas"
+        ],
+        "interval": "free",
+        "amount": 0,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "Grátis",
+        "original_price": "",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Comece a jogar agora!",
+        "button": {
+          "title": "Jogar Grátis",
+          "url": "/play",
+          "icon": "RiPlayFill"
+        },
+        "product_id": "free",
+        "product_name": "Disney Solitaire Grátis",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "Passe Premium",
+        "description": "Desbloqueie toda a magia Disney",
+        "label": "Popular",
+        "features_title": "Tudo na Versão Gratuita, mais",
+        "features": [
+          "Todos os personagens Disney",
+          "Designs exclusivos de cartas",
+          "Power-ups especiais",
+          "Experiência sem anúncios",
+          "Fundos premium",
+          "Eventos exclusivos",
+          "Suporte prioritário",
+          "Salvamento na nuvem"
+        ],
+        "interval": "one-time",
+        "amount": 499,
+        "cn_amount": 3499,
+        "currency": "USD",
+        "price": "R$24,99",
+        "original_price": "R$49,99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "Melhor valor!",
+        "button": {
+          "title": "Obter Premium",
+          "url": "/premium",
+          "icon": "RiVipCrownFill"
+        },
+        "product_id": "premium",
+        "product_name": "Disney Solitaire Premium",
+        "credits": 0,
+        "valid_months": 0
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "Avaliações dos Jogadores",
+    "title": "O que os Jogadores Dizem Sobre Disney Solitaire",
+    "description": "Junte-se a milhares de jogadores felizes neste jogo de cartas mágico!",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "Maria S.",
+        "label": "Fã da Disney",
+        "description": "A combinação perfeita de solitário clássico e magia Disney! Adoro ver todos os meus personagens favoritos nas cartas.",
+        "image": {
+          "src": "/imgs/users/review1.png"
+        }
+      },
+      {
+        "title": "João D.",
+        "label": "Entusiasta de Jogos de Cartas",
+        "description": "Gráficos lindos e gameplay suave. Os temas Disney tornam o solitário tradicional muito mais envolvente!",
+        "image": {
+          "src": "/imgs/users/review2.png"
+        }
+      },
+      {
+        "title": "Emily R.",
+        "label": "Jogadora em Família",
+        "description": "Meus filhos adoram os personagens Disney, e eu adoro que eles estão aprendendo estratégia através do solitário. Todos ganham!",
+        "image": {
+          "src": "/imgs/users/review3.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Perguntas Frequentes Sobre Disney Solitaire",
+    "description": "Tem outra pergunta? Entre em contato com nossa equipe de suporte!",
+    "items": [
+      {
+        "title": "O que é Disney Solitaire?",
+        "description": "Disney Solitaire é um jogo de cartas mágico que combina o gameplay clássico do solitário com personagens e temas queridos da Disney. Jogue o solitário tradicional com cartas lindamente desenhadas de personagens Disney e power-ups especiais."
+      },
+      {
+        "title": "Disney Solitaire é gratuito para jogar?",
+        "description": "Sim! A versão básica do Disney Solitaire é completamente gratuita para jogar. Recursos premium e conteúdo adicional estão disponíveis através de compras opcionais no aplicativo."
+      },
+      {
+        "title": "Como desbloquear novos personagens Disney e designs de cartas?",
+        "description": "Você pode desbloquear novo conteúdo Disney completando níveis, participando de desafios diários e coletando conquistas. Conteúdo premium também está disponível com o Passe Premium."
+      },
+      {
+        "title": "Posso jogar Disney Solitaire offline?",
+        "description": "Sim! Uma vez baixado, Disney Solitaire pode ser jogado sem conexão com a internet. No entanto, alguns recursos como rankings e desafios diários requerem conectividade com a internet."
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Disney Solitaire",
+      "description": "Experimente a magia da Disney neste encantador jogo de cartas solitário. Com personagens queridos da Disney e temas mágicos!",
+      "url": "/"
+    },
+    "copyright": "© 2025 disneysolitaire.net Todos os direitos reservados. Site de terceiros, não é uma plataforma oficial",
+    "nav": {
+      "items": [
+        {
+          "title": "Jogo",
+          "children": [
+            {
+              "title": "Recursos",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            
+            {
+              "title": "Como Jogar",
+              "url": "https://disney.fandom.com/wiki/Disney_Solitaire",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Suporte",
+          "children": [
+            
+          ]
+        },
+        {
+          "title": "Legal",
+          "children": [
+            {
+              "title": "Política de Privacidade",
+              "url": "/privacy",
+              "target": "_self"
+            },
+            {
+              "title": "Termos de Serviço",
+              "url": "/terms",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Facebook",
+          "icon": "RiFacebookFill",
+          "url": "https://facebook.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterFill",
+          "url": "https://twitter.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://instagram.com/disneysolitaire",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

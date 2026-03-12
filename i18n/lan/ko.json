@@ -1,0 +1,698 @@
+{
+  "template": "shipany-template-one",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "서브웨이 서퍼스",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "서브웨이 서퍼스"
+      },
+      "url": "/ko"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "공식 홈페이지",
+          "url": "https://subwaysurfers.com/",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "캐릭터",
+          "url": "https://subwaysurfers.com/characters/",
+          "icon": "BiUser"
+        },
+        {
+          "title": "월드 투어",
+          "url": "https://subwaysurfers.com/world-tour/",
+          "icon": "MdDownload"
+          
+        },
+        {
+          "title": "블로그",
+          "url": "/posts",
+          "icon": "RiGamepadFill"
+          
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "지금 플레이",
+        "url": "/subway-surfers/index_ko.tsx",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiGamepadFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "서브웨이 서퍼스 세계에서 가장 인기 있는 무한 러너 게임",
+    "highlight_text": "서브웨이 서퍼스",
+    "description": "전 세계 수백만 플레이어와 함께 끝없는 러닝 어드벤처를 즐겨보세요!",
+    "announcement": {
+      
+    },
+    "tip": "🏆 전 세계 30억 다운로드 돌파!",
+    "buttons": [
+      {
+        "title": "지금 플레이",
+        "icon": "RiPlayFill",
+        "url": "/subway-surfers",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "트레일러 보기",
+        "icon": "RiPlayFill",
+        "url": "https://www.youtube.com/embed/QFzfgB34cCk",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "서브웨이 서퍼스는 모든 주요 플랫폼에서 이용 가능합니다",
+    "items": [
+      {
+        "title": "iOS",
+        "image": {
+          "src": "/imgs/logos/ios.svg",
+          "alt": "iOS"
+        }
+      },
+      {
+        "title": "Android",
+        "image": {
+          "src": "/imgs/logos/android.svg",
+          "alt": "Android"
+        }
+      },
+      {
+        "title": "Windows",
+        "image": {
+          "src": "/imgs/logos/windows.svg",
+          "alt": "Windows"
+        }
+      },
+      {
+        "title": "Facebook",
+        "image": {
+          "src": "/imgs/logos/facebook.svg",
+          "alt": "Facebook"
+        }
+      },
+      {
+        "title": "Amazon",
+        "image": {
+          "src": "/imgs/logos/amazon.svg",
+          "alt": "Amazon"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "서브웨이 서퍼스란?",
+    "label": "소개",
+    "description": "서브웨이 서퍼스는 플레이어가 지하철 선로를 달리며 장애물을 피하고 코인을 수집하는 무한 러너 모바일 게임입니다.",
+    "image": {
+      "src": "/imgs/features/1.jpg"
+    },
+    "items": [
+      {
+        "title": "끝없는 러닝 액션",
+        "description": "기차를 피하고, 장벽을 뛰어넘고, 활기찬 지하철 환경에서 호버보드를 타고 서핑하세요.",
+        "icon": "RiRunFill"
+      },
+      {
+        "title": "글로벌 월드 투어",
+        "description": "정기적인 업데이트로 전 세계의 흥미로운 도시들을 여행하며 새로운 장소를 경험하세요.",
+        "icon": "RiEarthFill"
+      },
+      {
+        "title": "수집 및 업그레이드",
+        "description": "코인, 파워업을 수집하고 새로운 캐릭터, 의상, 호버보드를 잠금 해제하세요.",
+        "icon": "RiCoinFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "플레이어들이 서브웨이 서퍼스를 사랑하는 이유",
+    "label": "혜택",
+    "description": "세계에서 가장 인기 있는 무한 러너 게임에서 추격의 스릴을 경험하세요.",
+    "items": [
+      {
+        "title": "간단하고 중독성 있는 게임플레이",
+        "description": "배우기 쉽고 마스터하기 어려운 - 빠른 속도의 무한 러너에서 점프, 슬라이드, 회피를 위해 스와이프하세요.",
+        "icon": "RiGamepadFill",
+        "image": {
+          "src": "/imgs/features/2.webp"
+        }
+      },
+      {
+        "title": "멋진 비주얼",
+        "description": "독특한 테마와 환경으로 각 글로벌 위치를 생생하게 만드는 생동감 있고 컬러풀한 3D 그래픽.",
+        "icon": "RiPaletteFill",
+        "image": {
+          "src": "/imgs/features/3.jpg"
+        }
+      },
+      {
+        "title": "정기적인 업데이트",
+        "description": "월드 투어와 함께 매월 새로운 도시, 캐릭터, 의상, 도전 과제를 특징으로 하는 새로운 콘텐츠.",
+        "icon": "RiRefreshFill",
+        "image": {
+          "src": "/imgs/features/4.png"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "서브웨이 서퍼스 플레이 방법",
+    "description": "세 가지 간단한 단계로 서브웨이 서퍼스를 시작하세요:",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "게임 다운로드",
+        "description": "기기의 앱 스토어에서 서브웨이 서퍼스를 무료로 다운로드하세요 - iOS, Android 등에서 이용 가능합니다.",
+        "image": {
+          "src": "/imgs/features/5.png"
+        }
+      },
+      {
+        "title": "컨트롤 배우기",
+        "description": "점프는 위로, 구르기는 아래로, 레인 변경은 좌/우로 스와이프하세요. 코인을 수집하고 장애물을 피하세요!",
+        "image": {
+          "src": "/imgs/features/6.png"
+        }
+      },
+      {
+        "title": "파워업 수집",
+        "description": "제트팩, 슈퍼 스니커즈, 자석을 획득하여 더 많은 코인을 수집하고 최고 점수를 갱신하세요.",
+        "image": {
+          "src": "/imgs/features/7.png"
+        }
+      },
+      {
+        "title": "캐릭터 잠금 해제",
+        "description": "코인을 사용하여 특별한 능력을 가진 새로운 캐릭터, 의상, 호버보드를 잠금 해제하세요.",
+        "image": {
+          "src": "/imgs/features/8.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "서브웨이 서퍼스의 주요 기능",
+    "description": "서브웨이 서퍼스를 최고의 무한 러너 경험으로 만드는 요소를 발견하세요.",
+    "items": [
+      {
+        "title": "컬러풀한 3D 그래픽",
+        "description": "놀라운 디테일로 지하철 환경을 생생하게 만드는 생동감 있는 고품질 비주얼.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "캐릭터 컬렉션",
+        "description": "각자 고유한 스타일과 개성을 가진 수십 개의 독특한 캐릭터를 잠금 해제하고 플레이하세요.",
+        "icon": "RiUserFill"
+      },
+      {
+        "title": "글로벌 월드 투어",
+        "description": "정기적인 업데이트로 전 세계의 흥미로운 도시들을 여행하며 새로운 장소를 경험하세요.",
+        "icon": "RiEarthFill"
+      },
+      {
+        "title": "특별한 호버보드",
+        "description": "게임플레이를 향상시키는 특별한 능력을 가진 호버보드를 수집하고 업그레이드하세요.",
+        "icon": "RiRocketFill"
+      },
+      {
+        "title": "일일 도전 과제",
+        "description": "일일 미션과 주간 헌트를 완료하여 보상과 특별 아이템을 획득하세요.",
+        "icon": "RiTrophyFill"
+      },
+      {
+        "title": "소셜 기능",
+        "description": "친구들과 연결하고, 점수를 공유하고, 글로벌 리더보드에서 경쟁하세요.",
+        "icon": "RiGroupFill"
+      }
+    ]
+  },
+  "showcase": {
+    "name": "showcase",
+    "title": "서브웨이 서퍼스 캐릭터 만나기",
+    "description": "크루에 합류하여 함께 지하철을 달려보세요!",
+    "items": [
+      {
+        "title": "제이크",
+        "description": "오리지널 서퍼",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/1.png"
+        }
+      },
+      {
+        "title": "트리키",
+        "description": "장난꾸러기",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/2.png"
+        }
+      },
+      {
+        "title": "프레시",
+        "description": "음악 애호가",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/3.png"
+        }
+      },
+      {
+        "title": "유타니",
+        "description": "기술 천재",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/4.png"
+        }
+      },
+      {
+        "title": "스파이크",
+        "description": "펑크 록커",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/5.png"
+        }
+      },
+      {
+        "title": "프랭크",
+        "description": "좀비",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/6.png"
+        }
+      },
+      {
+        "title": "닌자",
+        "description": "은밀한 러너",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/7.png"
+        }
+      },
+      {
+        "title": "루시",
+        "description": "서퍼 걸",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/8.png"
+        }
+      },
+      {
+        "title": "킹",
+        "description": "로열 서퍼",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/9.png"
+        }
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "통계",
+    "title": "사람들이 서브웨이 서퍼스를 사랑합니다",
+    "description": "세계에서 가장 인기 있는 무한 러너 게임!",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "다운로드 수",
+        "label": "30억+",
+        "description": "전 세계 플레이어"
+      },
+      {
+        "title": "이용 가능한 지역",
+        "label": "20+",
+        "description": "글로벌 위치"
+      },
+      {
+        "title": "수집 가능한 캐릭터",
+        "label": "50+",
+        "description": "독특한 캐릭터"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "다운로드",
+    "title": "서브웨이 서퍼스 다운로드",
+    "description": "무료로 게임을 다운로드하고 선택적 인앱 구매로 경험을 향상시키세요.",
+    "groups": [],
+    "items": [
+      {
+        "title": "무료 버전",
+        "description": "전체 게임을 무료로 다운로드하고 플레이하세요.",
+        "features_title": "포함 사항",
+        "features": [
+          "전체 게임 액세스",
+          "정기적인 월드 투어 업데이트",
+          "기본 캐릭터",
+          "표준 호버보드",
+          "일일 미션",
+          "주간 헌트",
+          "글로벌 리더보드"
+        ],
+        "interval": "free",
+        "amount": 0,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "무료",
+        "original_price": "",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "결제 필요 없음!",
+        "button": {
+          "title": "지금 다운로드",
+          "url": "/#download",
+          "icon": "RiDownloadFill"
+        },
+        "product_id": "free",
+        "product_name": "서브웨이 서퍼스 무료",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "코인 더블러",
+        "description": "모든 코인 획득량을 영구적으로 두 배로 늘립니다.",
+        "label": "인기",
+        "features_title": "무료 버전의 모든 기능에 추가로",
+        "features": [
+          "모든 획득에서 코인 두 배",
+          "더 빠른 캐릭터 잠금 해제",
+          "더 빠른 호버보드 업그레이드",
+          "보너스 일일 보상",
+          "독점 캐릭터 의상",
+          "특별 호버보드 스킨",
+          "리더보드에 VIP 배지",
+          "광고 없는 경험"
+        ],
+        "interval": "one-time",
+        "amount": 499,
+        "cn_amount": 3499,
+        "currency": "USD",
+        "price": "$4.99",
+        "original_price": "$7.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "가장 인기 있는 구매!",
+        "button": {
+          "title": "코인 더블러 구매",
+          "url": "/#download",
+          "icon": "RiCoinFill"
+        },
+        "product_id": "coin-doubler",
+        "product_name": "서브웨이 서퍼스 코인 더블러",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "시즌 패스",
+        "description": "매 시즌마다 프리미엄 콘텐츠를 잠금 해제하세요.",
+        "features_title": "무료 버전의 모든 기능에 추가로",
+        "features": [
+          "독점 시즌 캐릭터",
+          "한정판 호버보드",
+          "주간 코인 보너스",
+          "프리미엄 미션 보상",
+          "독점 의상",
+          "특별 효과 및 애니메이션",
+          "새로운 콘텐츠 우선 액세스"
+        ],
+        "interval": "recurring",
+        "amount": 999,
+        "cn_amount": 6999,
+        "currency": "USD",
+        "price": "$9.99",
+        "original_price": "$14.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "매 시즌 새로운 콘텐츠!",
+        "button": {
+          "title": "시즌 패스 구매",
+          "url": "/#download",
+          "icon": "RiVipCrownFill"
+        },
+        "product_id": "season-pass",
+        "product_name": "서브웨이 서퍼스 시즌 패스",
+        "credits": 0,
+        "valid_months": 1
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "플레이어 리뷰",
+    "title": "서브웨이 서퍼스에 대한 플레이어들의 평가",
+    "description": "서브웨이 서퍼스를 사랑하는 전 세계 플레이어들의 이야기를 들어보세요!",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "마이클 J.",
+        "label": "2012년부터 플레이 중",
+        "description": "10년 넘게 서브웨이 서퍼스를 플레이해 왔지만 전혀 질리지 않아요! 새로운 도시와 캐릭터로 계속 업데이트되어 매달 다시 찾게 됩니다.",
+        "image": {
+          "src": "/imgs/users/1.png"
+        }
+      },
+      {
+        "title": "사라 K.",
+        "label": "경쟁적 플레이어",
+        "description": "가장 중독성 있는 모바일 게임이에요! 친구들과 고득점을 경쟁하는 것이 좋아요. 컨트롤이 매우 부드럽고 반응이 좋아 빠른 게임 세션에 완벽합니다.",
+        "image": {
+          "src": "/imgs/users/2.png"
+        }
+      },
+      {
+        "title": "타일러 M.",
+        "label": "캐릭터 수집가",
+        "description": "모든 캐릭터와 의상을 수집하는 데 푹 빠져있어요! 각 월드 투어는 멋진 새 디자인을 가져옵니다. 제 최애는 여전히 닌자예요 - 그의 애니메이션이 정말 멋져요!",
+        "image": {
+          "src": "/imgs/users/3.png"
+        }
+      },
+      {
+        "title": "엠마 R.",
+        "label": "캐주얼 게이머",
+        "description": "일상 통근에 완벽한 게임이에요! 밝은 색상과 재미있는 음악이 항상 기분을 좋게 만들어요. 몇 분 동안 쉽게 집어들고 플레이할 수 있어 좋아요.",
+        "image": {
+          "src": "/imgs/users/4.png"
+        }
+      },
+      {
+        "title": "제이슨 T.",
+        "label": "고득점 챔피언",
+        "description": "단연코 최고의 무한 러너예요! 게임플레이는 단순하지만 도전적이고, 파워업은 훌륭한 전략적 요소를 추가해요. 제 최고 점수는 1천만 이상이에요!",
+        "image": {
+          "src": "/imgs/users/5.png"
+        }
+      },
+      {
+        "title": "릴리 Z.",
+        "label": "가족 게이머",
+        "description": "우리 가족 모두가 서브웨이 서퍼스를 플레이해요! 아이들과 제가 똑같이 즐기는 몇 안 되는 게임 중 하나예요. 우리는 서로의 런을 비교하고 새 아이템 잠금 해제를 도와주는 것을 좋아해요.",
+        "image": {
+          "src": "/imgs/users/6.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions About Subway Surfers",
+    "description": "Have another question? Contact us on social media or by email.",
+    "items": [
+      {
+        "title": "What is Subway Surfers and how do I play it?",
+        "description": "Subway Surfers is an endless runner mobile game where you dodge trains, jump over obstacles, and collect coins. The controls are simple: swipe up to jump, down to roll, and left/right to change lanes. The goal is to run as far as possible while collecting coins and power-ups."
+      },
+      {
+        "title": "Is Subway Surfers free to play?",
+        "description": "Yes! Subway Surfers is completely free to download and play. While there are optional in-app purchases available to enhance your experience, you can enjoy the full game without spending any money."
+      },
+      {
+        "title": "How often does Subway Surfers get updated?",
+        "description": "Subway Surfers receives monthly updates through the World Tour feature, which introduces a new city location with unique themes, limited-time characters, and special hoverboards. This keeps the game fresh with new content regularly."
+      },
+      {
+        "title": "How do I unlock new characters and hoverboards?",
+        "description": "You can unlock most characters and hoverboards by collecting coins during your runs and purchasing them in the shop. Some special characters are available through limited-time events, daily rewards, or season passes."
+      },
+      {
+        "title": "What are the power-ups in Subway Surfers and how do they work?",
+        "description": "Subway Surfers features several power-ups including Jetpacks (fly above obstacles), Super Sneakers (jump higher), Coin Magnets (attract coins), and Score Boosters (multiply your score). You can collect these during runs or activate them at the beginning with keys."
+      },
+      {
+        "title": "Can I play Subway Surfers offline?",
+        "description": "Yes! Subway Surfers can be played without an internet connection, making it perfect for travel or areas with poor connectivity. However, some features like leaderboards and daily rewards require an internet connection to sync with the servers."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Download Subway Surfers Today",
+    "description": "Join millions of players worldwide in the endless running adventure!",
+    "buttons": [
+      {
+        "title": "Play Now",
+        "url": "/subway-surfers",
+        "target": "_self",
+        "icon": "RiPlayFill"
+      },
+      {
+        "title": "Watch Gameplay",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Subway Surfers",
+      "description": "Subway Surfers is the world's most popular endless runner mobile game. Join the adventure as you dash through the subway, avoiding trains and obstacles!",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Subway Surfers"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2023 • SYBO Games All rights reserved.",
+    "nav": {
+      "items": [
+        {
+          "title": "Game",
+          "children": [
+            {
+              "title": "Features",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "Characters",
+              "url": "https://subwaysurfers.com/characters/",
+              "target": "_self"
+            },
+            {
+              "title": "Play Now",
+              "url": "/subway-surfers",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "children": [
+            {
+              "title": "Game Guide",
+              "url": "https://sybo.helpshift.com/hc/en/5-subway-surfers/faq/206-pro-tips/",
+              "target": "_self"
+            },
+            
+            {
+              "title": "FAQ",
+              "url": "/#faq",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Community",
+          "children": [
+            {
+              "title": "Instagram",
+              "url": "https://www.instagram.com/sybo_games/",
+              "target": "_blank"
+            },
+            {
+              "title": "Fan Art",
+              "url": "https://subwaysurfers.com/fanzone/",
+              "target": "_blank"
+            },
+            {
+              "title": "Discord",
+              "url": "https://discord.gg/SubwaySurfers",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://www.instagram.com/sybo_games/",
+          "target": "_blank"
+        },
+        {
+          "title": "Facebook",
+          "icon": "RiFacebookFill",
+          "url": "https://www.facebook.com/SubwaySurfersSybo/",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://www.youtube.com/user/SyboGames",
+          "target": "_blank"
+        },
+        {
+          "title": "Email",
+          "icon": "RiMailLine",
+          "url": "mailto:support@subwaysurfers.com",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Parents Guide",
+          "url": "/parents-guide"
+        }
+      ]
+    }
+  }
+}

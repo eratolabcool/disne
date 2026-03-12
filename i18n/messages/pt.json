@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "title": "Paciência Disney | Jogo de Cartas Mágico",
+    "description": "Experimente a magia da Disney neste encantador jogo de paciência. Jogue com cartas lindamente desenhadas apresentando seus personagens favoritos da Disney nesta aventura clássica de cartas.",
+    "keywords": "paciência disney, jogo de cartas disney, jogo paciência, personagens disney, jogo coleção cartas, jogo de cartas família"
+  },
+  "user": {
+    "sign_in": "Entrar",
+    "sign_out": "Sair",
+    "credits": "Créditos",
+    "api_keys": "Chaves API",
+    "my_orders": "Meus Pedidos",
+    "user_center": "Central do Usuário",
+    "admin_system": "Sistema de Administração"
+  },
+  "character": {
+    "title": "personagem",
+    "franchise": "franquia",
+    "characters": "personagens",
+    "scene": "cena"
+  },
+  "sign_modal": {
+    "sign_in_title": "Entrar",
+    "sign_in_description": "Entre na sua conta",
+    "sign_up_title": "Cadastrar",
+    "sign_up_description": "Crie uma conta",
+    "email_title": "Email",
+    "email_placeholder": "Digite seu email aqui",
+    "password_title": "Senha",
+    "password_placeholder": "Digite sua senha aqui",
+    "forgot_password": "Esqueceu a senha?",
+    "or": "Ou",
+    "continue": "Continuar",
+    "no_account": "Não tem uma conta?",
+    "email_sign_in": "Entrar com Email",
+    "google_sign_in": "Entrar com Google",
+    "github_sign_in": "Entrar com GitHub",
+    "close_title": "Fechar",
+    "cancel_title": "Cancelar"
+  },
+  "my_orders": {
+    "title": "Meus Pedidos",
+    "description": "pedidos pagos com ShipAny.",
+    "no_orders": "Nenhum pedido encontrado",
+    "tip": "",
+    "activate_order": "Ativar Pedido",
+    "actived": "Ativado",
+    "join_discord": "Entrar no Discord",
+    "read_docs": "Ler Documentação",
+    "table": {
+      "order_no": "Nº do Pedido",
+      "email": "Email",
+      "product_name": "Nome do Produto",
+      "amount": "Valor",
+      "paid_at": "Pago em",
+      "github_username": "Nome de Usuário GitHub",
+      "status": "Status"
+    }
+  },
+  "my_credits": {
+    "title": "Meus Créditos",
+    "left_tip": "créditos restantes: {left_credits}",
+    "no_credits": "Nenhum registro de créditos",
+    "recharge": "Recarregar",
+    "table": {
+      "trans_no": "Nº da Transação",
+      "trans_type": "Tipo de Transação",
+      "credits": "Créditos",
+      "updated_at": "Atualizado em",
+      "status": "Status"
+    }
+  },
+  "api_keys": {
+    "title": "Chaves API",
+    "tip": "Por favor, mantenha sua chave API segura para evitar vazamentos",
+    "no_api_keys": "Nenhuma Chave API",
+    "create_api_key": "Criar Chave API",
+    "table": {
+      "name": "Nome",
+      "key": "Chave",
+      "created_at": "Criado em"
+    },
+    "form": {
+      "name": "Nome",
+      "name_placeholder": "Nome da Chave API",
+      "submit": "Enviar"
+    }
+  },
+  "blog": {
+    "title": "Blog Paciência Disney",
+    "description": "Últimas notícias, guias e atualizações sobre o jogo de cartas Paciência Disney",
+    "read_more_text": "Leia Mais"
+  },
+  "my_invites": {
+    "title": "Meus Convites",
+    "description": "Visualize seus registros de convites",
+    "no_invites": "Nenhum registro de convite encontrado",
+    "my_invite_link": "Meu Link de Convite",
+    "edit_invite_link": "Editar Link de Convite",
+    "copy_invite_link": "Copiar Link de Convite",
+    "invite_code": "Código de Convite",
+    "invite_tip": "Convide 1 amigo para comprar ShipAny, recompensa de R$250.",
+    "invite_balance": "Saldo de Recompensa de Convites",
+    "total_invite_count": "Total de Convites",
+    "total_paid_count": "Total de Pagamentos",
+    "total_award_amount": "Valor Total de Recompensas",
+    "update_invite_code": "Definir Código de Convite",
+    "update_invite_code_tip": "Digite seu código de convite personalizado",
+    "update_invite_button": "Salvar",
+    "no_orders": "Você não pode convidar outras pessoas antes de comprar ShipAny",
+    "no_affiliates": "Você não tem permissão para convidar outras pessoas, entre em contato conosco para solicitar permissão.",
+    "table": {
+      "invite_time": "Hora do Convite",
+      "invite_user": "Usuário Convidado",
+      "status": "Status",
+      "reward_percent": "Percentual de Recompensa",
+      "reward_amount": "Valor da Recompensa",
+      "pending": "Pendente",
+      "completed": "Concluído"
+    }
+  }
+}

@@ -1,0 +1,372 @@
+/* Performance Optimizations */
+@layer base {
+  /* Optimize font rendering */
+  html {
+    scroll-behavior: smooth;
+    font-display: swap;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Reduce paint on scroll */
+  body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* Enable hardware acceleration */
+    transform: translateZ(0);
+    /* Optimize for mobile */
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Optimize images */
+  img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+@import "theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :root {
+    --sidebar-background: var(--background);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--background);
+    --sidebar-accent-foreground: var(--primary);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+  }
+
+  .dark {
+    --sidebar-background: var(--background);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+  }
+}
+
+/* Performance Optimization Classes */
+@layer utilities {
+  /* Optimize animations */
+  .animate-optimized {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Optimize images for performance */
+  .img-optimized {
+    content-visibility: auto;
+    contain-intrinsic-size: 300px 200px;
+  }
+
+  /* Lazy loading placeholder */
+  .lazy-placeholder {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Optimize scrolling performance */
+  .scroll-smooth-optimized {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+
+  /* Font loading states */
+  .fonts-loading {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  .fonts-loaded {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+/* Critical CSS for immediate rendering */
+@layer critical {
+  /* Above-the-fold content styles */
+  .critical-content {
+    display: block;
+    min-height: 100vh;
+  }
+}
+
+/* ============================================================================
+   THEME-AWARE STYLING
+   All text and components respect the light/dark theme
+   ============================================================================ */
+
+/* Headings - Bold and High Contrast */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Light mode - Dark headings for contrast */
+:not(.dark) h1,
+:not(.dark) h2,
+:not(.dark) h3,
+:not(.dark) h4,
+:not(.dark) h5,
+:not(.dark) h6 {
+  color: #000000 !important;
+}
+
+/* Dark mode - Light headings for contrast */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #FFFFFF !important;
+}
+
+/* Paragraphs and body text */
+p, span, div {
+  color: hsl(var(--foreground));
+}
+
+/* Links and buttons */
+a, button {
+  color: hsl(var(--foreground));
+  transition: opacity 0.2s ease;
+}
+
+a:hover, button:hover {
+  opacity: 0.8;
+}
+
+/* Card components */
+.card {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-color: hsl(var(--border));
+}
+
+.card-title {
+  color: hsl(var(--card-foreground));
+  font-weight: 600;
+}
+
+.card-description {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Form inputs */
+input, textarea, select {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--input));
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Badges and labels */
+.badge {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.btn-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+/* Navigation */
+nav {
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--border));
+}
+
+nav a {
+  color: hsl(var(--foreground));
+}
+
+nav a:hover {
+  color: hsl(var(--primary));
+}
+
+/* NO MORE MUTED TEXT - All text is the same color */
+.text-muted {
+  color: hsl(var(--foreground)) !important;
+}
+
+/* Small text - Same color as all text */
+small, .text-xs, .text-sm {
+  color: hsl(var(--foreground));
+}
+
+/* Borders and dividers */
+.border, .divider {
+  border-color: hsl(var(--border));
+}
+
+/* Backgrounds */
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+
+.bg-secondary {
+  background-color: hsl(var(--secondary));
+}
+
+.bg-muted {
+  background-color: hsl(var(--muted));
+}
+
+.bg-accent {
+  background-color: hsl(var(--accent));
+}
+
+/* Text colors - ALL USE FOREGROUND COLOR */
+.text-primary {
+  color: hsl(var(--foreground));
+}
+
+.text-secondary {
+  color: hsl(var(--foreground));
+}
+
+.text-accent {
+  color: hsl(var(--accent-foreground));
+}
+
+/* Ensure all foreground colors follow theme */
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+
+.bg-background {
+  background-color: hsl(var(--background));
+}
+
+/* Utility classes for theme consistency */
+.themed-card {
+  background-color: hsl(var(--card));
+  border-color: hsl(var(--border));
+  color: hsl(var(--card-foreground));
+}
+
+.themed-input {
+  background-color: hsl(var(--background));
+  border-color: hsl(var(--input));
+  color: hsl(var(--foreground));
+}
+
+.themed-button {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Override specific component classes to ensure theme adherence */
+.prose {
+  color: hsl(var(--foreground));
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: inherit;
+}
+
+:not(.dark) .prose h1,
+:not(.dark) .prose h2,
+:not(.dark) .prose h3,
+:not(.dark) .prose h4,
+:not(.dark) .prose h5,
+:not(.dark) .prose h6 {
+  color: #000000 !important;
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6 {
+  color: #FFFFFF !important;
+}
+
+.prose p,
+.prose li,
+.prose span {
+  color: hsl(var(--foreground));
+}
+
+.prose strong,
+.prose b {
+  color: hsl(var(--foreground));
+  font-weight: 700;
+}
+
+.prose a {
+  color: hsl(var(--primary));
+}
+
+.prose code {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+/* Ensure readable text in all contexts */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

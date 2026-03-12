@@ -1,0 +1,696 @@
+{
+  "template": "shipany-template-one",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "Subway Surfers",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Subway Surfers"
+      },
+      "url": "/es"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Página Oficial",
+          "url": "https://subwaysurfers.com/",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "Personajes",
+          "url": "https://subwaysurfers.com/characters/",
+          "icon": "BiUser"
+        },
+        {
+          "title": "Tour Mundial",
+          "url": "https://subwaysurfers.com/world-tour/",
+          "icon": "MdDownload"
+        },
+        {
+          "title": "Blog",
+          "url": "/posts",
+          "icon": "RiGamepadFill"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Jugar Ahora",
+        "url": "/subway-surfers/index_es.tsx",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiGamepadFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "El juego de carreras sin fin más popular del mundo - Subway Surfers",
+    "highlight_text": "Subway Surfers",
+    "description": "¡Únete a millones de jugadores en todo el mundo en esta aventura de carrera sin fin!",
+    "announcement": {
+      
+    },
+    "tip": "🏆 ¡Más de 3 mil millones de descargas en todo el mundo!",
+    "buttons": [
+      {
+        "title": "Jugar Ahora",
+        "icon": "RiPlayFill",
+        "url": "/subway-surfers",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Ver Trailer",
+        "icon": "RiPlayFill",
+        "url": "https://www.youtube.com/embed/QFzfgB34cCk",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "Subway Surfers está disponible en todas las plataformas principales",
+    "items": [
+      {
+        "title": "iOS",
+        "image": {
+          "src": "/imgs/logos/ios.svg",
+          "alt": "iOS"
+        }
+      },
+      {
+        "title": "Android",
+        "image": {
+          "src": "/imgs/logos/android.svg",
+          "alt": "Android"
+        }
+      },
+      {
+        "title": "Windows",
+        "image": {
+          "src": "/imgs/logos/windows.svg",
+          "alt": "Windows"
+        }
+      },
+      {
+        "title": "Facebook",
+        "image": {
+          "src": "/imgs/logos/facebook.svg",
+          "alt": "Facebook"
+        }
+      },
+      {
+        "title": "Amazon",
+        "image": {
+          "src": "/imgs/logos/amazon.svg",
+          "alt": "Amazon"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "¿Qué es Subway Surfers?",
+    "label": "Introducción",
+    "description": "Subway Surfers es un juego móvil de carreras sin fin donde los jugadores corren por las vías del metro evitando obstáculos y recogiendo monedas.",
+    "image": {
+      "src": "/imgs/features/1.jpg"
+    },
+    "items": [
+      {
+        "title": "Acción de Carrera Sin Fin",
+        "description": "Esquiva trenes, salta sobre barreras y surfea en aerotablas a través de vibrantes entornos de metro.",
+        "icon": "RiRunFill"
+      },
+      {
+        "title": "Tour Mundial",
+        "description": "Viaja a emocionantes ciudades de todo el mundo con actualizaciones regulares que presentan nuevas ubicaciones.",
+        "icon": "RiEarthFill"
+      },
+      {
+        "title": "Colecciona y Mejora",
+        "description": "Recoge monedas, potenciadores y desbloquea nuevos personajes, atuendos y aerotablas.",
+        "icon": "RiCoinFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Por qué los Jugadores Aman Subway Surfers",
+    "label": "Beneficios",
+    "description": "Experimenta la emoción de la persecución en el juego de carreras sin fin más popular del mundo.",
+    "items": [
+      {
+        "title": "Jugabilidad Simple y Adictiva",
+        "description": "Fácil de aprender, difícil de dominar - desliza para saltar, deslizarte y esquivar en este juego de carreras sin fin de ritmo rápido.",
+        "icon": "RiGamepadFill",
+        "image": {
+          "src": "/imgs/features/2.webp"
+        }
+      },
+      {
+        "title": "Visuales Impresionantes",
+        "description": "Gráficos 3D vibrantes y coloridos que dan vida a cada ubicación global con temas y entornos únicos.",
+        "icon": "RiPaletteFill",
+        "image": {
+          "src": "/imgs/features/3.jpg"
+        }
+      },
+      {
+        "title": "Actualizaciones Regulares",
+        "description": "Nuevo contenido cada mes con el Tour Mundial - presentando nuevas ciudades, personajes, atuendos y desafíos.",
+        "icon": "RiRefreshFill",
+        "image": {
+          "src": "/imgs/features/4.png"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo Jugar Subway Surfers",
+    "description": "Comienza con Subway Surfers en tres simples pasos:",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Descarga el Juego",
+        "description": "Descarga Subway Surfers gratis desde la tienda de aplicaciones de tu dispositivo - disponible en iOS, Android y más.",
+        "image": {
+          "src": "/imgs/features/5.png"
+        }
+      },
+      {
+        "title": "Aprende los Controles",
+        "description": "Desliza hacia arriba para saltar, hacia abajo para rodar y hacia la izquierda/derecha para cambiar de carril. ¡Recoge monedas y evita obstáculos!",
+        "image": {
+          "src": "/imgs/features/6.png"
+        }
+      },
+      {
+        "title": "Recoge Potenciadores",
+        "description": "Agarra jetpacks, súper zapatillas y imanes para ayudarte a recoger más monedas y superar tu puntuación más alta.",
+        "image": {
+          "src": "/imgs/features/7.png"
+        }
+      },
+      {
+        "title": "Desbloquea Personajes",
+        "description": "Gasta tus monedas para desbloquear nuevos personajes, atuendos y aerotablas con habilidades especiales.",
+        "image": {
+          "src": "/imgs/features/8.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Características Principales de Subway Surfers",
+    "description": "Descubre lo que hace de Subway Surfers la experiencia definitiva de carreras sin fin.",
+    "items": [
+      {
+        "title": "Gráficos 3D Coloridos",
+        "description": "Visuales vibrantes y de alta calidad que dan vida al entorno del metro con detalles impresionantes.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "Colección de Personajes",
+        "description": "Desbloquea y juega como docenas de personajes únicos, cada uno con su propio estilo y personalidad.",
+        "icon": "RiUserFill"
+      },
+      {
+        "title": "Tour Mundial",
+        "description": "Viaja a emocionantes ciudades de todo el mundo con actualizaciones regulares que presentan nuevas ubicaciones.",
+        "icon": "RiEarthFill"
+      },
+      {
+        "title": "Aerotablas Especiales",
+        "description": "Colecciona y mejora aerotablas con habilidades especiales para mejorar tu jugabilidad.",
+        "icon": "RiRocketFill"
+      },
+      {
+        "title": "Desafíos Diarios",
+        "description": "Completa misiones diarias y cazas semanales para ganar recompensas y objetos especiales.",
+        "icon": "RiTrophyFill"
+      },
+      {
+        "title": "Características Sociales",
+        "description": "Conéctate con amigos, comparte puntuaciones y compite en tablas de clasificación globales.",
+        "icon": "RiGroupFill"
+      }
+    ]
+  },
+  "showcase": {
+    "name": "showcase",
+    "title": "Conoce a los Personajes de Subway Surfers",
+    "description": "¡Únete al equipo y corre por el metro juntos!",
+    "items": [
+      {
+        "title": "Jake",
+        "description": "El Surfista Original",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/1.png"
+        }
+      },
+      {
+        "title": "Tricky",
+        "description": "La Bromista",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/2.png"
+        }
+      },
+      {
+        "title": "Fresh",
+        "description": "El Amante de la Música",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/3.png"
+        }
+      },
+      {
+        "title": "Yutani",
+        "description": "La Genio Tecnológica",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/4.png"
+        }
+      },
+      {
+        "title": "Spike",
+        "description": "El Rockero Punk",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/5.png"
+        }
+      },
+      {
+        "title": "Frank",
+        "description": "El Zombi",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/6.png"
+        }
+      },
+      {
+        "title": "Ninja",
+        "description": "El Corredor Sigiloso",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/7.png"
+        }
+      },
+      {
+        "title": "Lucy",
+        "description": "La Chica Surfista",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/8.png"
+        }
+      },
+      {
+        "title": "King",
+        "description": "El Surfista Real",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/9.png"
+        }
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "Estadísticas",
+    "title": "La Gente Ama Subway Surfers",
+    "description": "¡El juego de carreras sin fin más popular del mundo!",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "Descargado por",
+        "label": "3B+",
+        "description": "Jugadores en Todo el Mundo"
+      },
+      {
+        "title": "Disponible en",
+        "label": "20+",
+        "description": "Ubicaciones Globales"
+      },
+      {
+        "title": "Colecciona Más de",
+        "label": "50+",
+        "description": "Personajes Únicos"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "Descargar",
+    "title": "Descarga Subway Surfers",
+    "description": "Obtén el juego gratis y mejora tu experiencia con compras opcionales dentro de la aplicación.",
+    "groups": [],
+    "items": [
+      {
+        "title": "Versión Gratuita",
+        "description": "Descarga y juega el juego completo gratis.",
+        "features_title": "Incluye",
+        "features": [
+          "Acceso completo al juego",
+          "Actualizaciones regulares del tour mundial",
+          "Personajes básicos",
+          "Aerotablas estándar",
+          "Misiones diarias",
+          "Cazas semanales",
+          "Tablas de clasificación globales"
+        ],
+        "interval": "free",
+        "amount": 0,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "Gratis",
+        "original_price": "",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "¡No se requiere pago!",
+        "button": {
+          "title": "Descargar Ahora",
+          "url": "/#download",
+          "icon": "RiDownloadFill"
+        },
+        "product_id": "free",
+        "product_name": "Subway Surfers Gratis",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "Duplicador de Monedas",
+        "description": "Duplica todas las recogidas de monedas permanentemente.",
+        "label": "Popular",
+        "features_title": "Todo en la Versión Gratuita, más",
+        "features": [
+          "Doble de monedas en todas las recogidas",
+          "Desbloqueos de personajes más rápidos",
+          "Mejoras de aerotablas más rápidas",
+          "Recompensas diarias adicionales",
+          "Atuendo exclusivo de personaje",
+          "Skin especial de aerotabla",
+          "Insignia VIP en tablas de clasificación",
+          "Experiencia sin anuncios"
+        ],
+        "interval": "one-time",
+        "amount": 499,
+        "cn_amount": 3499,
+        "currency": "USD",
+        "price": "$4.99",
+        "original_price": "$7.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "¡La compra más popular!",
+        "button": {
+          "title": "Obtener Duplicador de Monedas",
+          "url": "/#download",
+          "icon": "RiCoinFill"
+        },
+        "product_id": "coin-doubler",
+        "product_name": "Subway Surfers Duplicador de Monedas",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "Pase de Temporada",
+        "description": "Desbloquea contenido premium cada temporada.",
+        "features_title": "Todo en la Versión Gratuita, más",
+        "features": [
+          "Personaje exclusivo de temporada",
+          "Aerotabla de edición limitada",
+          "Bonificaciones semanales de monedas",
+          "Recompensas de misiones premium",
+          "Atuendos exclusivos",
+          "Efectos especiales y animaciones",
+          "Acceso prioritario a nuevo contenido"
+        ],
+        "interval": "recurring",
+        "amount": 999,
+        "cn_amount": 6999,
+        "currency": "USD",
+        "price": "$9.99",
+        "original_price": "$14.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "¡Nuevo contenido cada temporada!",
+        "button": {
+          "title": "Obtener Pase de Temporada",
+          "url": "/#download",
+          "icon": "RiVipCrownFill"
+        },
+        "product_id": "season-pass",
+        "product_name": "Subway Surfers Pase de Temporada",
+        "credits": 0,
+        "valid_months": 1
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "Reseñas de Jugadores",
+    "title": "Lo que Dicen los Jugadores Sobre Subway Surfers",
+    "description": "¡Escucha a jugadores de todo el mundo que aman Subway Surfers!",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "Michael J.",
+        "label": "Jugando desde 2012",
+        "description": "¡He estado jugando Subway Surfers durante más de 10 años y nunca pasa de moda! Las constantes actualizaciones con nuevas ciudades y personajes me hacen volver cada mes.",
+        "image": {
+          "src": "/imgs/users/1.png"
+        }
+      },
+      {
+        "title": "Sarah K.",
+        "label": "Jugadora Competitiva",
+        "description": "¡El juego móvil más adictivo de todos! Me encanta competir con mis amigos por las puntuaciones más altas. Los controles son tan suaves y receptivos - perfectos para sesiones de juego rápidas.",
+        "image": {
+          "src": "/imgs/users/2.png"
+        }
+      },
+      {
+        "title": "Tyler M.",
+        "label": "Coleccionista de Personajes",
+        "description": "¡Estoy obsesionado con coleccionar todos los personajes y atuendos! Cada tour mundial trae nuevos diseños increíbles. Mi favorito sigue siendo Ninja - ¡sus animaciones son geniales!",
+        "image": {
+          "src": "/imgs/users/3.png"
+        }
+      },
+      {
+        "title": "Emma R.",
+        "label": "Jugadora Casual",
+        "description": "¡Juego perfecto para mi viaje diario! Los colores brillantes y la música divertida siempre me ponen de buen humor. Me encanta lo fácil que es tomarlo y jugar durante unos minutos.",
+        "image": {
+          "src": "/imgs/users/4.png"
+        }
+      },
+      {
+        "title": "Jason T.",
+        "label": "Campeón de Puntuación Alta",
+        "description": "¡El mejor juego de carreras sin fin por mucho! La jugabilidad es simple pero desafiante, y los potenciadores añaden un gran elemento estratégico. ¡Mi puntuación más alta es de más de 10 millones!",
+        "image": {
+          "src": "/imgs/users/5.png"
+        }
+      },
+      {
+        "title": "Lily Z.",
+        "label": "Jugadora Familiar",
+        "description": "¡Toda mi familia juega Subway Surfers! Es uno de los pocos juegos que tanto mis hijos como yo disfrutamos por igual. Nos encanta comparar nuestras carreras y ayudarnos mutuamente a desbloquear nuevos objetos.",
+        "image": {
+          "src": "/imgs/users/6.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Preguntas Frecuentes Sobre Subway Surfers",
+    "description": "¿Tienes otra pregunta? Contáctanos en redes sociales o por correo electrónico.",
+    "items": [
+      {
+        "title": "¿Qué es Subway Surfers y cómo se juega?",
+        "description": "Subway Surfers es un juego móvil de carreras sin fin donde esquivas trenes, saltas sobre obstáculos y recoges monedas. Los controles son simples: desliza hacia arriba para saltar, hacia abajo para rodar y hacia la izquierda/derecha para cambiar de carril. El objetivo es correr lo más lejos posible mientras recoges monedas y potenciadores."
+      },
+      {
+        "title": "¿Es Subway Surfers gratis para jugar?",
+        "description": "¡Sí! Subway Surfers es completamente gratis para descargar y jugar. Aunque hay compras opcionales dentro de la aplicación disponibles para mejorar tu experiencia, puedes disfrutar del juego completo sin gastar dinero."
+      },
+      {
+        "title": "¿Con qué frecuencia se actualiza Subway Surfers?",
+        "description": "Subway Surfers recibe actualizaciones mensuales a través de la función Tour Mundial, que introduce una nueva ubicación de ciudad con temas únicos, personajes por tiempo limitado y aerotablas especiales. Esto mantiene el juego fresco con nuevo contenido regularmente."
+      },
+      {
+        "title": "¿Cómo desbloqueo nuevos personajes y aerotablas?",
+        "description": "Puedes desbloquear la mayoría de los personajes y aerotablas recogiendo monedas durante tus carreras y comprándolos en la tienda. Algunos personajes especiales están disponibles a través de eventos por tiempo limitado, recompensas diarias o pases de temporada."
+      },
+      {
+        "title": "¿Cuáles son los potenciadores en Subway Surfers y cómo funcionan?",
+        "description": "Subway Surfers presenta varios potenciadores incluyendo Jetpacks (vuela sobre obstáculos), Súper Zapatillas (salta más alto), Imanes de Monedas (atraen monedas) y Multiplicadores de Puntuación (multiplican tu puntuación). Puedes recoger estos durante las carreras o activarlos al principio con llaves."
+      },
+      {
+        "title": "¿Puedo jugar Subway Surfers sin conexión?",
+        "description": "¡Sí! Subway Surfers puede jugarse sin conexión a internet, haciéndolo perfecto para viajes o áreas con mala conectividad. Sin embargo, algunas funciones como tablas de clasificación y recompensas diarias requieren una conexión a internet para sincronizarse con los servidores."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Descarga Subway Surfers Hoy",
+    "description": "¡Únete a millones de jugadores en todo el mundo en la aventura de carrera sin fin!",
+    "buttons": [
+      {
+        "title": "Jugar Ahora",
+        "url": "/subway-surfers",
+        "target": "_self",
+        "icon": "RiPlayFill"
+      },
+      {
+        "title": "Ver Gameplay",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Subway Surfers",
+      "description": "Subway Surfers es el juego móvil de carreras sin fin más popular del mundo. ¡Únete a la aventura mientras corres por el metro, evitando trenes y obstáculos!",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Subway Surfers"
+      },
+      "url": "/es"
+    },
+    "copyright": "© 2023 • SYBO Games Todos los derechos reservados.",
+    "nav": {
+      "items": [
+        {
+          "title": "Juego",
+          "children": [
+            {
+              "title": "Características",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "Personajes",
+              "url": "https://subwaysurfers.com/characters/",
+              "target": "_self"
+            },
+            {
+              "title": "Jugar Ahora",
+              "url": "/subway-surfers",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "children": [
+            {
+              "title": "Game Guide",
+              "url": "https://sybo.helpshift.com/hc/en/5-subway-surfers/faq/206-pro-tips/",
+              "target": "_self"
+            },
+            
+            {
+              "title": "FAQ",
+              "url": "/#faq",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Community",
+          "children": [
+            {
+              "title": "Instagram",
+              "url": "https://www.instagram.com/sybo_games/",
+              "target": "_blank"
+            },
+            {
+              "title": "Fan Art",
+              "url": "https://subwaysurfers.com/fanzone/",
+              "target": "_blank"
+            },
+            {
+              "title": "Discord",
+              "url": "https://discord.gg/SubwaySurfers",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://www.instagram.com/sybo_games/",
+          "target": "_blank"
+        },
+        {
+          "title": "Facebook",
+          "icon": "RiFacebookFill",
+          "url": "https://www.facebook.com/SubwaySurfersSybo/",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://www.youtube.com/user/SyboGames",
+          "target": "_blank"
+        },
+        {
+          "title": "Email",
+          "icon": "RiMailLine",
+          "url": "mailto:support@subwaysurfers.com",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Parents Guide",
+          "url": "/parents-guide"
+        }
+      ]
+    }
+  }
+}

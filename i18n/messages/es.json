@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "title": "Disney Solitario | Juego de Cartas Mágico",
+    "description": "Experimenta la magia de Disney en este encantador juego de cartas solitario. Juega con hermosas cartas diseñadas con tus personajes favoritos de Disney en esta aventura de juego de cartas clásico.",
+    "keywords": "disney solitario, juego de cartas disney, juego de solitario, personajes disney, juego de colección de cartas, juego de cartas familiar"
+  },
+  "user": {
+    "sign_in": "Iniciar Sesión",
+    "sign_out": "Cerrar Sesión",
+    "credits": "Créditos",
+    "api_keys": "Claves API",
+    "my_orders": "Mis Pedidos",
+    "user_center": "Centro de Usuario",
+    "admin_system": "Sistema de Administración"
+  },
+  "character": {
+    "title": "personaje",
+    "franchise": "franquicia",
+    "characters": "personajes",
+    "scene": "escena"
+  },
+  "sign_modal": {
+    "sign_in_title": "Iniciar Sesión",
+    "sign_in_description": "Inicia sesión en tu cuenta",
+    "sign_up_title": "Registrarse",
+    "sign_up_description": "Crear una cuenta",
+    "email_title": "Correo Electrónico",
+    "email_placeholder": "Ingresa tu correo electrónico aquí",
+    "password_title": "Contraseña",
+    "password_placeholder": "Ingresa tu contraseña aquí",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "or": "O",
+    "continue": "Continuar",
+    "no_account": "¿No tienes una cuenta?",
+    "email_sign_in": "Iniciar sesión con Correo",
+    "google_sign_in": "Iniciar sesión con Google",
+    "github_sign_in": "Iniciar sesión con GitHub",
+    "close_title": "Cerrar",
+    "cancel_title": "Cancelar"
+  },
+  "my_orders": {
+    "title": "Mis Pedidos",
+    "description": "pedidos pagados con ShipAny.",
+    "no_orders": "No se encontraron pedidos",
+    "tip": "",
+    "activate_order": "Activar Pedido",
+    "actived": "Activado",
+    "join_discord": "Unirse a Discord",
+    "read_docs": "Leer Documentación",
+    "table": {
+      "order_no": "No. de Pedido",
+      "email": "Correo Electrónico",
+      "product_name": "Nombre del Producto",
+      "amount": "Monto",
+      "paid_at": "Pagado en",
+      "github_username": "Usuario de GitHub",
+      "status": "Estado"
+    }
+  },
+  "my_credits": {
+    "title": "Mis Créditos",
+    "left_tip": "créditos restantes: {left_credits}",
+    "no_credits": "No hay registros de créditos",
+    "recharge": "Recargar",
+    "table": {
+      "trans_no": "No. de Transacción",
+      "trans_type": "Tipo de Transacción",
+      "credits": "Créditos",
+      "updated_at": "Actualizado en",
+      "status": "Estado"
+    }
+  },
+  "api_keys": {
+    "title": "Claves API",
+    "tip": "Por favor mantén tu apikey segura para evitar filtraciones",
+    "no_api_keys": "No hay Claves API",
+    "create_api_key": "Crear Clave API",
+    "table": {
+      "name": "Nombre",
+      "key": "Clave",
+      "created_at": "Creado en"
+    },
+    "form": {
+      "name": "Nombre",
+      "name_placeholder": "Nombre de Clave API",
+      "submit": "Enviar"
+    }
+  },
+  "blog": {
+    "title": "Blog de Disney Solitario",
+    "description": "Últimas noticias, guías y actualizaciones sobre el juego de cartas Disney Solitario",
+    "read_more_text": "Leer Más"
+  },
+  "my_invites": {
+    "title": "Mis Invitaciones",
+    "description": "Ver tus registros de invitaciones",
+    "no_invites": "No se encontraron registros de invitaciones",
+    "my_invite_link": "Mi Enlace de Invitación",
+    "edit_invite_link": "Editar Enlace de Invitación",
+    "copy_invite_link": "Copiar Enlace de Invitación",
+    "invite_code": "Código de Invitación",
+    "invite_tip": "Invita a 1 amigo a comprar ShipAny, recompensa $50.",
+    "invite_balance": "Balance de Recompensas de Invitación",
+    "total_invite_count": "Conteo Total de Invitaciones",
+    "total_paid_count": "Conteo Total de Pagados",
+    "total_award_amount": "Monto Total de Recompensas",
+    "update_invite_code": "Establecer Código de Invitación",
+    "update_invite_code_tip": "Ingresa tu código de invitación personalizado",
+    "update_invite_button": "Guardar",
+    "no_orders": "No puedes invitar a otros antes de comprar ShipAny",
+    "no_affiliates": "No tienes permiso para invitar a otros, por favor contáctanos para solicitar permiso.",
+    "table": {
+      "invite_time": "Hora de Invitación",
+      "invite_user": "Usuario Invitado",
+      "status": "Estado",
+      "reward_percent": "Porcentaje de Recompensa",
+      "reward_amount": "Monto de Recompensa",
+      "pending": "Pendiente",
+      "completed": "Completado"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /*?*q=
+Disallow: /privacy-policy
+Disallow: /terms-of-service
+Allow: /
+Sitemap: https://disneysolitaire.net/sitemap.xml

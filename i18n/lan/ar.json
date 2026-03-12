@@ -1,0 +1,698 @@
+{
+  "template": "shipany-template-one",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "صب واي سيرفرز",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "صب واي سيرفرز"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "الصفحة الرسمية",
+          "url": "https://subwaysurfers.com/",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "الشخصيات",
+          "url": "https://subwaysurfers.com/characters/",
+          "icon": "BiUser"
+        },
+        {
+          "title": "جولة حول العالم",
+          "url": "https://subwaysurfers.com/world-tour/",
+          "icon": "MdDownload"
+          
+        },
+        {
+          "title": "المدونة",
+          "url": "/posts",
+          "icon": "RiGamepadFill"
+          
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "العب الآن",
+        "url": "/subway-surfers/index_zh.tsx",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiGamepadFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "أشهر لعبة جري لا نهائية في عالم صب واي سيرفرز",
+    "highlight_text": "صب واي سيرفرز",
+    "description": "انضم إلى ملايين اللاعبين حول العالم في مغامرة الجري اللانهائية!",
+    "announcement": {
+      
+    },
+    "tip": "🏆 أكثر من 3 مليار تنزيل حول العالم!",
+    "buttons": [
+      {
+        "title": "العب الآن",
+        "icon": "RiPlayFill",
+        "url": "/subway-surfers",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "شاهد الإعلان",
+        "icon": "RiPlayFill",
+        "url": "https://www.youtube.com/embed/QFzfgB34cCk",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "صب واي سيرفرز متوفرة على جميع المنصات الرئيسية",
+    "items": [
+      {
+        "title": "iOS",
+        "image": {
+          "src": "/imgs/logos/ios.svg",
+          "alt": "iOS"
+        }
+      },
+      {
+        "title": "Android",
+        "image": {
+          "src": "/imgs/logos/android.svg",
+          "alt": "Android"
+        }
+      },
+      {
+        "title": "Windows",
+        "image": {
+          "src": "/imgs/logos/windows.svg",
+          "alt": "Windows"
+        }
+      },
+      {
+        "title": "Facebook",
+        "image": {
+          "src": "/imgs/logos/facebook.svg",
+          "alt": "Facebook"
+        }
+      },
+      {
+        "title": "Amazon",
+        "image": {
+          "src": "/imgs/logos/amazon.svg",
+          "alt": "Amazon"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "ما هي لعبة صب واي سيرفرز",
+    "label": "تقديم",
+    "description": "صب واي سيرفرز هي لعبة جوال للجري اللانهائي حيث يندفع اللاعبون عبر مسارات المترو متجنبين العقبات وجمع العملات.",
+    "image": {
+      "src": "/imgs/features/1.jpg"
+    },
+    "items": [
+      {
+        "title": "حركة الجري اللانهائية",
+        "description": "تجنب القطارات، اقفز فوق الحواجز، وتزلج على الهوفربورد عبر بيئات المترو النابضة بالحياة.",
+        "icon": "RiRunFill"
+      },
+      {
+        "title": "جولة عالمية",
+        "description": "سافر إلى مدن مثيرة حول العالم مع تحديثات منتظمة تضم مواقع جديدة.",
+        "icon": "RiEarthFill"
+      },
+      {
+        "title": "اجمع وطوّر",
+        "description": "اجمع العملات، والقوى الخاصة، وافتح شخصيات جديدة، وأزياء، وألواح تزلج.",
+        "icon": "RiCoinFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "لماذا يحب اللاعبون صب واي سيرفرز",
+    "label": "المميزات",
+    "description": "استمتع بإثارة المطاردة في أشهر لعبة جري لا نهائية في العالم.",
+    "items": [
+      {
+        "title": "لعب بسيط ومدمن",
+        "description": "سهلة التعلم، صعبة الإتقان - اسحب للقفز، والانزلاق، والتفادي في هذه اللعبة سريعة الوتيرة.",
+        "icon": "RiGamepadFill",
+        "image": {
+          "src": "/imgs/features/2.webp"
+        }
+      },
+      {
+        "title": "رسومات مذهلة",
+        "description": "رسومات ثلاثية الأبعاد نابضة بالحياة وملونة تجعل كل موقع عالمي ينبض بالحياة مع سمات وبيئات فريدة.",
+        "icon": "RiPaletteFill",
+        "image": {
+          "src": "/imgs/features/3.jpg"
+        }
+      },
+      {
+        "title": "تحديثات منتظمة",
+        "description": "محتوى جديد كل شهر مع جولة العالم - تضم مدن جديدة، وشخصيات، وأزياء، وتحديات.",
+        "icon": "RiRefreshFill",
+        "image": {
+          "src": "/imgs/features/4.png"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "كيفية لعب صب واي سيرفرز",
+    "description": "ابدأ مع صب واي سيرفرز في ثلاث خطوات بسيطة:",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "تنزيل اللعبة",
+        "description": "قم بتنزيل صب واي سيرفرز مجانًا من متجر التطبيقات على جهازك - متوفرة على iOS وAndroid والمزيد.",
+        "image": {
+          "src": "/imgs/features/5.png"
+        }
+      },
+      {
+        "title": "تعلم التحكم",
+        "description": "اسحب لأعلى للقفز، ولأسفل للتدحرج، ولليسار/لليمين لتغيير المسارات. اجمع العملات وتجنب العقبات!",
+        "image": {
+          "src": "/imgs/features/6.png"
+        }
+      },
+      {
+        "title": "اجمع القوى الخاصة",
+        "description": "احصل على حقائب النفاثة، والأحذية الخارقة، والمغناطيس لمساعدتك على جمع المزيد من العملات وتحطيم أعلى النتائج.",
+        "image": {
+          "src": "/imgs/features/7.png"
+        }
+      },
+      {
+        "title": "افتح الشخصيات",
+        "description": "أنفق عملاتك لفتح شخصيات جديدة، وأزياء، وألواح تزلج بقدرات خاصة.",
+        "image": {
+          "src": "/imgs/features/8.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "الميزات الرئيسية لصب واي سيرفرز",
+    "description": "اكتشف ما يجعل صب واي سيرفرز تجربة الجري اللانهائية المثالية.",
+    "items": [
+      {
+        "title": "رسومات ثلاثية الأبعاد ملونة",
+        "description": "مرئيات نابضة بالحياة وعالية الجودة تجعل بيئة المترو تنبض بالحياة بتفاصيل مذهلة.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "مجموعة الشخصيات",
+        "description": "افتح والعب بعشرات الشخصيات الفريدة، كل منها بأسلوبها وشخصيتها الخاصة.",
+        "icon": "RiUserFill"
+      },
+      {
+        "title": "جولة عالمية",
+        "description": "سافر إلى مدن مثيرة حول العالم مع تحديثات منتظمة تضم مواقع جديدة.",
+        "icon": "RiEarthFill"
+      },
+      {
+        "title": "ألواح تزلج خاصة",
+        "description": "اجمع وطوّر ألواح التزلج ذات القدرات الخاصة لتعزيز طريقة لعبك.",
+        "icon": "RiRocketFill"
+      },
+      {
+        "title": "تحديات يومية",
+        "description": "أكمل المهام اليومية وعمليات البحث الأسبوعية لكسب المكافآت والعناصر الخاصة.",
+        "icon": "RiTrophyFill"
+      },
+      {
+        "title": "ميزات اجتماعية",
+        "description": "تواصل مع الأصدقاء، شارك النتائج، وتنافس على لوحات المتصدرين العالمية.",
+        "icon": "RiGroupFill"
+      }
+    ]
+  },
+  "showcase": {
+    "name": "showcase",
+    "title": "تعرف على شخصيات صب واي سيرفرز",
+    "description": "انضم إلى الفريق واركض عبر المترو معًا!",
+    "items": [
+      {
+        "title": "جيك",
+        "description": "المتزلج الأصلي",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/1.png"
+        }
+      },
+      {
+        "title": "تريكي",
+        "description": "المشاغب",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/2.png"
+        }
+      },
+      {
+        "title": "فريش",
+        "description": "محب الموسيقى",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/3.png"
+        }
+      },
+      {
+        "title": "يوتاني",
+        "description": "العبقري التقني",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/4.png"
+        }
+      },
+      {
+        "title": "سبايك",
+        "description": "نجم البانك روك",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/5.png"
+        }
+      },
+      {
+        "title": "فرانك",
+        "description": "الزومبي",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/6.png"
+        }
+      },
+      {
+        "title": "نينجا",
+        "description": "العداء الخفي",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/7.png"
+        }
+      },
+      {
+        "title": "لوسي",
+        "description": "فتاة المتزلج",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/8.png"
+        }
+      },
+      {
+        "title": "كينج",
+        "description": "المتزلج الملكي",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/9.png"
+        }
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "إحصائيات",
+    "title": "الناس يحبون صب واي سيرفرز",
+    "description": "لعبة الجري اللانهائية الأكثر شعبية في العالم!",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "تم تنزيلها بواسطة",
+        "label": "+3B",
+        "description": "لاعب حول العالم"
+      },
+      {
+        "title": "متوفرة في",
+        "label": "+20",
+        "description": "موقع عالمي"
+      },
+      {
+        "title": "اجمع أكثر من",
+        "label": "+50",
+        "description": "شخصية فريدة"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "تنزيل",
+    "title": "تنزيل صب واي سيرفرز",
+    "description": "احصل على اللعبة مجانًا وعزز تجربتك مع مشتريات داخل التطبيق اختيارية.",
+    "groups": [],
+    "items": [
+      {
+        "title": "النسخة المجانية",
+        "description": "قم بتنزيل اللعبة الكاملة ولعبها مجانًا.",
+        "features_title": "تتضمن",
+        "features": [
+          "وصول كامل للعبة",
+          "تحديثات منتظمة لجولة العالم",
+          "شخصيات أساسية",
+          "ألواح تزلج قياسية",
+          "مهام يومية",
+          "عمليات بحث أسبوعية",
+          "لوحات متصدرين عالمية"
+        ],
+        "interval": "free",
+        "amount": 0,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "مجاني",
+        "original_price": "",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "لا يلزم الدفع!",
+        "button": {
+          "title": "تنزيل الآن",
+          "url": "/#download",
+          "icon": "RiDownloadFill"
+        },
+        "product_id": "free",
+        "product_name": "صب واي سيرفرز المجاني",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "مضاعف العملات",
+        "description": "مضاعفة جميع العملات المجمعة بشكل دائم.",
+        "label": "شائع",
+        "features_title": "كل شيء في النسخة المجانية، بالإضافة إلى",
+        "features": [
+          "مضاعفة العملات من جميع المجموعات",
+          "فتح الشخصيات بشكل أسرع",
+          "ترقيات ألواح التزلج بشكل أسرع",
+          "مكافآت يومية إضافية",
+          "زي شخصية حصري",
+          "مظهر لوح تزلج خاص",
+          "شارة VIP على لوحات المتصدرين",
+          "تجربة خالية من الإعلانات"
+        ],
+        "interval": "one-time",
+        "amount": 499,
+        "cn_amount": 3499,
+        "currency": "USD",
+        "price": "$4.99",
+        "original_price": "$7.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "الشراء الأكثر شعبية!",
+        "button": {
+          "title": "احصل على مضاعف العملات",
+          "url": "/#download",
+          "icon": "RiCoinFill"
+        },
+        "product_id": "coin-doubler",
+        "product_name": "مضاعف عملات صب واي سيرفرز",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "باقة الموسم",
+        "description": "افتح المحتوى المميز في كل موسم.",
+        "features_title": "كل شيء في النسخة المجانية، بالإضافة إلى",
+        "features": [
+          "شخصية موسمية حصرية",
+          "لوح تزلج إصدار محدود",
+          "مكافآت عملات أسبوعية",
+          "مكافآت مهام مميزة",
+          "أزياء حصرية",
+          "تأثيرات ورسوم متحركة خاصة",
+          "أولوية الوصول إلى المحتوى الجديد"
+        ],
+        "interval": "recurring",
+        "amount": 999,
+        "cn_amount": 6999,
+        "currency": "USD",
+        "price": "$9.99",
+        "original_price": "$14.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "محتوى جديد كل موسم!",
+        "button": {
+          "title": "احصل على باقة الموسم",
+          "url": "/#download",
+          "icon": "RiVipCrownFill"
+        },
+        "product_id": "season-pass",
+        "product_name": "باقة موسم صب واي سيرفرز",
+        "credits": 0,
+        "valid_months": 1
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "آراء اللاعبين",
+    "title": "ماذا يقول اللاعبون عن صب واي سيرفرز",
+    "description": "اسمع من اللاعبين حول العالم الذين يحبون صب واي سيرفرز!",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "مايكل ج.",
+        "label": "يلعب منذ 2012",
+        "description": "لقد كنت ألعب صب واي سيرفرز لأكثر من 10 سنوات الآن ولا تشعر أبدًا بالملل! التحديثات المستمرة مع مدن وشخصيات جديدة تجعلني أعود كل شهر.",
+        "image": {
+          "src": "/imgs/users/1.png"
+        }
+      },
+      {
+        "title": "سارة ك.",
+        "label": "لاعبة تنافسية",
+        "description": "أكثر لعبة جوال إدمانًا على الإطلاق! أحب التنافس مع أصدقائي للحصول على أعلى النتائج. عناصر التحكم سلسة ومستجيبة للغاية - مثالية لجلسات اللعب السريعة.",
+        "image": {
+          "src": "/imgs/users/2.png"
+        }
+      },
+      {
+        "title": "تايلر م.",
+        "label": "جامع الشخصيات",
+        "description": "أنا مهووس بجمع جميع الشخصيات والأزياء! كل جولة عالمية تجلب تصاميم جديدة رائعة. المفضل لدي لا يزال نينجا - رسومه المتحركة رائعة جدًا!",
+        "image": {
+          "src": "/imgs/users/3.png"
+        }
+      },
+      {
+        "title": "إيما ر.",
+        "label": "لاعبة عادية",
+        "description": "لعبة مثالية لرحلتي اليومية! الألوان الزاهية والموسيقى الممتعة تجعلني دائمًا في مزاج جيد. أحب مدى سهولة التقاطها واللعب لبضع دقائق.",
+        "image": {
+          "src": "/imgs/users/4.png"
+        }
+      },
+      {
+        "title": "جيسون ت.",
+        "label": "بطل النتائج العالية",
+        "description": "أفضل لعبة جري لا نهائية على الإطلاق! طريقة اللعب بسيطة ولكنها تحدي، والقوى الخاصة تضيف عنصرًا استراتيجيًا رائعًا. نتيجتي العالية تتجاوز 10 ملايين!",
+        "image": {
+          "src": "/imgs/users/5.png"
+        }
+      },
+      {
+        "title": "ليلى ز.",
+        "label": "لاعبة عائلية",
+        "description": "عائلتي بأكملها تلعب صب واي سيرفرز! إنها واحدة من الألعاب القليلة التي يستمتع بها أطفالي وأنا بالتساوي. نحب مقارنة جولاتنا ومساعدة بعضنا البعض في فتح عناصر جديدة.",
+        "image": {
+          "src": "/imgs/users/6.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "الأسئلة الشائعة",
+    "title": "الأسئلة المتكررة حول صب واي سيرفرز",
+    "description": "هل لديك سؤال آخر؟ تواصل معنا على وسائل التواصل الاجتماعي أو عبر البريد الإلكتروني.",
+    "items": [
+      {
+        "title": "ما هي صب واي سيرفرز وكيف ألعبها؟",
+        "description": "صب واي سيرفرز هي لعبة جوال للجري اللانهائي حيث تتجنب القطارات، وتقفز فوق العقبات، وتجمع العملات. عناصر التحكم بسيطة: اسحب لأعلى للقفز، ولأسفل للتدحرج، ولليسار/لليمين لتغيير المسارات. الهدف هو الجري لأبعد مسافة ممكنة مع جمع العملات والقوى الخاصة."
+      },
+      {
+        "title": "هل صب واي سيرفرز مجانية للعب؟",
+        "description": "نعم! صب واي سيرفرز مجانية تمامًا للتنزيل واللعب. بينما هناك مشتريات اختيارية داخل التطبيق متاحة لتعزيز تجربتك، يمكنك الاستمتاع باللعبة الكاملة دون إنفاق أي أموال."
+      },
+      {
+        "title": "كم مرة يتم تحديث صب واي سيرفرز؟",
+        "description": "تتلقى صب واي سيرفرز تحديثات شهرية من خلال ميزة جولة العالم، والتي تقدم موقع مدينة جديد مع سمات فريدة، وشخصيات محدودة الوقت، وألواح تزلج خاصة. هذا يبقي اللعبة منعشة مع محتوى جديد بانتظام."
+      },
+      {
+        "title": "كيف أفتح شخصيات وألواح تزلج جديدة؟",
+        "description": "يمكنك فتح معظم الشخصيات وألواح التزلج عن طريق جمع العملات أثناء جولاتك وشرائها من المتجر. بعض الشخصيات الخاصة متاحة من خلال أحداث محدودة الوقت، أو المكافآت اليومية، أو باقات الموسم."
+      },
+      {
+        "title": "ما هي القوى الخاصة في صب واي سيرفرز وكيف تعمل؟",
+        "description": "تتميز صب واي سيرفرز بالعديد من القوى الخاصة بما في ذلك حقائب النفاثة (تطير فوق العقبات)، والأحذية الخارقة (تقفز أعلى)، ومغناطيس العملات (تجذب العملات)، ومعززات النتيجة (تضاعف نتيجتك). يمكنك جمع هذه أثناء الجولات أو تنشيطها في البداية باستخدام المفاتيح."
+      },
+      {
+        "title": "هل يمكنني لعب صب واي سيرفرز دون اتصال بالإنترنت؟",
+        "description": "نعم! يمكن لعب صب واي سيرفرز بدون اتصال بالإنترنت، مما يجعلها مثالية للسفر أو المناطق ذات الاتصال الضعيف. ومع ذلك، تتطلب بعض الميزات مثل لوحات المتصدرين والمكافآت اليومية اتصالاً بالإنترنت للمزامنة مع الخوادم."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "قم بتنزيل صب واي سيرفرز اليوم",
+    "description": "انضم إلى ملايين اللاعبين حول العالم في مغامرة الجري اللانهائية!",
+    "buttons": [
+      {
+        "title": "العب الآن",
+        "url": "/subway-surfers",
+        "target": "_self",
+        "icon": "RiPlayFill"
+      },
+      {
+        "title": "شاهد طريقة اللعب",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "صب واي سيرفرز",
+      "description": "صب واي سيرفرز هي لعبة الجري اللانهائية الأكثر شعبية للجوال في العالم. انضم إلى المغامرة وأنت تندفع عبر المترو، متجنبًا القطارات والعقبات!",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "صب واي سيرفرز"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2023 • SYBO Games جميع الحقوق محفوظة.",
+    "nav": {
+      "items": [
+        {
+          "title": "اللعبة",
+          "children": [
+            {
+              "title": "الميزات",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "الشخصيات",
+              "url": "https://subwaysurfers.com/characters/",
+              "target": "_self"
+            },
+            {
+              "title": "العب الآن",
+              "url": "/subway-surfers",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "الموارد",
+          "children": [
+            {
+              "title": "دليل اللعبة",
+              "url": "https://sybo.helpshift.com/hc/en/5-subway-surfers/faq/206-pro-tips/",
+              "target": "_self"
+            },
+            
+            {
+              "title": "الأسئلة الشائعة",
+              "url": "/#faq",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "المجتمع",
+          "children": [
+            {
+              "title": "انستغرام",
+              "url": "https://www.instagram.com/sybo_games/",
+              "target": "_blank"
+            },
+            {
+              "title": "فن المعجبين",
+              "url": "https://subwaysurfers.com/fanzone/",
+              "target": "_blank"
+            },
+            {
+              "title": "ديسكورد",
+              "url": "https://discord.gg/SubwaySurfers",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "انستغرام",
+          "icon": "RiInstagramFill",
+          "url": "https://www.instagram.com/sybo_games/",
+          "target": "_blank"
+        },
+        {
+          "title": "فيسبوك",
+          "icon": "RiFacebookFill",
+          "url": "https://www.facebook.com/SubwaySurfersSybo/",
+          "target": "_blank"
+        },
+        {
+          "title": "يوتيوب",
+          "icon": "RiYoutubeFill",
+          "url": "https://www.youtube.com/user/SyboGames",
+          "target": "_blank"
+        },
+        {
+          "title": "البريد الإلكتروني",
+          "icon": "RiMailLine",
+          "url": "mailto:support@subwaysurfers.com",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "سياسة الخصوصية",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "شروط الخدمة",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "دليل الآباء",
+          "url": "/parents-guide"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# Disney Solitaire Demo Video Placeholder
+
+This file serves as a placeholder for the local Disney Solitaire gameplay video.
+
+## Video Specifications (when implemented):
+- Format: MP4 (H.264)
+- Resolution: 1920x1080 (Full HD)
+- Duration: 30-60 seconds
+- File size: ~10-20MB (optimized for web)
+- Frame rate: 30fps
+
+## Content Suggestion:
+1. Opening: Disney Solitaire logo animation
+2. Gameplay: Card matching mechanics
+3. Features: Disney characters and themes
+4. Closing: Call-to-action to play the game
+
+## Technical Notes:
+- Add to `/videos/disney-solitaire-demo.mp4` for actual implementation
+- Consider creating multiple quality versions for adaptive streaming
+- Ensure video is compressed for web delivery
+- Add subtitles for accessibility
+
+## Alternative:
+The component automatically falls back to an interactive image slideshow using the Disney game screenshots if video file is not available.

@@ -1,0 +1,479 @@
+{
+  "template": "haluntemplate",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "迪士尼纸牌",
+      "logo": {
+        "src": "/logo.jpg",
+        "alt": "迪士尼纸牌"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "关于我们",
+          "url": "/about",
+          "icon": "RiInformationFill"
+        },
+        {
+          "title": "官方主页",
+          "url": "https://www.superplay.co/games/disney-solitaire/",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "迪士尼角色",
+          "url": "https://www.disneystore.com/characters.html",
+          "icon": "BiUser"
+        },
+        {
+          "title": "博客",
+          "url": "/posts",
+          "icon": "RiGamepadFill"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "立即下载",
+        "url": "https://www.superplay.co/games/disney-solitaire/",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiGamepadFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "体验迪士尼纸牌的魔法",
+    "highlight_text": "迪士尼纸牌",
+    "description": "在这款魔法纸牌游戏冒险中，加入迪士尼角色的奇幻世界！",
+    "announcement": {},
+    "background": {
+      "src": "/imgs/disney/hero-bg.jpg",
+      "alt": "迪士尼纸牌背景"
+    },
+    "buttons": [
+      {
+        "title": "下载迪士尼纸牌",
+        "icon": "RiPlayFill",
+        "url": "/play",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "观看预告片",
+        "icon": "RiPlayFill",
+        "url": "https://www.youtube.com/watch?v=GT6l9vMRewo",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "迪士尼纸牌在所有主要平台上都可使用",
+    "items": [
+      {
+        "title": "iOS",
+        "image": {
+          "src": "/imgs/disney/logo.png",
+          "alt": "iOS"
+        }
+      },
+      {
+        "title": "安卓",
+        "image": {
+          "src": "/imgs/logos/android.svg",
+          "alt": "安卓"
+        }
+      },
+      {
+        "title": "Windows",
+        "image": {
+          "src": "/imgs/logos/windows.svg",
+          "alt": "Windows"
+        }
+      },
+      {
+        "title": "Mac",
+        "image": {
+          "src": "/imgs/logos/apple.svg",
+          "alt": "Mac"
+        }
+      },
+      {
+        "title": "网页浏览器",
+        "image": {
+          "src": "/imgs/logos/chrome.svg",
+          "alt": "网页浏览器"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "什么是迪士尼纸牌",
+    "label": "介绍",
+    "description": "迪士尼纸牌是一款魔法纸牌游戏，将经典纸牌玩法与深受喜爱的迪士尼角色和主题相结合。",
+    "image": {
+      "src": "/imgs/disney/d01.png"
+    },
+    "items": [
+      {
+        "title": "经典纸牌玩法",
+        "description": "享受这款经典纸牌游戏，并加入迪士尼魔法和特殊能力的增强。",
+        "icon": "RiCards2Fill"
+      },
+      {
+        "title": "迪士尼角色",
+        "description": "使用经典电影和节目中你最喜爱的迪士尼角色卡牌进行游戏。",
+        "icon": "RiStarFill"
+      },
+      {
+        "title": "魔法主题",
+        "description": "体验不同的迪士尼世界，每个世界都有独特的卡牌设计和背景。",
+        "icon": "RiSparklingFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "为什么玩家喜爱迪士尼纸牌",
+    "label": "优势",
+    "description": "体验经典纸牌游戏和迪士尼魔法的完美结合。",
+    "items": [
+      {
+        "title": "全家欢乐",
+        "description": "适合所有年龄段，将教育性的纸牌游戏与深受喜爱的迪士尼角色相结合。",
+        "icon": "RiHeartFill",
+        "image": {
+          "src": "/imgs/disney/d02.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "精美迪士尼艺术",
+        "description": "令人惊叹的卡牌设计，展现真实的迪士尼艺术作品和动画。",
+        "icon": "RiPaletteFill",
+        "image": {
+          "src": "/imgs/disney/d03.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "定期更新",
+        "description": "定期添加新的迪士尼主题、角色和特别活动。",
+        "icon": "RiRefreshFill",
+        "image": {
+          "src": "/imgs/disney/d04.png",
+          "style": "mx-auto"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "如何玩迪士尼纸牌",
+    "description": "通过三个简单的步骤开始你的魔法纸牌冒险：",
+    "image": {
+      "src": "/imgs/disney/d05.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "选择你的迪士尼主题",
+        "description": "从各种迪士尼电影主题中选择，每个主题都有独特的卡牌设计和音乐。",
+        "image": {
+          "src": "/imgs/disney/image-01.png"
+        }
+      },
+      {
+        "title": "学习纸牌基础",
+        "description": "掌握经典纸牌规则，并体验迪士尼魔法和能力的加持。",
+        "image": {
+          "src": "/imgs/disney/image-02.png"
+        }
+      },
+      {
+        "title": "收集迪士尼卡牌",
+        "description": "在游戏过程中解锁特殊的迪士尼角色卡牌和魔法能力。",
+        "image": {
+          "src": "/imgs/disney/image-03.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "迪士尼纸牌的主要特色",
+    "description": "发现是什么让迪士尼纸牌成为一个魔法纸牌游戏体验。",
+    "items": [
+      {
+        "title": "迪士尼卡牌设计",
+        "description": "精美的卡牌设计，展现真实的迪士尼艺术作品和角色。",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "多种游戏模式",
+        "description": "经典纸牌、蜘蛛纸牌和特殊的迪士尼主题变体。",
+        "icon": "RiGamepadFill"
+      },
+      {
+        "title": "魔法能力",
+        "description": "特殊的迪士尼主题能力，帮助你解决具有挑战性的关卡。",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "成就系统",
+        "description": "获得徽章并在进度中解锁新的迪士尼内容。",
+        "icon": "RiTrophyFill"
+      },
+      {
+        "title": "每日挑战",
+        "description": "每天都有展现不同迪士尼主题的新谜题。",
+        "icon": "RiCalendarFill"
+      },
+      {
+        "title": "收藏册",
+        "description": "建立你的迪士尼角色卡牌和特殊物品收藏。",
+        "icon": "RiBookFill"
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "统计",
+    "title": "迪士尼纸牌的魔法",
+    "description": "为迪士尼粉丝打造的魔法纸牌游戏体验！",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "特色角色",
+        "label": "100+",
+        "description": "迪士尼角色"
+      },
+      {
+        "title": "支持语言",
+        "label": "15+",
+        "description": "种语言"
+      },
+      {
+        "title": "收集超过",
+        "label": "200+",
+        "description": "张独特卡牌"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "下载",
+    "title": "下载迪士尼纸牌",
+    "description": "今天就开始你的魔法纸牌游戏冒险！",
+    "groups": [],
+    "items": [
+      {
+        "title": "免费版",
+        "description": "免费开始你的魔法之旅",
+        "features_title": "包含",
+        "features": [
+          "基础游戏访问",
+          "经典纸牌模式",
+          "精选迪士尼角色",
+          "每日挑战",
+          "基础卡牌收藏",
+          "成就系统"
+        ],
+        "interval": "free",
+        "amount": 0,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "免费",
+        "original_price": "",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "立即开始游戏！",
+        "button": {
+          "title": "免费游戏",
+          "url": "/play",
+          "icon": "RiPlayFill"
+        },
+        "product_id": "free",
+        "product_name": "迪士尼纸牌免费版",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "高级通行证",
+        "description": "解锁所有迪士尼魔法",
+        "label": "热门",
+        "features_title": "包含免费版所有内容，以及",
+        "features": [
+          "所有迪士尼角色",
+          "独家卡牌设计",
+          "特殊能力",
+          "无广告体验",
+          "高级背景",
+          "独家活动",
+          "优先支持",
+          "云存档"
+        ],
+        "interval": "one-time",
+        "amount": 499,
+        "cn_amount": 3499,
+        "currency": "USD",
+        "price": "¥34.99",
+        "original_price": "¥69.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "最超值！",
+        "button": {
+          "title": "获取高级版",
+          "url": "/premium",
+          "icon": "RiVipCrownFill"
+        },
+        "product_id": "premium",
+        "product_name": "迪士尼纸牌高级版",
+        "credits": 0,
+        "valid_months": 0
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "玩家评价",
+    "title": "玩家对迪士尼纸牌的评价",
+    "description": "加入数千名快乐玩家的魔法纸牌游戏！",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "玛丽亚 S.",
+        "label": "迪士尼粉丝",
+        "description": "经典纸牌和迪士尼魔法的完美结合！我喜欢在卡牌上看到所有我喜爱的角色。",
+        "image": {
+          "src": "/imgs/users/review1.png"
+        }
+      },
+      {
+        "title": "约翰 D.",
+        "label": "纸牌游戏爱好者",
+        "description": "精美的图形和流畅的游戏体验。迪士尼主题让传统纸牌变得更加有趣！",
+        "image": {
+          "src": "/imgs/users/review2.png"
+        }
+      },
+      {
+        "title": "艾米丽 R.",
+        "label": "家庭玩家",
+        "description": "我的孩子们喜欢迪士尼角色，而我喜欢他们通过纸牌学习策略。双赢！",
+        "image": {
+          "src": "/imgs/users/review3.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "常见问题",
+    "title": "关于迪士尼纸牌的常见问题",
+    "description": "还有其他问题？联系我们的支持团队！",
+    "items": [
+      {
+        "title": "什么是迪士尼纸牌？",
+        "description": "迪士尼纸牌是一款魔法纸牌游戏，将经典纸牌玩法与深受喜爱的迪士尼角色和主题相结合。使用精美设计的迪士尼角色卡牌和特殊能力玩传统纸牌。"
+      },
+      {
+        "title": "迪士尼纸牌是免费的吗？",
+        "description": "是的！迪士尼纸牌的基础版本完全免费游玩。高级功能和额外内容可通过应用内可选购买获得。"
+      },
+      {
+        "title": "如何解锁新的迪士尼角色和卡牌设计？",
+        "description": "你可以通过完成关卡、参与每日挑战和收集成就来解锁新的迪士尼内容。高级内容也可通过高级通行证获得。"
+      },
+      {
+        "title": "我可以离线玩迪士尼纸牌吗？",
+        "description": "是的！下载后，迪士尼纸牌可以在没有网络连接的情况下玩。但是，排行榜和每日挑战等某些功能需要网络连接。"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "迪士尼纸牌",
+      "description": "在这款迷人的纸牌游戏中体验迪士尼魔法。特色迪士尼角色和魔法主题！",
+      "url": "/"
+    },
+    "copyright": "© 2025 disneysolitaire.net 保留所有权利。第三方网站，非官方平台",
+    "nav": {
+      "items": [
+        {
+          "title": "游戏",
+          "children": [
+            {
+              "title": "特色",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "游戏指南",
+              "url": "https://disney.fandom.com/wiki/Disney_Solitaire",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "支持",
+          "children": [
+            {
+              "title": "关于我们",
+              "url": "/about",
+              "icon": "RiInformationFill"
+            }
+          ]
+        },
+        {
+          "title": "法律",
+          "children": [
+            {
+              "title": "隐私政策",
+              "url": "/privacy",
+              "target": "_self"
+            },
+            {
+              "title": "服务条款",
+              "url": "/terms",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Facebook",
+          "icon": "RiFacebookFill",
+          "url": "https://facebook.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterFill",
+          "url": "https://twitter.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://instagram.com/disneysolitaire",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

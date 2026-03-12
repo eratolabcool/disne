@@ -1,0 +1,696 @@
+{
+  "template": "shipany-template-one",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "Subway Surfers",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Subway Surfers"
+      },
+      "url": "/ru"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Официальный сайт",
+          "url": "https://subwaysurfers.com/",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "Персонажи",
+          "url": "https://subwaysurfers.com/characters/",
+          "icon": "BiUser"
+        },
+        {
+          "title": "Мировой тур",
+          "url": "https://subwaysurfers.com/world-tour/",
+          "icon": "MdDownload"
+        },
+        {
+          "title": "Блог",
+          "url": "/posts",
+          "icon": "RiGamepadFill"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Играть сейчас",
+        "url": "/subway-surfers/index_ru.tsx",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiGamepadFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Самая популярная бесконечная игра-раннер в мире - Subway Surfers",
+    "highlight_text": "Subway Surfers",
+    "description": "Присоединяйтесь к миллионам игроков по всему миру в бесконечном приключении!",
+    "announcement": {
+      
+    },
+    "tip": "🏆 Более 3 миллиардов загрузок по всему миру!",
+    "buttons": [
+      {
+        "title": "Играть сейчас",
+        "icon": "RiPlayFill",
+        "url": "/subway-surfers",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Смотреть трейлер",
+        "icon": "RiPlayFill",
+        "url": "https://www.youtube.com/embed/QFzfgB34cCk",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "Subway Surfers доступна на всех основных платформах",
+    "items": [
+      {
+        "title": "iOS",
+        "image": {
+          "src": "/imgs/logos/ios.svg",
+          "alt": "iOS"
+        }
+      },
+      {
+        "title": "Android",
+        "image": {
+          "src": "/imgs/logos/android.svg",
+          "alt": "Android"
+        }
+      },
+      {
+        "title": "Windows",
+        "image": {
+          "src": "/imgs/logos/windows.svg",
+          "alt": "Windows"
+        }
+      },
+      {
+        "title": "Facebook",
+        "image": {
+          "src": "/imgs/logos/facebook.svg",
+          "alt": "Facebook"
+        }
+      },
+      {
+        "title": "Amazon",
+        "image": {
+          "src": "/imgs/logos/amazon.svg",
+          "alt": "Amazon"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Что такое Subway Surfers",
+    "label": "Введение",
+    "description": "Subway Surfers - это мобильная игра-раннер, в которой игроки бегут по путям метро, избегая препятствий и собирая монеты.",
+    "image": {
+      "src": "/imgs/features/1.jpg"
+    },
+    "items": [
+      {
+        "title": "Бесконечный бег",
+        "description": "Уворачивайтесь от поездов, перепрыгивайте через барьеры и катайтесь на ховербордах в ярком окружении метро.",
+        "icon": "RiRunFill"
+      },
+      {
+        "title": "Мировой тур",
+        "description": "Путешествуйте по захватывающим городам мира с регулярными обновлениями, представляющими новые локации.",
+        "icon": "RiEarthFill"
+      },
+      {
+        "title": "Собирайте и улучшайте",
+        "description": "Собирайте монеты, усилители и разблокируйте новых персонажей, костюмы и ховерборды.",
+        "icon": "RiCoinFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Почему игроки любят Subway Surfers",
+    "label": "Преимущества",
+    "description": "Испытайте азарт погони в самой популярной бесконечной игре-раннере в мире.",
+    "items": [
+      {
+        "title": "Простой и захватывающий геймплей",
+        "description": "Легко освоить, сложно овладеть - проводите пальцем, чтобы прыгать, скользить и уворачиваться в этой быстрой бесконечной игре.",
+        "icon": "RiGamepadFill",
+        "image": {
+          "src": "/imgs/features/2.webp"
+        }
+      },
+      {
+        "title": "Потрясающая графика",
+        "description": "Яркая, красочная 3D-графика, которая оживляет каждую глобальную локацию с уникальными темами и окружением.",
+        "icon": "RiPaletteFill",
+        "image": {
+          "src": "/imgs/features/3.jpg"
+        }
+      },
+      {
+        "title": "Регулярные обновления",
+        "description": "Новый контент каждый месяц с Мировым туром - представляющим новые города, персонажей, костюмы и испытания.",
+        "icon": "RiRefreshFill",
+        "image": {
+          "src": "/imgs/features/4.png"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Как играть в Subway Surfers",
+    "description": "Начните играть в Subway Surfers в три простых шага:",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Скачайте игру",
+        "description": "Скачайте Subway Surfers бесплатно из магазина приложений вашего устройства - доступно на iOS, Android и других платформах.",
+        "image": {
+          "src": "/imgs/features/5.png"
+        }
+      },
+      {
+        "title": "Изучите управление",
+        "description": "Проведите вверх, чтобы прыгнуть, вниз, чтобы перекатиться, и влево/вправо, чтобы сменить полосу. Собирайте монеты и избегайте препятствий!",
+        "image": {
+          "src": "/imgs/features/6.png"
+        }
+      },
+      {
+        "title": "Собирайте усилители",
+        "description": "Хватайте реактивные ранцы, супер-кроссовки и магниты, чтобы собирать больше монет и побить свой рекорд.",
+        "image": {
+          "src": "/imgs/features/7.png"
+        }
+      },
+      {
+        "title": "Разблокируйте персонажей",
+        "description": "Тратьте свои монеты на разблокировку новых персонажей, костюмов и ховербордов с особыми способностями.",
+        "image": {
+          "src": "/imgs/features/8.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Ключевые особенности Subway Surfers",
+    "description": "Узнайте, что делает Subway Surfers непревзойденным опытом бесконечного бега.",
+    "items": [
+      {
+        "title": "Красочная 3D-графика",
+        "description": "Яркие, высококачественные визуальные эффекты, которые оживляют окружение метро с потрясающими деталями.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "Коллекция персонажей",
+        "description": "Разблокируйте и играйте за десятки уникальных персонажей, каждый со своим стилем и индивидуальностью.",
+        "icon": "RiUserFill"
+      },
+      {
+        "title": "Мировой тур",
+        "description": "Путешествуйте по захватывающим городам мира с регулярными обновлениями, представляющими новые локации.",
+        "icon": "RiEarthFill"
+      },
+      {
+        "title": "Особые ховерборды",
+        "description": "Собирайте и улучшайте ховерборды с особыми способностями для улучшения игрового процесса.",
+        "icon": "RiRocketFill"
+      },
+      {
+        "title": "Ежедневные испытания",
+        "description": "Выполняйте ежедневные миссии и еженедельные охоты, чтобы получать награды и особые предметы.",
+        "icon": "RiTrophyFill"
+      },
+      {
+        "title": "Социальные функции",
+        "description": "Общайтесь с друзьями, делитесь результатами и соревнуйтесь в мировых таблицах лидеров.",
+        "icon": "RiGroupFill"
+      }
+    ]
+  },
+  "showcase": {
+    "name": "showcase",
+    "title": "Познакомьтесь с персонажами Subway Surfers",
+    "description": "Присоединяйтесь к команде и бегите по метро вместе!",
+    "items": [
+      {
+        "title": "Джейк",
+        "description": "Оригинальный сёрфер",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/1.png"
+        }
+      },
+      {
+        "title": "Трики",
+        "description": "Шутница",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/2.png"
+        }
+      },
+      {
+        "title": "Фреш",
+        "description": "Любитель музыки",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/3.png"
+        }
+      },
+      {
+        "title": "Ютани",
+        "description": "Технический гений",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/4.png"
+        }
+      },
+      {
+        "title": "Спайк",
+        "description": "Панк-рокер",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/5.png"
+        }
+      },
+      {
+        "title": "Фрэнк",
+        "description": "Зомби",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/6.png"
+        }
+      },
+      {
+        "title": "Ниндзя",
+        "description": "Скрытный бегун",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/7.png"
+        }
+      },
+      {
+        "title": "Люси",
+        "description": "Девушка-сёрфер",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/8.png"
+        }
+      },
+      {
+        "title": "Кинг",
+        "description": "Королевский сёрфер",
+        "url": "/#characters",
+        "target": "_self",
+        "image": {
+          "src": "/imgs/showcases/9.png"
+        }
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "Статистика",
+    "title": "Люди любят Subway Surfers",
+    "description": "Самая популярная бесконечная игра-раннер в мире!",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "Скачано",
+        "label": "3B+",
+        "description": "Игроками по всему миру"
+      },
+      {
+        "title": "Доступно в",
+        "label": "20+",
+        "description": "Глобальных локациях"
+      },
+      {
+        "title": "Соберите более",
+        "label": "50+",
+        "description": "Уникальных персонажей"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "Скачать",
+    "title": "Скачайте Subway Surfers",
+    "description": "Получите игру бесплатно и улучшите свой опыт с помощью дополнительных внутриигровых покупок.",
+    "groups": [],
+    "items": [
+      {
+        "title": "Бесплатная версия",
+        "description": "Скачайте и играйте в полную игру бесплатно.",
+        "features_title": "Включает",
+        "features": [
+          "Полный доступ к игре",
+          "Регулярные обновления мирового тура",
+          "Базовые персонажи",
+          "Стандартные ховерборды",
+          "Ежедневные миссии",
+          "Еженедельные охоты",
+          "Мировые таблицы лидеров"
+        ],
+        "interval": "free",
+        "amount": 0,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "Бесплатно",
+        "original_price": "",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Оплата не требуется!",
+        "button": {
+          "title": "Скачать сейчас",
+          "url": "/#download",
+          "icon": "RiDownloadFill"
+        },
+        "product_id": "free",
+        "product_name": "Subway Surfers Бесплатно",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "Удвоитель монет",
+        "description": "Удвойте все собираемые монеты навсегда.",
+        "label": "Популярное",
+        "features_title": "Всё из бесплатной версии, плюс",
+        "features": [
+          "Двойные монеты со всех сборов",
+          "Более быстрая разблокировка персонажей",
+          "Более быстрые улучшения ховербордов",
+          "Бонусные ежедневные награды",
+          "Эксклюзивный костюм персонажа",
+          "Специальный скин ховерборда",
+          "VIP-значок в таблицах лидеров",
+          "Опыт без рекламы"
+        ],
+        "interval": "one-time",
+        "amount": 499,
+        "cn_amount": 3499,
+        "currency": "USD",
+        "price": "$4.99",
+        "original_price": "$7.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "Самая популярная покупка!",
+        "button": {
+          "title": "Получить удвоитель монет",
+          "url": "/#download",
+          "icon": "RiCoinFill"
+        },
+        "product_id": "coin-doubler",
+        "product_name": "Удвоитель монет Subway Surfers",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "Сезонный пропуск",
+        "description": "Разблокируйте премиум-контент каждый сезон.",
+        "features_title": "Всё из бесплатной версии, плюс",
+        "features": [
+          "Эксклюзивный сезонный персонаж",
+          "Ховерборд ограниченного выпуска",
+          "Еженедельные бонусы монет",
+          "Премиум-награды за миссии",
+          "Эксклюзивные костюмы",
+          "Специальные эффекты и анимации",
+          "Приоритетный доступ к новому контенту"
+        ],
+        "interval": "recurring",
+        "amount": 999,
+        "cn_amount": 6999,
+        "currency": "USD",
+        "price": "$9.99",
+        "original_price": "$14.99",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Новый контент каждый сезон!",
+        "button": {
+          "title": "Получить сезонный пропуск",
+          "url": "/#download",
+          "icon": "RiVipCrownFill"
+        },
+        "product_id": "season-pass",
+        "product_name": "Сезонный пропуск Subway Surfers",
+        "credits": 0,
+        "valid_months": 1
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "Отзывы игроков",
+    "title": "Что говорят игроки о Subway Surfers",
+    "description": "Послушайте игроков со всего мира, которые любят Subway Surfers!",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "Михаил Ю.",
+        "label": "Играет с 2012 года",
+        "description": "Я играю в Subway Surfers уже более 10 лет, и она никогда не надоедает! Постоянные обновления с новыми городами и персонажами заставляют меня возвращаться каждый месяц.",
+        "image": {
+          "src": "/imgs/users/1.png"
+        }
+      },
+      {
+        "title": "Софья К.",
+        "label": "Соревновательный игрок",
+        "description": "Самая захватывающая мобильная игра всех времен! Обожаю соревноваться с друзьями за высокие результаты. Управление такое плавное и отзывчивое - идеально для быстрых игровых сессий.",
+        "image": {
+          "src": "/imgs/users/2.png"
+        }
+      },
+      {
+        "title": "Тимур М.",
+        "label": "Коллекционер персонажей",
+        "description": "Я одержим коллекционированием всех персонажей и костюмов! Каждый мировой тур приносит потрясающие новые дизайны. Мой любимый до сих пор Ниндзя - его анимации такие крутые!",
+        "image": {
+          "src": "/imgs/users/3.png"
+        }
+      },
+      {
+        "title": "Елена Р.",
+        "label": "Казуальный игрок",
+        "description": "Идеальная игра для моей ежедневной поездки! Яркие цвета и веселая музыка всегда поднимают мне настроение. Мне нравится, как легко её запустить и поиграть несколько минут.",
+        "image": {
+          "src": "/imgs/users/4.png"
+        }
+      },
+      {
+        "title": "Иван Т.",
+        "label": "Чемпион по высоким результатам",
+        "description": "Лучший бесконечный раннер, безусловно! Геймплей простой, но сложный, а усилители добавляют отличный стратегический элемент. Мой лучший результат - более 10 миллионов!",
+        "image": {
+          "src": "/imgs/users/5.png"
+        }
+      },
+      {
+        "title": "Лилия З.",
+        "label": "Семейный игрок",
+        "description": "Вся моя семья играет в Subway Surfers! Это одна из немногих игр, которая нравится и моим детям, и мне в равной степени. Мы любим сравнивать наши забеги и помогать друг другу разблокировать новые предметы.",
+        "image": {
+          "src": "/imgs/users/6.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions About Subway Surfers",
+    "description": "Have another question? Contact us on social media or by email.",
+    "items": [
+      {
+        "title": "What is Subway Surfers and how do I play it?",
+        "description": "Subway Surfers is an endless runner mobile game where you dodge trains, jump over obstacles, and collect coins. The controls are simple: swipe up to jump, down to roll, and left/right to change lanes. The goal is to run as far as possible while collecting coins and power-ups."
+      },
+      {
+        "title": "Is Subway Surfers free to play?",
+        "description": "Yes! Subway Surfers is completely free to download and play. While there are optional in-app purchases available to enhance your experience, you can enjoy the full game without spending any money."
+      },
+      {
+        "title": "How often does Subway Surfers get updated?",
+        "description": "Subway Surfers receives monthly updates through the World Tour feature, which introduces a new city location with unique themes, limited-time characters, and special hoverboards. This keeps the game fresh with new content regularly."
+      },
+      {
+        "title": "How do I unlock new characters and hoverboards?",
+        "description": "You can unlock most characters and hoverboards by collecting coins during your runs and purchasing them in the shop. Some special characters are available through limited-time events, daily rewards, or season passes."
+      },
+      {
+        "title": "What are the power-ups in Subway Surfers and how do they work?",
+        "description": "Subway Surfers features several power-ups including Jetpacks (fly above obstacles), Super Sneakers (jump higher), Coin Magnets (attract coins), and Score Boosters (multiply your score). You can collect these during runs or activate them at the beginning with keys."
+      },
+      {
+        "title": "Can I play Subway Surfers offline?",
+        "description": "Yes! Subway Surfers can be played without an internet connection, making it perfect for travel or areas with poor connectivity. However, some features like leaderboards and daily rewards require an internet connection to sync with the servers."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Download Subway Surfers Today",
+    "description": "Join millions of players worldwide in the endless running adventure!",
+    "buttons": [
+      {
+        "title": "Play Now",
+        "url": "/subway-surfers",
+        "target": "_self",
+        "icon": "RiPlayFill"
+      },
+      {
+        "title": "Watch Gameplay",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Subway Surfers",
+      "description": "Subway Surfers is the world's most popular endless runner mobile game. Join the adventure as you dash through the subway, avoiding trains and obstacles!",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Subway Surfers"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2023 • SYBO Games All rights reserved.",
+    "nav": {
+      "items": [
+        {
+          "title": "Game",
+          "children": [
+            {
+              "title": "Features",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "Characters",
+              "url": "https://subwaysurfers.com/characters/",
+              "target": "_self"
+            },
+            {
+              "title": "Play Now",
+              "url": "/subway-surfers",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Resources",
+          "children": [
+            {
+              "title": "Game Guide",
+              "url": "https://sybo.helpshift.com/hc/en/5-subway-surfers/faq/206-pro-tips/",
+              "target": "_self"
+            },
+            
+            {
+              "title": "FAQ",
+              "url": "/#faq",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Community",
+          "children": [
+            {
+              "title": "Instagram",
+              "url": "https://www.instagram.com/sybo_games/",
+              "target": "_blank"
+            },
+            {
+              "title": "Fan Art",
+              "url": "https://subwaysurfers.com/fanzone/",
+              "target": "_blank"
+            },
+            {
+              "title": "Discord",
+              "url": "https://discord.gg/SubwaySurfers",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://www.instagram.com/sybo_games/",
+          "target": "_blank"
+        },
+        {
+          "title": "Facebook",
+          "icon": "RiFacebookFill",
+          "url": "https://www.facebook.com/SubwaySurfersSybo/",
+          "target": "_blank"
+        },
+        {
+          "title": "YouTube",
+          "icon": "RiYoutubeFill",
+          "url": "https://www.youtube.com/user/SyboGames",
+          "target": "_blank"
+        },
+        {
+          "title": "Email",
+          "icon": "RiMailLine",
+          "url": "mailto:support@subwaysurfers.com",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Parents Guide",
+          "url": "/parents-guide"
+        }
+      ]
+    }
+  }
+}

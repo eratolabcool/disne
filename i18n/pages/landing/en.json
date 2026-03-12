@@ -1,0 +1,479 @@
+{
+  "template": "haluntemplate",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "Disney Solitaire",
+      "logo": {
+        "src": "/logo.jpg",
+        "alt": "Disney Solitaire"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Official Homepage",
+          "url": "https://www.superplay.co/games/disney-solitaire/",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "Disney Characters",
+          "url": "https://www.disneystore.com/characters.html",
+          "icon": "BiUser"
+        },
+        {
+          "title": "Blog",
+          "url": "/posts",
+          "icon": "RiGamepadFill"
+        },
+        {
+          "title": "About",
+          "url": "/about",
+          "icon": "RiInformationFill"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Download Now",
+        "url": "https://www.superplay.co/games/disney-solitaire/",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiGamepadFill"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "Play Disney Solitaire - Magical Free Online Card Game",
+    "highlight_text": "Disney Solitaire",
+    "description": "Join the enchanting world of Disney characters in this magical solitaire card game adventure! Play Disney Solitaire free online, featuring beloved characters and enchanting themes from your favorite movies.",
+    "announcement": {},
+    "background": {
+      "src": "/imgs/disney/hero-bg.jpg",
+      "alt": "Play Disney Solitaire - Free Online Card Game"
+    },
+    "buttons": [
+      {
+        "title": "Download Disney Solitaire",
+        "icon": "RiPlayFill",
+        "url": "https://www.superplay.co/games/disney-solitaire/",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Watch Trailer",
+        "icon": "RiPlayFill",
+        "url": "https://www.youtube.com/watch?v=GT6l9vMRewo",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": false,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "Disney Solitaire is available on all major platforms",
+    "items": [
+      {
+        "title": "iOS",
+        "image": {
+          "src": "/imgs/disney/logo.png",
+          "alt": "iOS"
+        }
+      },
+      {
+        "title": "Android",
+        "image": {
+          "src": "/imgs/logos/android.svg",
+          "alt": "Android"
+        }
+      },
+      {
+        "title": "Windows",
+        "image": {
+          "src": "/imgs/logos/windows.svg",
+          "alt": "Windows"
+        }
+      },
+      {
+        "title": "Mac",
+        "image": {
+          "src": "/imgs/logos/apple.svg",
+          "alt": "Mac"
+        }
+      },
+      {
+        "title": "Web Browser",
+        "image": {
+          "src": "/imgs/logos/chrome.svg",
+          "alt": "Web Browser"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What is Disney Solitaire?",
+    "label": "Play Online",
+    "description": "Disney Solitaire is a magical card game that combines classic solitaire gameplay with beloved Disney characters and themes. It's the perfect free online game for Disney fans of all ages.",
+    "image": {
+      "src": "/imgs/disney/d01.png"
+    },
+    "items": [
+      {
+        "title": "Classic Solitaire Gameplay",
+        "description": "Enjoy the timeless card game enhanced with Disney magic and special power-ups.",
+        "icon": "RiCards2Fill"
+      },
+      {
+        "title": "Disney Characters",
+        "description": "Play with cards featuring your favorite Disney characters from classic movies and shows.",
+        "icon": "RiStarFill"
+      },
+      {
+        "title": "Magical Themes",
+        "description": "Experience different Disney worlds with unique card designs and backgrounds.",
+        "icon": "RiSparklingFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Why Players Love Playing Disney Solitaire",
+    "label": "Game Benefits",
+    "description": "Experience the perfect blend of classic card game strategy and Disney magic with our free online solitaire game.",
+    "items": [
+      {
+        "title": "Family-Friendly Fun",
+        "description": "Suitable for all ages, combining educational card gaming with beloved Disney characters.",
+        "icon": "RiHeartFill",
+        "image": {
+          "src": "/imgs/disney/d02.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "Beautiful Disney Art",
+        "description": "Stunning card designs featuring authentic Disney artwork and animations.",
+        "icon": "RiPaletteFill",
+        "image": {
+          "src": "/imgs/disney/d03.png",
+          "style": "mx-auto"
+        }
+      },
+      {
+        "title": "Regular Updates",
+        "description": "New Disney themes, characters, and special events added regularly.",
+        "icon": "RiRefreshFill",
+        "image": {
+          "src": "/imgs/disney/d04.png",
+          "style": "mx-auto"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Play Disney Solitaire",
+    "description": "Start your magical solitaire adventure in three simple steps:",
+    "image": {
+      "src": "/imgs/disney/d05.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Choose Your Disney Theme",
+        "description": "Select from various Disney movie themes, each with unique card designs and music.",
+        "image": {
+          "src": "/imgs/disney/image-01.png"
+        }
+      },
+      {
+        "title": "Learn Solitaire Basics",
+        "description": "Master the classic solitaire rules enhanced with Disney magic and power-ups.",
+        "image": {
+          "src": "/imgs/disney/image-02.png"
+        }
+      },
+      {
+        "title": "Collect Disney Cards",
+        "description": "Unlock special Disney character cards and magical power-ups as you play.",
+        "image": {
+          "src": "/imgs/disney/image-03.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Key Features of Disney Solitaire",
+    "description": "Discover what makes Disney Solitaire a magical card game experience.",
+    "items": [
+      {
+        "title": "Disney Card Designs",
+        "description": "Beautiful card designs featuring authentic Disney artwork and characters.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "Multiple Game Modes",
+        "description": "Classic solitaire, Spider solitaire, and special Disney-themed variations.",
+        "icon": "RiGamepadFill"
+      },
+      {
+        "title": "Magical Power-ups",
+        "description": "Special Disney-themed abilities to help you solve challenging levels.",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "Achievement System",
+        "description": "Earn badges and unlock new Disney content as you progress.",
+        "icon": "RiTrophyFill"
+      },
+      {
+        "title": "Daily Challenges",
+        "description": "New puzzles featuring different Disney themes each day.",
+        "icon": "RiCalendarFill"
+      },
+      {
+        "title": "Collection Album",
+        "description": "Build your collection of Disney character cards and special items.",
+        "icon": "RiBookFill"
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "Stats",
+    "title": "The Magic of Disney Solitaire",
+    "description": "A magical card game experience for Disney fans!",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "Featured Characters",
+        "label": "100+",
+        "description": "Disney Characters"
+      },
+      {
+        "title": "Available in",
+        "label": "5+",
+        "description": "Languages"
+      },
+      {
+        "title": "Collect Over",
+        "label": "200+",
+        "description": "Unique Cards"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "Download",
+    "title": "Download Disney Solitaire",
+    "description": "Start your magical card game adventure today!",
+    "groups": [],
+    "items": [
+      {
+        "title": "Free Version",
+        "description": "Start your magical journey for free",
+        "features_title": "Includes",
+        "features": [
+          "Basic game access",
+          "Classic solitaire mode",
+          "Selected Disney characters",
+          "Daily challenges",
+          "Basic card collections",
+          "Achievement system"
+        ],
+        "interval": "free",
+        "amount": 0,
+        "cn_amount": 0,
+        "currency": "USD",
+        "price": "Free",
+        "original_price": "",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "Start playing now!",
+        "button": {
+          "title": "Play Free",
+          "url": "/play",
+          "icon": "RiPlayFill"
+        },
+        "product_id": "free",
+        "product_name": "Disney Solitaire Free",
+        "credits": 0,
+        "valid_months": 0
+      },
+      {
+        "title": "Premium Pass",
+        "description": "Unlock all Disney magic",
+        "label": "Popular",
+        "features_title": "Everything in Free Version, plus",
+        "features": [
+          "All Disney characters",
+          "Exclusive card designs",
+          "Special power-ups",
+          "Ad-free experience",
+          "Premium backgrounds",
+          "Exclusive events",
+          "Priority support",
+          "Cloud save"
+        ],
+        "interval": "one-time",
+        "amount": 499,
+        "cn_amount": 3499,
+        "currency": "USD",
+        "price": "$4.99",
+        "original_price": "$9.99",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "Best value!",
+        "button": {
+          "title": "Get Premium",
+          "url": "/premium",
+          "icon": "RiVipCrownFill"
+        },
+        "product_id": "premium",
+        "product_name": "Disney Solitaire Premium",
+        "credits": 0,
+        "valid_months": 0
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "Player Reviews",
+    "title": "What Players Say About Disney Solitaire",
+    "description": "Join thousands of happy players in this magical card game!",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "Maria S.",
+        "label": "Disney Fan",
+        "description": "The perfect combination of classic solitaire and Disney magic! I love seeing all my favorite characters on the cards.",
+        "image": {
+          "src": "/imgs/users/review1.png"
+        }
+      },
+      {
+        "title": "John D.",
+        "label": "Card Game Enthusiast",
+        "description": "Beautiful graphics and smooth gameplay. The Disney themes make traditional solitaire so much more engaging!",
+        "image": {
+          "src": "/imgs/users/review2.png"
+        }
+      },
+      {
+        "title": "Emily R.",
+        "label": "Family Gamer",
+        "description": "My kids love the Disney characters, and I love that they're learning strategy through solitaire. Win-win!",
+        "image": {
+          "src": "/imgs/users/review3.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions About Disney Solitaire",
+    "description": "Have another question? Contact our support team!",
+    "items": [
+      {
+        "title": "What is Disney Solitaire?",
+        "description": "Disney Solitaire is a magical card game that combines classic solitaire gameplay with beloved Disney characters and themes. Play traditional solitaire with beautifully designed Disney character cards and special power-ups."
+      },
+      {
+        "title": "Is Disney Solitaire free to play?",
+        "description": "Yes! The basic version of Disney Solitaire is completely free to play. Premium features and additional content are available through optional in-app purchases."
+      },
+      {
+        "title": "How do I unlock new Disney characters and card designs?",
+        "description": "You can unlock new Disney content by completing levels, participating in daily challenges, and collecting achievements. Premium content is also available with the Premium Pass."
+      },
+      {
+        "title": "Can I play Disney Solitaire offline?",
+        "description": "Yes! Once downloaded, Disney Solitaire can be played without an internet connection. However, some features like leaderboards and daily challenges require internet connectivity."
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Disney Solitaire",
+      "description": "Experience the magic of Disney in this enchanting solitaire card game. Featuring beloved Disney characters and magical themes!",
+      "url": "/"
+    },
+    "copyright": "© 2025 disneysolitaire.net All rights reserved.Third-party site, not an official platform",
+    "nav": {
+      "items": [
+        {
+          "title": "Game",
+          "children": [
+            {
+              "title": "Features",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "How to Play",
+              "url": "https://disney.fandom.com/wiki/Disney_Solitaire",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Support",
+          "children": [
+            {
+              "title": "About",
+              "url": "/about",
+              "icon": "RiInformationFill"
+            }
+          ]
+        },
+        {
+          "title": "Legal",
+          "children": [
+            {
+              "title": "Privacy Policy",
+              "url": "/privacy",
+              "target": "_self"
+            },
+            {
+              "title": "Terms of Service",
+              "url": "/terms",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Facebook",
+          "icon": "RiFacebookFill",
+          "url": "https://facebook.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "icon": "RiTwitterFill",
+          "url": "https://twitter.com/disneysolitaire",
+          "target": "_blank"
+        },
+        {
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://instagram.com/disneysolitaire",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

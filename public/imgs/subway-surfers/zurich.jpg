@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#1e88e5"/>
+  <text x="200" y="150" font-family="Arial" font-size="24" fill="white" text-anchor="middle" dominant-baseline="middle">Subway Surfers Zurich</text>
+  <g transform="translate(200, 100)">
+    <path d="M-40,-20 L40,-20 L0,-60 Z" fill="#ffc107"/>
+    <circle cx="0" cy="10" r="30" fill="#ffc107"/>
+    <circle cx="-15" cy="0" r="5" fill="#000"/>
+    <circle cx="15" cy="0" r="5" fill="#000"/>
+    <path d="M-15,20 Q0,30 15,20" stroke="#000" stroke-width="3" fill="none"/>
+  </g>
+  <text x="200" y="220" font-family="Arial" font-size="32" fill="#ffc107" text-anchor="middle" font-weight="bold">ZURICH</text>
+</svg>

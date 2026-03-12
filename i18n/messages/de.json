@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "title": "Disney Solitaire | Magisches Kartenspiel",
+    "description": "Erleben Sie die Magie von Disney in diesem bezaubernden Solitär-Kartenspiel. Spielen Sie mit wunderschön gestalteten Karten mit Ihren Lieblings-Disney-Figuren in diesem klassischen Kartenspiel-Abenteuer.",
+    "keywords": "disney solitaire, disney kartenspiel, solitär spiel, disney charaktere, kartensammelspiel, familienkartenspiel"
+  },
+  "user": {
+    "sign_in": "Anmelden",
+    "sign_out": "Abmelden",
+    "credits": "Guthaben",
+    "api_keys": "API-Schlüssel",
+    "my_orders": "Meine Bestellungen",
+    "user_center": "Benutzerzentrum",
+    "admin_system": "Admin-System"
+  },
+  "character": {
+    "title": "charakter",
+    "franchise": "serie",
+    "characters": "charakters",
+    "scene": "szene"
+  },
+  "sign_modal": {
+    "sign_in_title": "Anmelden",
+    "sign_in_description": "Bei Ihrem Konto anmelden",
+    "sign_up_title": "Registrieren",
+    "sign_up_description": "Konto erstellen",
+    "email_title": "E-Mail",
+    "email_placeholder": "Geben Sie hier Ihre E-Mail ein",
+    "password_title": "Passwort",
+    "password_placeholder": "Geben Sie hier Ihr Passwort ein",
+    "forgot_password": "Passwort vergessen?",
+    "or": "Oder",
+    "continue": "Fortfahren",
+    "no_account": "Haben Sie kein Konto?",
+    "email_sign_in": "Mit E-Mail anmelden",
+    "google_sign_in": "Mit Google anmelden",
+    "github_sign_in": "Mit GitHub anmelden",
+    "close_title": "Schließen",
+    "cancel_title": "Abbrechen"
+  },
+  "my_orders": {
+    "title": "Meine Bestellungen",
+    "description": "Bestellungen bezahlt mit Disney Solitaire",
+    "no_orders": "Keine Bestellungen gefunden",
+    "tip": "",
+    "activate_order": "Bestellung aktivieren",
+    "actived": "Aktiviert",
+    "join_discord": "Discord beitreten",
+    "read_docs": "Dokumentation lesen",
+    "table": {
+      "order_no": "Bestellnummer",
+      "email": "E-Mail",
+      "product_name": "Produktname",
+      "amount": "Betrag",
+      "paid_at": "Bezahlt am",
+      "github_username": "GitHub Benutzername",
+      "status": "Status"
+    }
+  },
+  "my_credits": {
+    "title": "Mein Guthaben",
+    "left_tip": "Verbleibendes Guthaben: {left_credits}",
+    "no_credits": "Keine Guthabeneinträge",
+    "recharge": "Aufladen",
+    "table": {
+      "trans_no": "Transaktionsnummer",
+      "trans_type": "Transaktionstyp",
+      "credits": "Guthaben",
+      "updated_at": "Aktualisiert am",
+      "status": "Status"
+    }
+  },
+  "api_keys": {
+    "title": "API-Schlüssel",
+    "tip": "Bitte bewahren Sie Ihren API-Schlüssel sicher auf, um Lecks zu vermeiden",
+    "no_api_keys": "Keine API-Schlüssel",
+    "create_api_key": "API-Schlüssel erstellen",
+    "table": {
+      "name": "Name",
+      "key": "Schlüssel",
+      "created_at": "Erstellt am"
+    },
+    "form": {
+      "name": "Name",
+      "name_placeholder": "API-Schlüssel Name",
+      "submit": "Absenden"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Neuigkeiten, Ressourcen und Updates über Disney Solitaire",
+    "read_more_text": "Weiterlesen"
+  },
+  "my_invites": {
+    "title": "Meine Einladungen",
+    "description": "Sehen Sie Ihre Einladungsaufzeichnungen",
+    "no_invites": "Keine Einladungsaufzeichnungen gefunden",
+    "my_invite_link": "Mein Einladungslink",
+    "edit_invite_link": "Einladungslink bearbeiten",
+    "copy_invite_link": "Einladungslink kopieren",
+    "invite_code": "Einladungscode",
+    "invite_tip": "Laden Sie 1 Freund ein, Disney Solitaire zu kaufen, Belohnung $50.",
+    "invite_balance": "Einladungsbelohnungsguthaben",
+    "total_invite_count": "Gesamtzahl der Einladungen",
+    "total_paid_count": "Gesamtzahl der Bezahlungen",
+    "total_award_amount": "Gesamtbetrag der Belohnungen",
+    "update_invite_code": "Einladungscode festlegen",
+    "update_invite_code_tip": "Geben Sie Ihren benutzerdefinierten Einladungscode ein",
+    "update_invite_button": "Speichern",
+    "no_orders": "Sie können andere nicht einladen, bevor Sie Disney Solitaire gekauft haben",
+    "no_affiliates": "Sie dürfen andere nicht einladen, bitte kontaktieren Sie uns, um eine Genehmigung zu beantragen.",
+    "table": {
+      "invite_time": "Einladungszeit",
+      "invite_user": "Eingeladener Benutzer",
+      "status": "Status",
+      "reward_percent": "Belohnungsprozentsatz",
+      "reward_amount": "Belohnungsbetrag",
+      "pending": "Ausstehend",
+      "completed": "Abgeschlossen"
+    }
+  }
+}
