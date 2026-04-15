@@ -14,7 +14,8 @@
     "cf:preview": "pnpm cf:build && wrangler pages dev",
     "cf:deploy": "pnpm cf:build && wrangler pages deploy",
     "docker:build": "docker build -f Dockerfile -t shipany-template-one:latest .",
-    "test:db": "dotenv -e .env.development -- tsx lib/db-test.ts"
+    "test:db": "dotenv -e .env.development -- tsx lib/db-test.ts",
+    "test:insert-post": "dotenv -e .env.development -- tsx lib/insert-post-test.ts"
   },
   "dependencies": {
     "@ai-sdk/deepseek": "^0.1.11",
