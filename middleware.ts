@@ -55,7 +55,7 @@ export const config = {
   matcher: [
     "/",
     "/(en|zh|ja|es|de|pt)/:path*",
-    // 移除 ".*\\..*" 排除规则，让中间件拦截所有路径
-    "/((?!api/|_next|_vercel).*)",
+    // 明确排除：静态文件、API、Next.js 内部路径
+    "/((?!api/|_next|_vercel|.*\\.(txt|ico|svg|png|jpg|jpeg|webp|gif|woff2?|ttf|eot|wasm|mp4|webm|mp3|pdf|zip|json|xml|webmanifest|js|css)$).*)",
   ],
 };
