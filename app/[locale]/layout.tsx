@@ -61,9 +61,6 @@ export default async function RootLayout({
         <link rel="preload" href="/imgs/disney/og-image.jpg" as="image" />
         <link rel="preload" href="/imgs/disney/twitter-card.jpg" as="image" />
 
-        {/* Font Optimization */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="" />
-
         {/* Accessibility Meta Tags */}
         <meta name="description" content="Play Disney Solitaire free online! Experience the magic of Disney in this enchanting card game adventure with your favorite characters." />
         <meta name="keywords" content="disney solitaire, play disney solitaire, disney solitaire free online, disney card game, solitaire game unblocked" />
@@ -90,8 +87,6 @@ export default async function RootLayout({
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Performance & SEO Optimizations */}

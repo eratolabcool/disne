@@ -8,7 +8,7 @@ const API_CACHE = 'disney-solitaire-api-v2';
 const STATIC_ASSETS = [
   '/',
   '/offline.html',
-  '/manifest.json',
+  '/site.webmanifest',
   '/imgs/badges/phdaily.svg',
   '/imgs/disney/og-image.jpg',
   '/imgs/disney/twitter-card.jpg'
@@ -204,7 +204,7 @@ function isStaticAsset(pathname) {
          pathname.includes('/_next/static/') ||
          pathname.includes('/fonts/') ||
          pathname.includes('/imgs/badges/') ||
-         pathname.includes('/manifest.json');
+         pathname.includes('/site.webmanifest');
 }
 
 function isImage(pathname) {
