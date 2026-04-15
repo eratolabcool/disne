@@ -5,7 +5,7 @@ import type { NextRequest } from "next/server";
 
 /**
  * [INPUT]: 依赖 next-intl/middleware 和 Next.js 的 NextRequest/NextResponse
- * [OUTPUT]: 对外提供 i18n 中间件和安全过滤
+ * [OUTPUT]: 对外提供 i18n 代理和安全过滤
  * [POS]: 应用的第一道防线，拦截恶意请求和 i18n 路由
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
@@ -35,9 +35,9 @@ function isBlockedPath(pathname: string): boolean {
 }
 
 /**
- * 增强型中间件：安全过滤 + i18n 路由
+ * 增强型代理：安全过滤 + i18n 路由
  */
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // ======================== 第一道防线：路径黑名单 ========================
@@ -54,8 +54,7 @@ export default function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     "/",
-    "/(en|zh|ja|es|de|pt)/:path*",
-    // 明确排除：静态文件、API、Next.js 内部路径
-    "/((?!api/|_next|_vercel|.*\\.(txt|ico|svg|png|jpg|jpeg|webp|gif|woff2?|ttf|eot|wasm|mp4|webm|mp3|pdf|zip|json|xml|webmanifest|js|css)$).*)",
+    // 排除 API、Next.js 内部路径和带扩展名的静态资源，避免 Next 16 route source 解析错误
+    "/((?!api|_next|_vercel|.*\\..*).*)",
   ],
 };
