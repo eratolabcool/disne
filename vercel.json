@@ -3,5 +3,58 @@
     "app/api/**/*": {
       "maxDuration": 60
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/.*\\.php$",
+      "status": 404
+    },
+    {
+      "src": "/.*\\.asp$",
+      "status": 404
+    },
+    {
+      "src": "/.*\\.jsp$",
+      "status": 404
+    },
+    {
+      "src": "/wp-.*",
+      "status": 404
+    },
+    {
+      "src": "/wordpress.*",
+      "status": 404
+    },
+    {
+      "src": "/shell\\.php",
+      "status": 404
+    },
+    {
+      "src": "/\\.env.*",
+      "status": 404
+    },
+    {
+      "src": "/\\.git.*",
+      "status": 404
+    },
+    {
+      "src": "/config\\.php",
+      "status": 404
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ]
 }

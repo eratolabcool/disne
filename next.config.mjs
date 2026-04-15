@@ -63,7 +63,7 @@ const nextConfig = {
     return [];
   },
 
-  // HTTP 头部优化
+  // HTTP 头部优化 + 安全加固
   async headers() {
     return [
       {
@@ -76,6 +76,22 @@ const nextConfig = {
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
           }
         ]
       },
