@@ -45,6 +45,9 @@ export default function BlogDetail({
     });
   };
 
+  const getPostHref = (item: Post) =>
+    item.locale === "en" ? `/posts/${item.slug}` : `/${item.locale}/posts/${item.slug}`;
+
   return (
     <section className="py-16">
       <div className="container">
@@ -75,6 +78,40 @@ export default function BlogDetail({
           <div className="order-2 lg:order-none lg:col-span-8">
             <AdUnit className="mb-6" />
             {post.content && <Markdown content={post.content} />}
+            {relatedPosts.length > 0 && (
+              <div className="mt-10 rounded-2xl border bg-muted/30 p-5 md:p-6">
+                <div className="mb-5">
+                  <h2 className="text-xl font-semibold md:text-2xl">
+                    Continue Reading
+                  </h2>
+                  <p className="mt-2 text-sm text-muted-foreground md:text-base">
+                    Explore more Disney Solitaire guides to improve strategy,
+                    score more consistently, and make better power-up
+                    decisions.
+                  </p>
+                </div>
+                <div className="grid gap-4 md:grid-cols-2">
+                  {relatedPosts.slice(0, 4).map((item) => (
+                    <Link
+                      key={item.uuid || item.slug}
+                      href={getPostHref(item)}
+                      className="rounded-xl border bg-background p-4 transition-colors hover:bg-muted/60"
+                      onClick={() => onRelatedClick(item.title || "", item.slug)}
+                    >
+                      <div className="text-base font-medium">{item.title}</div>
+                      {item.description && (
+                        <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">
+                          {item.description}
+                        </p>
+                      )}
+                      <div className="mt-3 text-sm font-medium">
+                        Read this guide
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
             <AdUnit className="mt-8" />
           </div>
           <aside className="order-1 flex h-fit flex-col gap-6 text-sm lg:sticky lg:top-8 lg:order-none lg:col-span-3 lg:col-start-10 lg:text-xs">
@@ -88,11 +125,7 @@ export default function BlogDetail({
                   {relatedPosts.map((item) => (
                     <li key={item.uuid || item.slug}>
                       <Link
-                        href={
-                          item.locale === "en"
-                            ? `/posts/${item.slug}`
-                            : `/${item.locale}/posts/${item.slug}`
-                        }
+                        href={getPostHref(item)}
                         className="line-clamp-2 text-sm hover:underline"
                         onClick={() => onRelatedClick(item.title || "", item.slug)}
                       >
