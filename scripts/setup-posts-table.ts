@@ -117,7 +117,6 @@ async function insertTestData() {
     const query = `
       INSERT INTO posts (slug, title, description, content, status, locale, author_name)
       VALUES ($1, $2, $3, $4, $5, $6, $7)
-      ON CONFLICT (slug) DO NOTHING
       RETURNING slug, title
     `;
 

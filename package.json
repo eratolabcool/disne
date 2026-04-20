@@ -16,6 +16,7 @@
     "docker:build": "docker build -f Dockerfile -t shipany-template-one:latest .",
     "test:db": "dotenv -e .env.development -- tsx lib/db-test.ts",
     "setup:posts": "dotenv -e .env.development -- tsx scripts/setup-posts-table.ts",
+    "insert:posts": "dotenv -e .env.development -- tsx scripts/insert-clean-posts.ts",
     "test:insert-post": "dotenv -e .env.development -- tsx lib/insert-post-test.ts"
   },
   "dependencies": {
