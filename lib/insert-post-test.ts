@@ -1,37 +1,114 @@
-import { db } from './db';
+/**
+ * [INPUT]: 依赖 models/post 的 insertPost 和 Post 类型
+ * [OUTPUT]: 对外提供测试文章插入功能
+ * [POS]: 开发测试脚本，用于验证 Supabase 连接和 SEO 文章系统
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
 
-const newPost = {
-  title: '解锁魔法：迪士尼纸牌游戏新手指南',
-  content: `欢迎，各位迪士尼粉丝和纸牌游戏爱好者！
+import { insertPost } from "@/models/post";
+import { Post } from "@/types/post";
 
-如果您正在寻找一款既轻松又引人入胜的游戏，那么《迪士尼纸牌》将是您的完美选择。这不仅仅是任何普通的纸牌游戏；这是一场穿越经典迪士尼世界的奇妙旅程，充满了您喜爱的角色和迷人的主题。
+async function testInsertPost() {
+  console.log("🧪 测试 Supabase 连接和文章插入...\n");
 
-### 游戏玩法基础
+  const testPost: Post = {
+    slug: "how-to-win-disney-solitaire-level-100",
+    title: "How to Win Disney Solitaire Level 100: Advanced Strategies",
+    description: "Master Disney Solitaire Level 100 with our comprehensive guide. Learn advanced strategies, power-up combinations, and expert tips to overcome the toughest challenges.",
+    content: `
+# How to Win Disney Solitaire Level 100
 
-《迪士尼纸牌》的核心玩法遵循经典的单人纸牌规则，但加入了独特的魔法元素。您的目标是按照顺序清理桌面上的所有纸牌。一路上，您将解锁强大的魔法道具，帮助您克服挑战性的关卡。
+## Understanding the Challenge
+Level 100 in Disney Solitaire represents a significant milestone that tests your card game skills to the limit. This guide will help you develop the strategies needed to succeed.
 
-### 为什么它如此迷人？
+## Key Strategies
 
-*   **怀旧的角色**：与来自《冰雪奇缘》、《狮子王》、《小美人鱼》等电影的角色一起玩耍。
-*   **美丽的场景**：每个关卡都带您进入一个制作精美的迪士尼场景。
-*   **收集与奖励**：完成挑战，收集独特的卡牌，并解锁专属奖励。
+### 1. Power-Up Management
+- Save your most powerful power-ups for critical moments
+- Combine wild cards with undo abilities for maximum effect
+- Use the connector strategically to create long card chains
 
-准备好开始您的冒险了吗？立即加入，体验最神奇的纸牌游戏！`
-};
+### 2. Resource Optimization
+- Focus on clearing lower cards first to maximize chain potential
+- Don't waste coins on unnecessary hints
+- Practice patience - sometimes waiting for the right move is better than forcing a play
 
-async function insertPost() {
+### 3. Pattern Recognition
+- Learn to identify card distribution patterns early
+- Track which suits have been depleted
+- Use the draw pile strategically based on remaining cards
+
+## Advanced Techniques
+
+### The "Connector Cascade"
+Master the art of creating cascading chain reactions by:
+1. Identifying multiple connector opportunities
+2. Planning 3-4 moves ahead
+3. Using power-ups to extend chain length
+
+### Risk Assessment
+Calculate the risk-to-reward ratio for each move:
+- High risk: Using premium power-ups early
+- Medium risk: Drawing from the pile with few cards left
+- Low risk: Playing obvious safe moves
+
+## Common Mistakes to Avoid
+
+1. **Overusing Premium Power-Ups**: Save these for level 100+
+2. **Ignoring Card Count**: Track remaining cards in each suit
+3. **Playing Too Fast**: Speed leads to mistakes in challenging levels
+4. **Neglecting Daily Challenges**: These provide valuable practice
+
+## Conclusion
+
+Mastering Level 100 requires patience, strategy, and practice. Use these techniques to improve your win rate and prepare for even more challenging levels ahead.
+
+Remember: Every expert was once a beginner. Keep practicing!
+    `.trim(),
+    status: "online",
+    locale: "en",
+    author_name: "Disney Solitaire Team",
+    author_avatar_url: "/imgs/disney/og-image.jpg",
+    cover_url: "/imgs/disney/twitter-card.jpg",
+  };
+
   try {
-    // Assuming a table named 'posts' with 'title' and 'content' columns
-    const query = 'INSERT INTO posts (title, content) VALUES ($1, $2) RETURNING id;';
-    const values = [newPost.title, newPost.content];
-    
-    const { rows } = await db.query(query, values);
-    
-    console.log('✅ Blog post successfully inserted! Post ID:', rows[0].id);
+    console.log("📝 准备插入测试文章...");
+    console.log(`标题: ${testPost.title}`);
+    console.log(`Slug: ${testPost.slug}`);
+    console.log(`Locale: ${testPost.locale}\n`);
+
+    const result = await insertPost(testPost);
+
+    console.log("✅ 成功！文章已插入数据库");
+    console.log("📊 文章数据:", JSON.stringify(result, null, 2));
+
+    return result;
   } catch (error) {
-    console.error('❌ Error inserting blog post:', error);
-    console.log("\n🤔 Hint: Does the 'posts' table with 'title' and 'content' columns exist?");
+    console.error("❌ 错误：插入失败");
+    console.error("详细错误:", error);
+
+    if (error instanceof Error) {
+      if (error.message.includes("Supabase")) {
+        console.log("\n🔧 修复建议：");
+        console.log("1. 检查 .env.development 中的 SUPABASE_URL");
+        console.log("2. 检查 .env.development 中的 SUPABASE_ANON_KEY");
+        console.log("3. 确保 Supabase 项目已启动");
+        console.log("4. 验证 posts 表是否存在");
+      }
+    }
+
+    throw error;
   }
 }
 
-insertPost();
+// 运行测试
+testInsertPost()
+  .then(() => {
+    console.log("\n🎉 测试完成！");
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error("\n💥 测试失败：", error);
+    process.exit(1);
+  });

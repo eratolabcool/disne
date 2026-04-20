@@ -15,6 +15,7 @@
     "cf:deploy": "pnpm cf:build && wrangler pages deploy",
     "docker:build": "docker build -f Dockerfile -t shipany-template-one:latest .",
     "test:db": "dotenv -e .env.development -- tsx lib/db-test.ts",
+    "setup:posts": "dotenv -e .env.development -- tsx scripts/setup-posts-table.ts",
     "test:insert-post": "dotenv -e .env.development -- tsx lib/insert-post-test.ts"
   },
   "dependencies": {
