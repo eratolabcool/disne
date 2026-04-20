@@ -1,4 +1,5 @@
 import { PostStatus, findPostBySlug, getRelatedPosts } from "@/models/post";
+import { DEFAULT_POST_COVER_URL } from "@/lib/post-cover";
 
 import BlogDetail from "@/components/blocks/blog-detail";
 import Empty from "@/components/blocks/empty";
@@ -68,7 +69,7 @@ function buildPostSchemas(post: Post, locale: string, slug: string) {
       name: "Disney Solitaire",
       url: baseUrl,
     },
-    image: post.cover_url || undefined,
+    image: post.cover_url || DEFAULT_POST_COVER_URL,
   };
 
   const breadcrumbSchema = {

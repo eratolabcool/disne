@@ -1,5 +1,6 @@
 import { Post } from "@/types/post";
 import { db } from "@/lib/db";
+import { DEFAULT_POST_COVER_URL } from "@/lib/post-cover";
 
 export enum PostStatus {
   Created = "created",
@@ -123,19 +124,35 @@ function getRelatedPostScore(source: Post, candidate: Post) {
 
 export async function insertPost(post: Post) {
   const query = `
-    INSERT INTO posts (slug, title, description, content, status, locale, cover_url, author_name, author_avatar_url)
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+    INSERT INTO posts (
+      uuid,
+      slug,
+      title,
+      description,
+      content,
+      created_at,
+      updated_at,
+      status,
+      locale,
+      cover_url,
+      author_name,
+      author_avatar_url
+    )
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
     RETURNING *
   `;
 
   const values = [
+    post.uuid,
     post.slug,
     post.title,
     post.description,
     post.content,
+    post.created_at || new Date().toISOString(),
+    post.updated_at || post.created_at || new Date().toISOString(),
     post.status || PostStatus.Created,
     post.locale || "en",
-    post.cover_url,
+    post.cover_url || DEFAULT_POST_COVER_URL,
     post.author_name,
     post.author_avatar_url,
   ];
@@ -250,7 +267,7 @@ export async function getAllPosts(
   const query = `
     SELECT * FROM posts
     WHERE status != 'deleted'
-    ORDER BY created_at DESC
+    ORDER BY created_at DESC NULLS LAST
     LIMIT $1 OFFSET $2
   `;
 
@@ -272,7 +289,7 @@ export async function getPostsByLocale(
   const query = `
     SELECT * FROM posts
     WHERE locale = $1 AND status = 'online'
-    ORDER BY created_at DESC
+    ORDER BY created_at DESC NULLS LAST
     LIMIT $2 OFFSET $3
   `;
 
@@ -296,7 +313,7 @@ export async function getRelatedPosts(
     const query = `
       SELECT * FROM posts
       WHERE locale = $1 AND status = 'online' AND slug != $2
-      ORDER BY created_at DESC
+      ORDER BY created_at DESC NULLS LAST
       LIMIT $3
     `;
 

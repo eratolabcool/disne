@@ -3,6 +3,7 @@
 import AdUnit from "@/components/adsense/ad-unit";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
+import { extractMarkdownHeadings } from "@/lib/markdown";
 
 import Crumb from "./crumb";
 import Markdown from "@/components/markdown";
@@ -47,6 +48,7 @@ export default function BlogDetail({
 
   const getPostHref = (item: Post) =>
     item.locale === "en" ? `/posts/${item.slug}` : `/${item.locale}/posts/${item.slug}`;
+  const tocItems = post.content ? extractMarkdownHeadings(post.content, 2, 3) : [];
 
   return (
     <section className="py-16">
@@ -77,7 +79,7 @@ export default function BlogDetail({
         <div className="relative py-8 grid max-w-screen-xl gap-4 lg:mt-0 lg:grid lg:grid-cols-12 lg:gap-6">
           <div className="order-2 lg:order-none lg:col-span-8">
             <AdUnit className="mb-6" />
-            {post.content && <Markdown content={post.content} />}
+            {post.content && <Markdown content={post.content} headings={tocItems} />}
             {relatedPosts.length > 0 && (
               <div className="mt-10 rounded-2xl border bg-muted/30 p-5 md:p-6">
                 <div className="mb-5">
@@ -116,6 +118,27 @@ export default function BlogDetail({
           </div>
           <aside className="order-1 flex h-fit flex-col gap-6 text-sm lg:sticky lg:top-8 lg:order-none lg:col-span-3 lg:col-start-10 lg:text-xs">
             <AdUnit />
+            {tocItems.length > 0 && (
+              <div className="rounded-xl border p-4">
+                <h3 className="mb-3 text-sm font-semibold md:text-base">
+                  On This Page
+                </h3>
+                <ul className="space-y-3">
+                  {tocItems.map((item) => (
+                    <li key={item.id}>
+                      <a
+                        href={`#${item.id}`}
+                        className={`block text-sm hover:underline ${
+                          item.level === 3 ? "pl-4 text-muted-foreground" : ""
+                        }`}
+                      >
+                        {item.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             {relatedPosts.length > 0 && (
               <div className="rounded-xl border p-4">
                 <h3 className="mb-3 text-sm font-semibold md:text-base">

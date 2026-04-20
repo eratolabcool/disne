@@ -1,5 +1,4 @@
-import dotenv from "dotenv";
-dotenv.config({ path: ".env.development" });
+import "../lib/load-env";
 
 import { findPostBySlug, insertPost, PostStatus } from "../models/post";
 import { getUuid } from "../lib/hash";

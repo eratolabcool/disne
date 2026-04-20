@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Blog as BlogType } from "@/types/blocks/blog";
+import { DEFAULT_POST_COVER_URL } from "@/lib/post-cover";
 
 export default function Blog({ blog }: { blog: BlogType }) {
   if (blog.disabled) {
@@ -24,20 +25,23 @@ export default function Blog({ blog }: { blog: BlogType }) {
           {blog.items?.map((item, idx) => (
             <a
               key={idx}
-              href={item.url || `/${item.locale}/posts/${item.slug}`}
+              href={
+                item.url ||
+                (item.locale === "en"
+                  ? `/posts/${item.slug}`
+                  : `/${item.locale}/posts/${item.slug}`)
+              }
               target={item.target || "_self"}
               className="w-full md:w-1/3 p-4"
             >
               <div className="flex flex-col overflow-clip rounded-xl border border-border">
-                {item.cover_url && (
-                  <div>
-                    <img
-                      src={item.cover_url}
-                      alt={item.title || ""}
-                      className="aspect-[16/9] h-full w-full object-cover object-center"
-                    />
-                  </div>
-                )}
+                <div>
+                  <img
+                    src={item.cover_url || DEFAULT_POST_COVER_URL}
+                    alt={item.title || ""}
+                    className="aspect-[16/9] h-full w-full object-cover object-center"
+                  />
+                </div>
                 <div className="px-4 py-4 md:px-4 md:py-4 lg:px-4 lg:py-4">
                   <h3 className="mb-3 text-lg font-semibold md:mb-4 md:text-xl lg:mb-6">
                     {item.title}
