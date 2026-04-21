@@ -12,6 +12,8 @@ import { cn } from "@/lib/utils";
 import Script from "next/script";
 import Analytics from "@/components/analytics";
 
+import { locales } from "@/i18n/locale";
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -25,15 +27,41 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
+  const baseUrl = process.env.NEXT_PUBLIC_WEB_URL || "https://disneysolitaire.net";
+  
+  // 构建当前语言的规范链接
+  const canonicalUrl = locale === "en" ? baseUrl : `${baseUrl}/${locale}`;
+
+  // 构建所有语言的备用链接
+  const languages: Record<string, string> = {};
+  locales.forEach((l) => {
+    languages[l] = l === "en" ? baseUrl : `${baseUrl}/${l}`;
+  });
+  languages["x-default"] = baseUrl;
 
   return {
+    metadataBase: new URL(baseUrl),
     title: {
       template: `%s | Disney Solitaire - Play Magical Free Online Card Game`,
       default: "Disney Solitaire - Play Magical Free Online Card Game",
     },
     description: "Play Disney Solitaire free online! Experience the magic of Disney in this enchanting card game adventure with your favorite characters. No download required for the best online experience.",
     keywords: "disney solitaire, play disney solitaire, disney solitaire free online, disney card game, solitaire game unblocked, disney characters card game",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: languages,
+    },
+    manifest: "/manifest.json",
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/logo.jpg",
+    },
+    appleWebApp: {
+      capable: true,
+      title: "Disney Solitaire",
+      statusBarStyle: "default",
+    },
   };
 }
 
@@ -61,41 +89,7 @@ export default async function RootLayout({
         <link rel="preload" href="/imgs/disney/og-image.jpg" as="image" />
         <link rel="preload" href="/imgs/disney/twitter-card.jpg" as="image" />
 
-        {/* Accessibility Meta Tags */}
-        <meta name="description" content="Play Disney Solitaire free online! Experience the magic of Disney in this enchanting card game adventure with your favorite characters." />
-        <meta name="keywords" content="disney solitaire, play disney solitaire, disney solitaire free online, disney card game, solitaire game unblocked" />
-        <meta name="author" content="Disney Solitaire Team" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
-
-        {/* Open Graph for Social Sharing */}
-        <meta property="og:title" content="Disney Solitaire - Magical Card Game" />
-        <meta property="og:description" content="Experience the magic of Disney in this enchanting solitaire card game adventure!" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/imgs/disney/og-image.jpg" />
-        <meta property="og:url" content={process.env.NEXT_PUBLIC_WEB_URL || "https://disneysolitaire.net"} />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Disney Solitaire - Magical Card Game" />
-        <meta name="twitter:description" content="Experience the magic of Disney in this enchanting solitaire card game adventure!" />
-        <meta name="twitter:image" content="/imgs/disney/twitter-card.jpg" />
-
-        {/* Accessibility Links */}
-        <link rel="alternate" hrefLang="en" href={`${process.env.NEXT_PUBLIC_WEB_URL || "https://disneysolitaire.net"}`} />
-        <link rel="alternate" hrefLang="x-default" href={`${process.env.NEXT_PUBLIC_WEB_URL || "https://disneysolitaire.net"}`} />
-
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="manifest" href="/site.webmanifest" />
-
-        {/* Performance & SEO Optimizations */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="theme-color" content="#0ea5e9" />
-        <meta name="msapplication-TileColor" content="#0ea5e9" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
-
+        {/* Analytics & Scripts */}
         <script defer data-domain="disneysolitaire.net" src="https://plausible.riftrunner.art/js/script.js"></script>
 
         {/* JSON-LD Structured Data */}
