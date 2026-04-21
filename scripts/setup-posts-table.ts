@@ -29,7 +29,7 @@ async function setupPostsTable() {
       );
     `;
 
-    await db.query(createTableQuery);
+    await db.query(createTableQuery, []);
     console.log("✅ posts 表创建成功");
 
     // 创建索引
@@ -42,7 +42,7 @@ async function setupPostsTable() {
     ];
 
     for (const indexQuery of indexes) {
-      await db.query(indexQuery);
+      await db.query(indexQuery, []);
     }
 
     console.log("✅ 索引创建成功");
@@ -56,7 +56,7 @@ async function setupPostsTable() {
       );
     `;
 
-    const { rows } = await db.query(checkQuery);
+    const { rows } = await db.query(checkQuery, []);
     const tableExists = rows[0].exists;
 
     console.log(`\n📊 表存在检查: ${tableExists ? "✅ 存在" : "❌ 不存在"}`);
@@ -64,7 +64,7 @@ async function setupPostsTable() {
     if (tableExists) {
       // 检查现有文章数量
       const countQuery = "SELECT COUNT(*) as count FROM posts;";
-      const { rows: countRows } = await db.query(countQuery);
+      const { rows: countRows } = await db.query(countQuery, []);
       const postCount = countRows[0].count;
 
       console.log(`📝 现有文章数量: ${postCount}\n`);

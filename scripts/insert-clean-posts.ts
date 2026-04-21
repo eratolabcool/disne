@@ -14,7 +14,7 @@ async function cleanAndInsertPosts() {
   try {
     // 第一步：清空表
     const deleteQuery = "DELETE FROM posts;";
-    await db.query(deleteQuery);
+    await db.query(deleteQuery, []);
     console.log("✅ posts 表已清空");
 
     // 第二步：插入测试文章
@@ -84,14 +84,14 @@ async function cleanAndInsertPosts() {
 
     // 第三步：验证插入结果
     const countQuery = "SELECT COUNT(*) as count FROM posts;";
-    const { rows } = await db.query(countQuery);
+    const { rows } = await db.query(countQuery, []);
     const postCount = rows[0].count;
 
     console.log(`\n📊 当前文章数量: ${postCount}`);
 
     // 第四步：列出所有文章
     const listQuery = "SELECT slug, title, status, locale FROM posts ORDER BY created_at DESC;";
-    const { rows: posts } = await db.query(listQuery);
+    const { rows: posts } = await db.query(listQuery, []);
 
     console.log("\n📚 文章列表:");
     posts.forEach((post: any, index: number) => {
