@@ -20,14 +20,14 @@ const games = [
   {
     title: "Spider Solitaire",
     description: "Challenge yourself with 1, 2, or 4 suits of Spider.",
-    image: "/imgs/disney/disney-solitaire-guide.jpg",
-    url: "/play/spider",
+    image: "/imgs/disney/Image-02.jpg",
+    url: "/spider-solitaire",
   },
   {
     title: "FreeCell",
     description: "Strategic card game where almost every deal is winnable.",
-    image: "/imgs/disney/disney-solitaire-tips.jpg",
-    url: "/play/freecell",
+    image: "/imgs/disney/Image-03.jpg",
+    url: "/freecell-solitaire",
   },
 ];
 

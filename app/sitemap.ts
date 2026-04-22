@@ -34,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
   // 1. 静态页面
-  const staticPaths = ["/", "/about", "/posts", "/classic-solitaire"];
+  const staticPaths = ["/", "/about", "/posts", "/classic-solitaire", "/spider-solitaire", "/freecell-solitaire"];
   
   for (const locale of locales) {
     for (const path of staticPaths) {
