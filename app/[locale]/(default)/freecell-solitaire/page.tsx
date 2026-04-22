@@ -13,7 +13,7 @@ export default function FreeCellSolitairePage() {
   const heroData = {
     title: "FreeCell Solitaire",
     description: "The strategic FreeCell solitaire experience. Use your skills to solve every puzzle.",
-    background: {
+    image: {
       src: "/imgs/disney/Image-03.jpg",
       alt: "FreeCell Solitaire Background"
     },

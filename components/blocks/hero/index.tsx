@@ -14,7 +14,7 @@ export default function Hero({ hero }: { hero?: HeroType }) {
 
   return (
     <div className="relative min-h-screen flex items-center">
-      <HeroBg />
+      <HeroBg src={hero.image?.src} />
       <section className="py-24 w-full">
         <div className="container">
           {hero.show_badge && (

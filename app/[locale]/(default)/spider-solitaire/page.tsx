@@ -13,7 +13,7 @@ export default function SpiderSolitairePage() {
   const heroData = {
     title: "Spider Solitaire",
     description: "The challenging and addictive Spider solitaire experience. Master your strategy and clear the board.",
-    background: {
+    image: {
       src: "/imgs/disney/Image-02.jpg",
       alt: "Spider Solitaire Background"
     },

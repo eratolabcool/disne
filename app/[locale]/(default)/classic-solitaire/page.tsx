@@ -13,7 +13,7 @@ export default function ClassicSolitairePage() {
   const heroData = {
     title: "Classic Solitaire",
     description: "The timeless Klondike solitaire experience. Play for free, master your strategy, and beat your high score.",
-    background: {
+    image: {
       src: "/imgs/disney/hero-bg.jpg",
       alt: "Classic Solitaire Background"
     },

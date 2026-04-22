@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
-const games = [
+const games: { title: string; description: string; image: string; url: any; badge?: string }[] = [
   {
     title: "Disney Solitaire",
     description: "Magical Solitaire with beloved Disney characters.",

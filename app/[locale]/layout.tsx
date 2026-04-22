@@ -86,11 +86,10 @@ export default async function RootLayout({
 
         {/* Critical Image Preloading */}
         <link rel="preload" href="/imgs/badges/phdaily.svg" as="image" />
-        <link rel="preload" href="/imgs/disney/og-image.jpg" as="image" />
-        <link rel="preload" href="/imgs/disney/twitter-card.jpg" as="image" />
 
         {/* Analytics & Scripts */}
         <script defer data-domain="disneysolitaire.net" src="https://plausible.riftrunner.art/js/script.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7627909166795192" crossOrigin="anonymous"></script>
 
         {/* JSON-LD Structured Data */}
         <script
@@ -125,33 +124,6 @@ export default async function RootLayout({
           fontSans.variable
         )}
       >
-        <Script
-          id="google-adsense"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7627909166795192"
-          crossOrigin="anonymous"
-          strategy="lazyOnload"
-        />
-
-        {/* Service Worker Registration */}
-        <Script
-          id="service-worker"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js')
-                  .then(registration => {
-                    console.log('SW registered: ', registration);
-                  })
-                  .catch(registrationError => {
-                    console.log('SW registration failed: ', registrationError);
-                  });
-              }
-            `,
-          }}
-        />
-
         {/* Web Vitals Monitoring */}
         <Script
           id="web-vitals"
@@ -219,11 +191,6 @@ export default async function RootLayout({
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              // Preload critical resources
-              if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js').catch(() => {});
-              }
-
               // Optimize font loading
               if ('fonts' in document) {
                 Promise.all([
