@@ -12,22 +12,22 @@ const games = [
   },
   {
     title: "Classic Solitaire",
-    description: "The timeless card game experience you know and love.",
-    image: "/imgs/maxresdefault.jpg",
+    description: "The timeless card game experience you know and love. Klondike, Spider, and more.",
+    image: "/imgs/disney/hero-bg.jpg",
     url: "/classic-solitaire",
-    badge: "Popular",
+    badge: "New",
   },
   {
     title: "Spider Solitaire",
     description: "Challenge yourself with 1, 2, or 4 suits of Spider.",
-    image: "/imgs/maxresdefault.jpg",
-    url: "/spider-solitaire",
+    image: "/imgs/disney/disney-solitaire-guide.jpg",
+    url: "/play/spider",
   },
   {
     title: "FreeCell",
     description: "Strategic card game where almost every deal is winnable.",
-    image: "/imgs/maxresdefault.jpg",
-    url: "/freecell",
+    image: "/imgs/disney/disney-solitaire-tips.jpg",
+    url: "/play/freecell",
   },
 ];
 

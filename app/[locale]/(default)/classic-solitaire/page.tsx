@@ -20,8 +20,7 @@ export default function ClassicSolitairePage() {
     buttons: [
       {
         title: "Play Now",
-        url: "https://www.solitaire-klondike.com/", // A popular free solitaire site
-        target: "_blank",
+        url: "#game",
         variant: "default" as const,
         icon: "RiPlayFill"
       }
@@ -64,19 +63,14 @@ export default function ClassicSolitairePage() {
   return (
     <>
       <Hero hero={heroData} />
-      <div className="container py-12">
-        <div className="bg-black aspect-video rounded-2xl flex items-center justify-center text-white border-4 border-white shadow-2xl overflow-hidden relative">
-           <div className="text-center p-8">
-              <h2 className="text-2xl font-bold mb-4">Classic Solitaire Game</h2>
-              <p className="mb-6 text-gray-300">Experience the original Klondike challenge.</p>
-              <a 
-                href="https://www.solitaire-klondike.com/" 
-                target="_blank" 
-                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              >
-                Launch Game in New Window
-              </a>
-           </div>
+      <div id="game" className="container py-12 scroll-mt-20">
+        <div className="bg-black aspect-[16/9] rounded-2xl shadow-2xl overflow-hidden relative border-4 border-primary/20">
+           <iframe 
+             src="/play/klondike/index.html" 
+             className="w-full h-full border-none"
+             title="Classic Solitaire Game"
+             allow="autoplay; fullscreen"
+           />
         </div>
       </div>
       <Feature1 section={introduceData} />

@@ -1,0 +1,160 @@
+---
+/**
+ * [INPUT]: 依赖 Layout.astro
+ * [OUTPUT]: 闯关地图页 HTML
+ * [POS]: pages/campaign.astro 是闯关模式地图页
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+import Layout from '../layouts/Layout.astro';
+
+// 闯关章节数据 (5 chapters, 10 关/章)
+const chapters = [
+  { id: 1, name: '新手牌桌', levels: 10, game: 'Klondike', color: '#2d6a4f' },
+  { id: 2, name: '花色迷宫', levels: 10, game: 'Klondike + FreeCell', color: '#d4af37' },
+  { id: 3, name: '蜘蛛巢穴', levels: 10, game: 'Spider', color: '#8B5CF6' },
+  { id: 4, name: '终极试炼', levels: 10, game: '混合', color: '#c0392b' },
+  { id: 5, name: '传奇牌局', levels: 10, game: '混合(极难)', color: '#e8c84a' },
+];
+---
+
+<Layout title="闯关模式 — Solitaire Arena" description="200关闯关地图，五星评价，Boss 关卡挑战。">
+  <div class="campaign-page">
+    <div class="page-header">
+      <div class="header-inner">
+        <h1>🗺️ 闯关模式</h1>
+        <p>5 章 · 50 关 · 三星评价 · Boss 挑战</p>
+      </div>
+    </div>
+
+    <div class="campaign-map">
+      {chapters.map((ch) => (
+        <section class="chapter" id={`ch-${ch.id}`}>
+          <div class="chapter-header" style={`--ch-color: ${ch.color}`}>
+            <div class="chapter-num">Ch.{ch.id}</div>
+            <div class="chapter-info">
+              <h2>{ch.name}</h2>
+              <span class="chapter-game">{ch.game}</span>
+            </div>
+            <div class="chapter-stars">
+              <span class="stars-earned">0</span> / <span class="stars-total">{ch.levels * 3}</span> ⭐
+            </div>
+          </div>
+          <div class="levels-grid">
+            {Array.from({ length: ch.levels }, (_, i) => {
+              const levelId = (ch.id - 1) * 10 + i + 1;
+              const isBoss = i === ch.levels - 1;
+              return (
+                <a
+                  href={`/play/klondike?campaign=${levelId}`}
+                  class:list={['level-node', { boss: isBoss, locked: ch.id > 1 && false }]}
+                  data-level={levelId}
+                >
+                  <div class="level-circle" style={`--ch-color: ${ch.color}`}>
+                    <span class="level-num">{levelId}</span>
+                  </div>
+                  <div class="level-stars">
+                    <span>☆</span><span>☆</span><span>☆</span>
+                  </div>
+                  {isBoss && <div class="boss-badge">BOSS</div>}
+                </a>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .campaign-page { min-height: 100vh; }
+  .page-header {
+    background: linear-gradient(135deg, #1a472a 0%, #0d2818 50%, #0a0f0d 100%);
+    padding: 48px 24px 36px;
+  }
+  .header-inner { max-width: 1000px; margin: 0 auto; }
+  .header-inner h1 { font-size: clamp(28px, 4vw, 40px); color: white; font-weight: 800; margin-bottom: 8px; }
+  .header-inner p { color: rgba(255,255,255,0.6); font-size: 16px; }
+
+  .campaign-map {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .chapter { }
+  .chapter-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 16px 20px;
+    background: var(--bg-card, #162219);
+    border: 1px solid var(--border, #1e2e24);
+    border-radius: 14px;
+  }
+  .chapter-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px; font-weight: 900;
+    color: var(--ch-color);
+  }
+  .chapter-info { flex: 1; }
+  .chapter-info h2 { font-size: 18px; font-weight: 700; color: var(--text-primary, #e8e0d0); }
+  .chapter-game { font-size: 12px; color: var(--text-muted, #5a6a5e); }
+  .chapter-stars { font-size: 14px; font-weight: 600; color: var(--text-secondary, #8a9a8e); }
+
+  .levels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 12px;
+    padding: 0 4px;
+  }
+
+  .level-node {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 4px;
+    padding: 12px 4px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 200ms;
+    cursor: pointer;
+  }
+  .level-node:hover {
+    background: var(--bg-card, #162219);
+    transform: translateY(-2px);
+  }
+  .level-node.locked { opacity: 0.35; pointer-events: none; }
+
+  .level-circle {
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: rgba(26,71,42,0.3);
+    border: 2px solid var(--ch-color);
+    font-weight: 700;
+    color: var(--text-primary, #e8e0d0);
+    font-size: 16px;
+  }
+  .level-node.boss .level-circle {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, #d4af37, #b8960c);
+    border-color: #e8c84a;
+    color: #0a0f0d;
+    font-weight: 900;
+  }
+
+  .level-stars { font-size: 10px; color: var(--text-muted, #5a6a5e); letter-spacing: 1px; }
+  .boss-badge {
+    font-size: 10px; font-weight: 800;
+    color: #d4af37; letter-spacing: 1px;
+  }
+
+  @media (max-width: 768px) {
+    .levels-grid { grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 8px; }
+    .level-circle { width: 40px; height: 40px; font-size: 14px; }
+    .level-node.boss .level-circle { width: 48px; height: 48px; }
+  }
+</style>

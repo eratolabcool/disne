@@ -1,0 +1,106 @@
+---
+/**
+ * [INPUT]: 依赖 Layout.astro, config/site.ts
+ * [OUTPUT]: 排行榜页 HTML
+ * [POS]: pages/leaderboard.astro 是全球排行榜页
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+import Layout from '../layouts/Layout.astro';
+import { GAMES } from '../config/site';
+
+const tabs = [
+  { id: 'DC-klondike', name: '每日 Klondike', icon: '🎯' },
+  { id: 'DC-spider', name: '每日 Spider', icon: '🎯' },
+  { id: 'DC-freecell', name: '每日 FreeCell', icon: '🎯' },
+  { id: 'TT-klondike', name: '竞速 Klondike', icon: '⏱️' },
+  { id: 'TT-spider', name: '竞速 Spider', icon: '⏱️' },
+  { id: 'TT-freecell', name: '竞速 FreeCell', icon: '⏱️' },
+];
+---
+
+<Layout title="排行榜 — Solitaire Arena" description="全球排行榜。每日挑战、计时竞速排名。">
+  <div class="lb-page">
+    <div class="page-header">
+      <div class="header-inner">
+        <h1>🏆 排行榜</h1>
+        <p>全球玩家排名 — 每日挑战 · 计时竞速</p>
+      </div>
+    </div>
+
+    <div class="lb-content">
+      <div class="tabs-container">
+        <div class="tabs-scroll">
+          {tabs.map((tab, i) => (
+            <button class:list={['tab', { active: i === 0 }]} data-lb-id={tab.id}>
+              <span>{tab.icon}</span> {tab.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="lb-table-wrap" id="lb-table-wrap">
+        <table class="lb-table">
+          <thead>
+            <tr>
+              <th>排名</th>
+              <th>玩家</th>
+              <th>分数</th>
+              <th>步数</th>
+              <th>时间</th>
+              <th>日期</th>
+            </tr>
+          </thead>
+          <tbody id="lb-body">
+            <tr><td colSpan={6} class="empty-row">暂无排行数据</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .lb-page { min-height: 100vh; }
+  .page-header {
+    background: linear-gradient(135deg, #d4af37 0%, #1a472a 50%, #0d2818 100%);
+    padding: 48px 24px 36px;
+  }
+  .header-inner { max-width: 1200px; margin: 0 auto; }
+  .header-inner h1 { font-size: clamp(28px, 4vw, 40px); color: white; font-weight: 800; margin-bottom: 8px; }
+  .header-inner p { color: rgba(255,255,255,0.7); font-size: 16px; }
+
+  .lb-content { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  .tabs-container { border-bottom: 1px solid var(--border, #1e2e24); margin-bottom: 24px; }
+  .tabs-scroll { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  .tabs-scroll::-webkit-scrollbar { display: none; }
+
+  .tab {
+    display: flex; align-items: center; gap: 6px;
+    padding: 10px 18px; border-radius: 100px;
+    background: var(--bg-card, #162219);
+    border: 1px solid var(--border, #1e2e24);
+    font-size: 14px; font-weight: 500;
+    color: var(--text-secondary, #8a9a8e);
+    white-space: nowrap; cursor: pointer;
+    transition: all 150ms;
+  }
+  .tab:hover { background: var(--bg-card-hover, #1e2e24); }
+  .tab.active { background: #1a472a; color: white; border-color: #2d6a4f; }
+
+  .lb-table-wrap { overflow-x: auto; }
+  .lb-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .lb-table th {
+    text-align: left; padding: 12px 16px;
+    font-size: 12px; font-weight: 600;
+    color: var(--text-muted, #5a6a5e);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border, #1e2e24);
+  }
+  .lb-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border, #1e2e24);
+    color: var(--text-secondary, #8a9a8e);
+  }
+  .lb-table tr:hover td { background: var(--bg-card, #162219); }
+  .empty-row { text-align: center; padding: 40px; color: var(--text-muted, #5a6a5e); }
+</style>

@@ -25,6 +25,11 @@
         {
           "title": "Strategy Guides",
           "url": "/posts",
+          "icon": "RiInformationFill"
+        },
+        {
+          "title": "Classic Solitaire",
+          "url": "/classic-solitaire",
           "icon": "RiGamepadFill"
         },
         {
