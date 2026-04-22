@@ -1,0 +1,8 @@
+name = "solitaire-arena"
+compatibility_date = "2026-03-01"
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "solitaire-db"
+database_id = "b06ef8cb-b438-44b7-8d67-9a26a86c6b20"

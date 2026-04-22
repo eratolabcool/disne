@@ -8,6 +8,7 @@ import Stats from "@/components/blocks/stats";
 import FAQ from "@/components/blocks/faq";
 import CTA from "@/components/blocks/cta";
 import LocalVideo from "@/components/blocks/video/local-video";
+import GameGrid from "@/components/blocks/game-grid";
 
 const CharacterTable = dynamic(() => import("@/components/blocks/chractor"), {
   loading: () => (
@@ -73,6 +74,7 @@ export default async function LandingPage({
         />
       )}
       {page.hero && <Hero hero={page.hero} />}
+      <GameGrid />
       {/*page.branding && <Branding section={page.branding} />*/}
       {page.introduce && <Feature1 section={page.introduce} />}
       <LocalVideo />

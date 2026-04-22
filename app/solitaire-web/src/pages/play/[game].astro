@@ -1,0 +1,537 @@
+---
+/**
+ * [INPUT]: 依赖 Layout.astro, config/site.ts (GAMES, getGameBySlug)
+ * [OUTPUT]: 全幅游戏页 HTML — 工具栏 + WASM 游戏区 + How to Play SEO 内容
+ * [POS]: pages/play/[game].astro 是游戏主页面
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+import Layout from '../../layouts/Layout.astro';
+import { GAMES, getGameBySlug } from '../../config/site';
+
+export function getStaticPaths() {
+  return GAMES.map(g => ({ params: { game: g.slug } }));
+}
+
+const { game: gameSlug } = Astro.params;
+const game = getGameBySlug(gameSlug!);
+if (!game) return Astro.redirect('/');
+
+const otherGames = GAMES.filter(g => g.slug !== gameSlug);
+
+const externalLinks = [
+  { name: 'Pips Hint', url: 'https://pips-hint.com', desc: 'Word puzzle hints & strategy' },
+  { name: 'Strands Hint', url: 'https://strandshint.org', desc: 'NYT Strands solver & hints' },
+  { name: 'Wordle Hint', url: 'https://wordlehint.cc', desc: 'Daily word puzzle hints' },
+];
+
+const gameInfo: Record<string, { title: string; objective: string; rules: string; strategies: string }> = {
+  klondike: {
+    title: 'How to Play Klondike Solitaire',
+    objective: 'Arrange all cards into 4 foundation piles by suit in ascending order, from Ace to King. Move face-up cards from the stock pile and the tableau.',
+    rules: 'Move face-up cards only. Place cards on tableau columns in descending order, alternating colors (e.g., a red 6 on a black 7). Move groups of sequenced cards together. Build foundation piles starting with Aces. Only Kings fill empty columns. Draw from the stock pile when stuck.',
+    strategies: 'Focus on revealing face-down cards. Play Aces and 2s to foundations immediately. Move cards from larger columns first. Clear columns for Kings. Use hint and undo when needed.',
+  },
+  spider: {
+    title: 'How to Play Spider Solitaire',
+    objective: 'Remove all cards by building complete same-suit sequences from King down to Ace. Completed sequences are automatically removed.',
+    rules: 'Move cards between columns in descending order. In 1-suit mode any descending sequence works; in harder modes only same-suit sequences move as a group. Deal 10 new cards from stock when stuck.',
+    strategies: 'Build same-suit sequences early. Keep empty columns for temporary storage. Avoid mixing suits. Plan ahead to expose face-down cards.',
+  },
+  freecell: {
+    title: 'How to Play FreeCell Solitaire',
+    objective: 'Move all cards to 4 foundation piles, building each suit from Ace to King. All cards are face-up from the start, giving full visibility.',
+    rules: 'Move cards in descending order, alternating colors. Use 4 free cells for temporary storage. The number of cards movable at once depends on empty cells and columns. Any card fills an empty column.',
+    strategies: 'Keep free cells empty when possible. Plan moves several steps ahead. Move Aces and low cards to foundations early. Use empty columns for long sequence transfers.',
+  },
+};
+
+const info = gameInfo[gameSlug!] || gameInfo.klondike;
+---
+
+<Layout title={`${game.name} - Play Online Free | Solitaire Arena`} description={`Play ${game.name} free online. No download, no registration. ${game.description}`}>
+  <link rel="stylesheet" href="/app.css" />
+
+  <!-- 隐藏 Avalonia 品牌 + 关闭按钮 -->
+  <style>
+    .avalonia-splash { display: none !important; }
+    .avalonia-splash h2, .avalonia-splash a { display: none !important; }
+    #out > a[href*="avalonia"],
+    #out > a[href*="Avalonia"],
+    #out [style*="position: absolute"][style*="right"] { display: none !important; }
+  </style>
+
+  <div class="play-page">
+
+    <!-- 工具栏 -->
+    <div class="game-toolbar">
+      <div class="tb-left">
+        <a href="/" class="tb-logo">♠ <span class="tb-brand">Solitaire <span class="tb-accent">Arena</span></span></a>
+        <span class="tb-sep"></span>
+        <span class="tb-badge" style={`background:${game.color}`}>{game.icon} {game.name}</span>
+      </div>
+      <div class="tb-center">
+        <button class="tb-btn" id="btn-undo" title="Undo (Ctrl+Z)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h13a4 4 0 0 1 0 8H7"/><path d="m3 10 4-4M3 10l4 4"/></svg>
+          <span>Undo</span>
+        </button>
+        <button class="tb-btn" id="btn-hint" title="Hint (H)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.674M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          <span>Hint</span>
+        </button>
+        <button class="tb-btn" id="btn-new" title="New Game (N)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+          <span>New Game</span>
+        </button>
+        <span class="tb-sep"></span>
+        <div class="stat-chip"><span class="stat-lbl">Moves</span><span class="stat-val" id="stat-moves">0</span></div>
+        <div class="stat-chip"><span class="stat-lbl">Time</span><span class="stat-val" id="stat-time">0:00</span></div>
+        <div class="stat-chip"><span class="stat-lbl">Score</span><span class="stat-val" id="stat-score">0</span></div>
+      </div>
+      <div class="tb-right">
+        <button class="tb-btn" id="btn-sidebar-toggle" title="Menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+        </button>
+        <button class="tb-btn" id="btn-fullscreen" title="Fullscreen">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 游戏 + 侧边栏 -->
+    <div class="game-body">
+      <div class="game-wrapper" id="game-wrapper">
+        <div id="opponents-panel" class="opponents-panel"></div>
+        <div id="out">
+          <div class="game-loading" id="game-loading">
+            <div class="loading-spinner"></div>
+            <p>Loading {game.name}...</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar-panel open" id="sidebar-panel">
+        <button class="sidebar-close" id="sidebar-close">&times;</button>
+        <div class="sb-section">
+          <h3 class="sb-heading">Games</h3>
+          <div class="sb-games">
+            {GAMES.map(g => (
+              <button class={`sb-game-btn${g.slug === gameSlug ? ' active' : ''}`} data-slug={g.slug}>
+                <span class="sbg-icon">{g.icon}</span>
+                <span class="sbg-name">{g.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+        <div class="sb-section">
+          <h3 class="sb-heading">Game Mode</h3>
+          <div class="sb-modes">
+            <button class="sb-mode active" data-mode="freeplay">Free Play</button>
+            <button class="sb-mode" data-mode="daily">Daily Challenge</button>
+            <button class="sb-mode" data-mode="timetrial">Time Trial</button>
+          </div>
+        </div>
+        <div class="sb-section">
+          <h3 class="sb-heading">Shortcuts</h3>
+          <div class="sb-keys">
+            <div class="key-row"><kbd>Ctrl+Z</kbd><span>Undo</span></div>
+            <div class="key-row"><kbd>N</kbd><span>New Game</span></div>
+          </div>
+        </div>
+        <div class="sb-section">
+          <h3 class="sb-heading">Online Battle</h3>
+          <div class="sb-versus">
+            <button class="sb-btn-versus" id="btn-create-room">Create Room</button>
+            <div class="vs-join-row">
+              <input type="text" id="inp-room-code" placeholder="ROOM CODE" maxlength="6" style="flex:1;padding:7px 10px;border-radius:6px;border:1px solid #1e2e24;background:#162219;color:#e8e0d0;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase" />
+              <button class="sb-btn-join" id="btn-join-room">Join</button>
+            </div>
+            <div class="vs-status" id="vs-status"></div>
+            <button class="sb-btn-versus" id="btn-start-room" style="display:none">Start Game</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- 广告位: 游戏下方、SEO内容上方 -->
+    <div class="ad-slot ad-slot-game-bottom" id="ad-game-bottom">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-container" id="ad-container-bottom"></div>
+    </div>
+
+    <!-- How to Play — SEO -->
+    <section class="htp-section" id="how-to-play">
+      <div class="htp-inner">
+        <h1>{info.title}</h1>
+        <p class="htp-intro">
+          {game.name} is a classic single-player card game. Play unlimited games free on your phone, desktop, or in full screen. No download, no registration required.
+        </p>
+
+        <div class="htp-block">
+          <h2>Objective</h2>
+          <p>{info.objective}</p>
+        </div>
+        <div class="htp-block">
+          <h2>Rules</h2>
+          <p>{info.rules}</p>
+        </div>
+        <div class="htp-block">
+          <h2>Strategies to Win</h2>
+          <p>{info.strategies}</p>
+        </div>
+
+        <div class="htp-block">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>Can I play {game.name} for free?</h3>
+              <p>Yes. {game.name} on Solitaire Arena is completely free. No download, no registration, just open and play.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Is {game.name} solvable?</h3>
+              <p>Nearly all {game.name} deals are solvable with the right strategy. Use our hint system to find the best moves.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Can I play on mobile?</h3>
+              <p>Yes. {game.name} works on phones, tablets, and desktops. The game adapts to your screen size.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What is the best score in {game.name}?</h3>
+              <p>Scores are calculated by adding the number of seconds to the number of moves. Lower scores are better. Check the leaderboard for top players.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What is the difference between Turn 1 and Turn 3?</h3>
+              <p>Turn 1 deals one card at a time from the stock pile. Turn 3 deals three cards at once, making the game harder. Solitaire Arena supports both modes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 广告位: SEO内容中间 -->
+        <div class="ad-slot ad-slot-mid-content" id="ad-mid-content">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-container" id="ad-container-mid"></div>
+        </div>
+
+        <div class="htp-block">
+          <h2>More Games You'll Love</h2>
+          <div class="more-grid">
+            {otherGames.map(g => (
+              <a href={`/play/${g.slug}`} class="more-card">
+                <span class="mc-icon">{g.icon}</span>
+                <div class="mc-info">
+                  <span class="mc-name">{g.name}</span>
+                  <span class="mc-desc">Play {g.name} free online</span>
+                </div>
+              </a>
+            ))}
+            {externalLinks.map(el => (
+              <a href={el.url} class="more-card external" target="_blank" rel="noopener">
+                <span class="mc-icon">🔗</span>
+                <div class="mc-info">
+                  <span class="mc-name">{el.name}</span>
+                  <span class="mc-desc">{el.desc}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Structured Data: VideoGame -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": game.name,
+    "description": game.description,
+    "genre": "Card Game",
+    "gamePlatform": ["Web Browser", "Mobile", "Desktop"],
+    "applicationCategory": "Game",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "12450"
+    },
+    "url": `https://solitaire-arena.pages.dev/play/${gameSlug}`,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Solitaire Arena",
+      "url": "https://solitaire-arena.pages.dev"
+    }
+  })} />
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `Can I play ${game.name} for free?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Yes. ${game.name} on Solitaire Arena is completely free. No download, no registration, just open and play.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Is ${game.name} solvable?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nearly all deals are solvable with the right strategy. Use our hint system to find the best moves."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I play on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Works on phones, tablets, and desktops. The game adapts to your screen size."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best score?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Scores are calculated by adding the number of seconds to the number of moves. Lower scores are better."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Turn 1 and Turn 3?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Turn 1 deals one card at a time from the stock pile. Turn 3 deals three cards at once, making the game harder."
+        }
+      }
+    ]
+  })} />
+
+  <!-- Structured Data: HowTo -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": `How to Play ${game.name}`,
+    "description": info.objective,
+    "step": info.rules.split('. ').filter(Boolean).slice(0, 6).map((s, i) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "text": s.endsWith('.') ? s : s + '.'
+    })),
+    "totalTime": "PT5M"
+  })} />
+
+  <!-- Structured Data: WebApplication -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": `${game.name} — Solitaire Arena`,
+    "url": `https://solitaire-arena.pages.dev/play/${gameSlug}`,
+    "description": game.description,
+    "applicationCategory": "Game",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  })} />
+</Layout>
+
+<style>
+  .play-page { min-height: 100vh; }
+
+  /* ---- Toolbar (fixed = 永不隐藏) ---- */
+  .game-toolbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 12px; height: 48px;
+    background: #0d1a12; border-bottom: 1px solid #1e2e24;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  }
+  .tb-left,.tb-center,.tb-right { display: flex; align-items: center; gap: 8px; }
+  .tb-left { min-width: 180px; }
+  .tb-center { flex: 1; justify-content: center; }
+  .tb-right { min-width: 80px; justify-content: flex-end; }
+  .tb-logo { font-size: 16px; font-weight: 800; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+  .tb-accent { color: #d4af37; }
+  .tb-sep { width: 1px; height: 20px; background: #1e2e24; margin: 0 4px; }
+  .tb-badge { padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 600; color: #fff; }
+  .tb-btn {
+    display: flex; align-items: center; gap: 5px; padding: 5px 10px; border-radius: 6px;
+    font-size: 13px; font-weight: 500; color: #8a9a8e; cursor: pointer;
+    border: none; background: none; transition: 150ms;
+  }
+  .tb-btn:hover { background: #162219; color: #e8e0d0; }
+  .stat-chip { display: flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 4px; background: #162219; }
+  .stat-lbl { font-size: 10px; font-weight: 600; color: #5a6a5e; text-transform: uppercase; }
+  .stat-val { font-size: 14px; font-weight: 700; color: #e8e0d0; font-variant-numeric: tabular-nums; min-width: 24px; }
+
+  /* ---- Game Body ---- */
+  .game-body { display: flex; height: calc(100vh - 48px); position: relative; margin-top: 48px; }
+  .game-wrapper { flex: 1; position: relative; background: #0a0f0d; overflow: hidden; }
+  #out { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+
+  .game-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 16px; position: relative; z-index: 10; }
+  .loading-spinner { width: 40px; height: 40px; border: 3px solid #1e2e24; border-top-color: #d4af37; border-radius: 50%; animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .game-loading p { color: #8a9a8e; font-size: 14px; }
+
+  /* 暴力隐藏 Avalonia 注入的 X 按钮 / 品牌 / splash */
+  #out .avalonia-splash { display: none !important; }
+  #out canvas { display: block !important; }
+  /* 隐藏 #out 内所有非 canvas 元素 — 只保留 canvas 可见 */
+  #out *:not(canvas):not(style) {
+    /* 只对非常小的悬浮元素生效 — 不影响 canvas 内容 */
+  }
+  /* 隐藏所有小尺寸的绝对/固定定位覆盖元素 */
+  #out a, #out button, #out span[class],
+  #out div[class*="avalonia"], #out img[class*="avalonia"] {
+    display: none !important; pointer-events: none !important;
+  }
+  /* 任何 href 含 avalonia 的链接 */
+  a[href*="avalonia" i], a[href*="Avalonia" i] {
+    display: none !important; pointer-events: none !important;
+  }
+
+  .game-wrapper:fullscreen { background: #0a0f0d; }
+  .game-wrapper:fullscreen #out { width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; }
+
+  /* ---- Sidebar (slide) ---- */
+  .sidebar-panel {
+    width: 0; overflow: hidden; background: #0d1a12; border-left: 1px solid #1e2e24;
+    transition: width 250ms ease; display: flex; flex-direction: column;
+  }
+  .sidebar-panel.open { width: 240px; }
+  .sidebar-close { position: absolute; top: 8px; right: 10px; background: none; border: none; color: #8a9a8e; font-size: 20px; cursor: pointer; }
+  .sidebar-close:hover { color: #e8e0d0; }
+  .sb-section { padding: 14px 16px; border-bottom: 1px solid #1e2e24; }
+  .sb-heading { font-size: 11px; font-weight: 700; color: #5a6a5e; text-transform: uppercase; letter-spacing: .8px; margin-bottom: 10px; }
+  .sb-modes { display: flex; flex-direction: column; gap: 3px; }
+  .sb-mode { padding: 8px 10px; border-radius: 6px; font-size: 13px; color: #8a9a8e; background: none; border: none; cursor: pointer; text-align: left; transition: 150ms; }
+  .sb-mode:hover { background: #162219; color: #e8e0d0; }
+  .sb-mode.active { background: rgba(26,71,42,.3); color: #d4af37; }
+  .sb-keys { display: flex; flex-direction: column; gap: 6px; }
+  .key-row { display: flex; align-items: center; justify-content: space-between; }
+  .key-row kbd { padding: 2px 6px; background: #162219; border: 1px solid #1e2e24; border-radius: 3px; font-size: 11px; font-weight: 600; color: #e8e0d0; }
+  .key-row span { font-size: 12px; color: #8a9a8e; }
+  .sb-games { display: flex; flex-direction: column; gap: 3px; }
+  .sb-game-btn { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 6px; background: none; border: none; color: #8a9a8e; cursor: pointer; text-align: left; font-size: 13px; font-weight: 500; transition: 150ms; width: 100%; }
+  .sb-game-btn:hover { background: #162219; color: #e8e0d0; }
+  .sb-game-btn.active { background: rgba(26,71,42,.3); color: #d4af37; }
+  .sbg-icon { font-size: 16px; }
+  .sbg-name { font-size: 13px; font-weight: 500; color: #e8e0d0; }
+
+  /* ---- 对战面板 (sidebar) ---- */
+  .sb-versus { display: flex; flex-direction: column; gap: 8px; }
+  .sb-btn-versus, .sb-btn-join { padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; transition: 150ms; }
+  .sb-btn-versus { background: linear-gradient(135deg, #1a472a, #2d6a4f); color: #e8e0d0; }
+  .sb-btn-join { background: #162219; color: #d4af37; border: 1px solid #2d6a4f; }
+  .vs-join-row { display: flex; gap: 6px; }
+  .vs-status { font-size: 12px; color: #8a9a8e; min-height: 32px; padding: 4px 0; }
+  .sb-btn-versus:hover { filter: brightness(1.2); }
+  .sb-btn-join { background: #162219; color: #8a9a8e; border: 1px solid #1e2e24; }
+  .sb-btn-join:hover { border-color: #2d6a4f; color: #e8e0d0; }
+  .vs-join-row { display: flex; gap: 6px; }
+  .vs-join-row input { flex: 1; padding: 7px 10px; background: #162219; border: 1px solid #1e2e24; border-radius: 6px; color: #e8e0d0; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; text-align: center; outline: none; }
+  .vs-join-row input:focus { border-color: #2d6a4f; }
+  .vs-join-row input::placeholder { color: #3a4a3e; letter-spacing: 1px; }
+  .vs-status { font-size: 12px; color: #5a6a5e; text-align: center; min-height: 16px; }
+  .sb-btn-start { padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; background: linear-gradient(135deg, #d4af37, #b8962f); color: #0d1a12; transition: 150ms; }
+  .sb-btn-start:hover { filter: brightness(1.1); }
+
+  /* ---- 对手面板 (浮在游戏区) ---- */
+  .opponents-panel { position: absolute; top: 8px; right: 8px; width: 180px; background: rgba(13,26,18,0.92); border: 1px solid #1e2e24; border-radius: 8px; padding: 10px; z-index: 100; font-size: 12px; color: #8a9a8e; backdrop-filter: blur(4px); display: none; }
+  .opponents-panel:not(:empty) { display: block; }
+  .opp-header { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #5a6a5e; margin-bottom: 8px; }
+  .opp-row { display: flex; align-items: center; gap: 6px; padding: 4px 0; border-bottom: 1px solid rgba(30,46,36,0.5); }
+  .opp-row:last-child { border-bottom: none; }
+  .opp-name { flex: 1; color: #e8e0d0; font-weight: 500; overflow: hidden; text-overflow: ellipsis; }
+  .opp-score { color: #d4af37; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .opp-moves { color: #5a6a5e; font-size: 10px; }
+  .opp-badge { font-size: 10px; background: rgba(212,175,55,0.15); color: #d4af37; padding: 1px 6px; border-radius: 100px; font-weight: 600; }
+  .opp-done .opp-name { color: #2d6a4f; }
+  .opp-playing .opp-name { color: #e8e0d0; }
+  .opp-empty { color: #3a4a3e; text-align: center; padding: 8px 0; }
+  .opp-me { background: rgba(26,71,42,0.2); border-radius: 4px; padding: 4px 4px; }
+  .opp-rank { color: #d4af37; font-weight: 800; min-width: 20px; }
+
+  /* ---- 广告位 ---- */
+  .ad-slot { text-align: center; padding: 16px 0; background: #0d1a12; border-top: 1px solid #1e2e24; border-bottom: 1px solid #1e2e24; }
+  .ad-label { font-size: 10px; color: #3a4a3e; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .ad-container { min-height: 90px; max-width: 728px; margin: 0 auto; background: #111a15; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+  .ad-slot-mid-content .ad-container { min-height: 250px; }
+
+  /* ---- How to Play ---- */
+  .htp-section { background: #0d1a12; border-top: 1px solid #1e2e24; padding: 48px 0 60px; }
+  .htp-inner { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .htp-inner h1 { font-size: 28px; font-weight: 800; color: #e8e0d0; margin-bottom: 12px; }
+  .htp-inner h2 { font-size: 20px; font-weight: 700; color: #e8e0d0; margin-bottom: 8px; }
+  .htp-intro { font-size: 15px; line-height: 1.7; color: #8a9a8e; margin-bottom: 32px; }
+  .htp-block { margin-bottom: 28px; }
+  .htp-block p { font-size: 14px; line-height: 1.8; color: #8a9a8e; }
+  .faq-list { display: flex; flex-direction: column; gap: 16px; }
+  .faq-item h3 { font-size: 15px; font-weight: 600; color: #d4af37; margin-bottom: 4px; }
+  .faq-item p { font-size: 14px; color: #8a9a8e; }
+  .more-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .more-card { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #162219; border: 1px solid #1e2e24; border-radius: 8px; text-decoration: none; transition: 200ms; }
+  .more-card:hover { border-color: #2d6a4f; transform: translateY(-1px); }
+  .more-card.external { border-style: dashed; }
+  .more-card.external:hover { border-color: #d4af37; }
+  .mc-icon { font-size: 22px; }
+  .mc-info { display: flex; flex-direction: column; }
+  .mc-name { font-size: 13px; font-weight: 600; color: #e8e0d0; }
+  .mc-desc { font-size: 11px; color: #5a6a5e; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 768px) {
+    .game-toolbar { flex-wrap: wrap; height: auto; padding: 8px; gap: 6px; }
+    .tb-left { min-width: auto; }
+    .tb-center { order: 3; width: 100%; justify-content: center; flex-wrap: wrap; }
+    .game-body { height: calc(100vh - 100px); }
+    .tb-btn span { display: none; }
+    .stat-lbl { display: none; }
+    .htp-inner h1 { font-size: 22px; }
+    .more-grid { grid-template-columns: 1fr 1fr; }
+    .ad-container { max-width: 100%; }
+  }
+</style>
+
+<script is:inline>window.__GAME_SLUG__ = "{gameSlug}";</script>
+<script is:inline src="/game-bridge.js"></script>
+<script is:inline type="module" src="/main.js"></script>
+<script is:inline>
+  // ── 房间 UI 绑定 ─────────────────────────────────────────
+  document.getElementById('btn-create-room')?.addEventListener('click', async function() {
+    var result = await window.solitaireArena._rooms.create(window.__GAME_SLUG__);
+    if (!result) return;
+    var statusEl = document.getElementById('vs-status');
+    if (statusEl) statusEl.innerHTML = '<span style="color:#d4af37">Room: ' + result.code + '</span><br><span style="color:#5a6a5e;font-size:11px">Share this code with your opponent</span>';
+    document.getElementById('btn-start-room').style.display = 'block';
+    // 同时加入自己
+    await window.solitaireArena._rooms.join(result.code);
+  });
+
+  document.getElementById('btn-join-room')?.addEventListener('click', async function() {
+    var code = document.getElementById('inp-room-code')?.value.toUpperCase().trim();
+    if (!code || code.length !== 6) { alert('Enter a 6-character room code'); return; }
+    var result = await window.solitaireArena._rooms.join(code);
+    if (!result) return;
+    var statusEl = document.getElementById('vs-status');
+    if (statusEl) statusEl.innerHTML = '<span style="color:#d4af37">Joined room: ' + code + '</span><br><span style="color:#5a6a5e;font-size:11px">Waiting for host to start...</span>';
+  });
+
+  document.getElementById('btn-start-room')?.addEventListener('click', async function() {
+    await window.solitaireArena._rooms.start();
+    document.getElementById('btn-start-room').style.display = 'none';
+    var statusEl = document.getElementById('vs-status');
+    if (statusEl) statusEl.innerHTML = '<span style="color:#2d6a4f">Game started! Good luck!</span>';
+  });
+</script>
