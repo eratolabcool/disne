@@ -9,7 +9,7 @@ import type { APIRoute } from 'astro';
 export const prerender = false;
 
 export const GET: APIRoute = async ({ params, url, locals }) => {
-  const db = (locals.runtime.env as Record<string, unknown>).DB as D1Database | undefined;
+  const db = (locals as any).runtime?.env?.DB;
   if (!db) return new Response(JSON.stringify({ error: 'DB unavailable' }), { status: 503 });
 
   const id = params.id;

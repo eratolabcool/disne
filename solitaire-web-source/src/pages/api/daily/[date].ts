@@ -27,7 +27,7 @@ export const GET: APIRoute = async ({ params, url, locals }) => {
 
   // 如果有 playerId，查询该玩家当日成绩
   if (playerId) {
-    const db = (locals.runtime.env as Record<string, unknown>).DB as D1Database | undefined;
+    const db = (locals as any).runtime?.env?.DB;
     if (db) {
       const score = await db.prepare(
         `SELECT score, moves, time_ms, played_at FROM scores
