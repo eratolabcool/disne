@@ -8,12 +8,14 @@ import Stats from "@/components/blocks/stats";
 import FAQ from "@/components/blocks/faq";
 import CTA from "@/components/blocks/cta";
 import GameGrid from "@/components/blocks/game-grid";
-const LocalVideo = dynamic(() => import("@/components/blocks/video/local-video"), {
-  ssr: false,
-});
+
+// Components that need to be Client-only are now imported via next/dynamic 
+// without ssr: false here, because this is a Server Component.
+// The components themselves should handle their client-side only nature 
+// (e.g., using useEffect or being marked with 'use client').
+const LocalVideo = dynamic(() => import("@/components/blocks/video/local-video"));
 
 const CharacterTable = dynamic(() => import("@/components/blocks/chractor"), {
-  ssr: false,
   loading: () => (
     <div className="container mx-auto px-4 py-8">
       <div className="h-64 bg-gray-100 rounded-xl flex items-center justify-center">
