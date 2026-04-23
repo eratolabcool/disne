@@ -85,7 +85,7 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://api.supabase.co" crossOrigin="" />
 
         {/* Critical Image Preloading */}
-        <link rel="preload" href="/imgs/badges/phdaily.svg" as="image" />
+        {/* Removed redundant preloads to fix console warnings */}
 
         {/* Analytics & Scripts */}
         <script defer data-domain="disneysolitaire.net" src="https://plausible.riftrunner.art/js/script.js"></script>

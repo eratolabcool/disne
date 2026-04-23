@@ -29,13 +29,11 @@ export default function LegalLayout({
         <meta charSet="utf-8" />
       </head>
       <body>
-        <Script
-          id="google-adsense"
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7627909166795192"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        ></script>
         <div>
           <Link
             className="text-base-content cursor-pointer hover:opacity-80 transition-opacity"

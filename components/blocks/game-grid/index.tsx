@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
-const games: { title: string; description: string; image: string; url: any; badge?: string }[] = [
+const games = [
   {
     title: "Disney Solitaire",
     description: "Magical Solitaire with beloved Disney characters.",
@@ -20,16 +20,16 @@ const games: { title: string; description: string; image: string; url: any; badg
   {
     title: "Spider Solitaire",
     description: "Challenge yourself with 1, 2, or 4 suits of Spider.",
-    image: "/imgs/disney/Image-02.jpg",
+    image: "/imgs/disney/d01.png",
     url: "/spider-solitaire",
   },
   {
     title: "FreeCell",
     description: "Strategic card game where almost every deal is winnable.",
-    image: "/imgs/disney/Image-03.jpg",
+    image: "/imgs/disney/d02.png",
     url: "/freecell-solitaire",
   },
-];
+] as const;
 
 export default function GameGrid() {
   return (
@@ -43,7 +43,7 @@ export default function GameGrid() {
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {games.map((game, i) => (
-            <Link key={i} href={game.url} className="group transition-transform hover:-translate-y-1">
+            <Link key={i} href={game.url as any} className="group transition-transform hover:-translate-y-1">
               <Card className="overflow-hidden h-full border-2 hover:border-primary/50 transition-colors">
                 <div className="relative aspect-video">
                   <Image
@@ -52,7 +52,7 @@ export default function GameGrid() {
                     fill
                     className="object-cover"
                   />
-                  {game.badge && (
+                  {"badge" in game && game.badge && (
                     <span className="absolute top-2 right-2 px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-primary text-primary-foreground rounded">
                       {game.badge}
                     </span>
