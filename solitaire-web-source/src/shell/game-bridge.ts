@@ -15,6 +15,7 @@ export class GameBridge {
     this.container = document.getElementById(containerId);
     if (!this.container) throw new Error(`Container #${containerId} not found`);
 
+    // @ts-ignore
     const { dotnet } = await import('/_framework/dotnet.js');
     const runtime = await dotnet
       .withDiagnosticTracing(false)
@@ -26,11 +27,43 @@ export class GameBridge {
   }
 
   async injectSeed(seed: number): Promise<void> {
+    // @ts-ignore
     const { SetSeed } = await import('/_framework/dotnet.js');
     SetSeed(seed);
   }
 
+  async getMoves(): Promise<number> {
+    // @ts-ignore
+    const { GetMoves } = await import('/_framework/dotnet.js');
+    return GetMoves();
+  }
+
+  async getScore(): Promise<number> {
+    // @ts-ignore
+    const { GetScore } = await import('/_framework/dotnet.js');
+    return GetScore();
+  }
+
+  async getTimeMs(): Promise<number> {
+    // @ts-ignore
+    const { GetTimeMs } = await import('/_framework/dotnet.js');
+    return GetTimeMs();
+  }
+
+  async getFinished(): Promise<boolean> {
+    // @ts-ignore
+    const { GetFinished } = await import('/_framework/dotnet.js');
+    return GetFinished();
+  }
+
+  async getGameState(): Promise<string> {
+    // @ts-ignore
+    const { GetGameState } = await import('/_framework/dotnet.js');
+    return GetGameState();
+  }
+
   async clearSeed(): Promise<void> {
+    // @ts-ignore
     const { ClearSeed } = await import('/_framework/dotnet.js');
     ClearSeed();
   }

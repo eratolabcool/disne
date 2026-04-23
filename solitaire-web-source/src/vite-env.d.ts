@@ -1,17 +1,4 @@
-/// <reference path="../.astro/types.d.ts" />
-
-type Env = {
-  DB: D1Database;
-  ROOMS: DurableObjectNamespace;
-};
-
-declare namespace App {
-  interface Locals {
-    runtime: {
-      env: Env;
-    };
-  }
-}
+/// <reference types="astro/client" />
 
 // Avalonia WASM 模块声明（运行时动态加载）
 declare module '/_framework/dotnet.js' {

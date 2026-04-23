@@ -9,6 +9,15 @@ import type { APIRoute } from 'astro';
 
 export const prerender = false;
 
+interface PlayerResult {
+  player_id: string;
+  moves: number;
+  score: number;
+  time_ms: number;
+  finished: number;
+  rank: number | null;
+}
+
 export const GET: APIRoute = async ({ url, locals }) => {
   const code = (url.searchParams.get('code') || '').toUpperCase().trim();
   if (!code) return Response.json({ error: 'Missing code' }, { status: 400 });
@@ -27,7 +36,7 @@ export const GET: APIRoute = async ({ url, locals }) => {
     game: room.game,
     seed: room.seed,
     status: room.status,
-    players: players.results.map(p => ({
+    players: players.results.map((p: PlayerResult) => ({
       playerId: p.player_id,
       moves: p.moves as number,
       score: p.score as number,
