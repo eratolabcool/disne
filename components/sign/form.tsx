@@ -56,6 +56,13 @@ export default function SignForm({
                   {t("sign_modal.github_sign_in")}
                 </Button>
               )}
+              {process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED !== "true" && 
+               process.env.NEXT_PUBLIC_AUTH_GITHUB_ENABLED !== "true" && (
+                <div className="text-center p-4 border border-dashed rounded-lg bg-yellow-50 text-yellow-800 text-sm">
+                  <p className="font-bold mb-1">Configuration Required</p>
+                  <p>Please enable at least one login method in environment variables.</p>
+                </div>
+              )}
             </div>
             <p className="text-center text-xs text-muted-foreground">
               New users will automatically create an account upon signing in.
