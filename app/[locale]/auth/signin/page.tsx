@@ -1,7 +1,6 @@
 import SignForm from "@/components/sign/form";
 import { auth } from "@/auth";
-import { redirect } from "next/navigation";
-import Link from "next/link";
+import { redirect, Link } from "@/i18n/routing";
 
 export default async function SignInPage({
   searchParams,
@@ -11,7 +10,7 @@ export default async function SignInPage({
   const { callbackUrl } = await searchParams;
   const session = await auth();
   if (session) {
-    return redirect(callbackUrl || "/");
+    return redirect((callbackUrl as any) || "/");
   }
 
   return (

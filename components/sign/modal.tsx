@@ -112,6 +112,9 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
           {t("sign_modal.github_sign_in")}
         </Button>
       )}
+      <p className="text-center text-xs text-muted-foreground mt-2">
+        New users will automatically create an account upon signing in.
+      </p>
     </div>
   );
 }

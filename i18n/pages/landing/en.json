@@ -13,14 +13,19 @@
     "nav": {
       "items": [
         {
-          "title": "Official Homepage",
-          "url": "https://www.superplay.co/games/disney-solitaire/",
-          "icon": "HiOutlineSparkles"
+          "title": "Tutorials",
+          "url": "/tutorials",
+          "icon": "RiBookOpenLine"
         },
         {
-          "title": "Disney Characters",
-          "url": "https://www.disneystore.com/characters.html",
-          "icon": "BiUser"
+          "title": "Updates",
+          "url": "/updates",
+          "icon": "RiNotificationBadgeLine"
+        },
+        {
+          "title": "Community",
+          "url": "/community",
+          "icon": "RiGroupLine"
         },
         {
           "title": "Strategy Guides",
@@ -31,11 +36,6 @@
           "title": "Classic Solitaire",
           "url": "/classic-solitaire",
           "icon": "RiGamepadFill"
-        },
-        {
-          "title": "About",
-          "url": "/about",
-          "icon": "RiInformationFill"
         }
       ]
     },

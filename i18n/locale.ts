@@ -24,6 +24,10 @@ export const pathnames = {
   "/classic-solitaire": "/classic-solitaire",
   "/spider-solitaire": "/spider-solitaire",
   "/freecell-solitaire": "/freecell-solitaire",
+  "/tutorials": "/tutorials",
+  "/updates": "/updates",
+  "/community": "/community",
+  "/auth/signin": "/auth/signin",
   "privacy-policy": "/privacy-policy",
   "terms-of-service": "/terms-of-service",
 } satisfies Pathnames<typeof locales>;

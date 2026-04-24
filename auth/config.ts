@@ -2,7 +2,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import { NextAuthConfig } from "next-auth";
-import { Provider } from "next-auth/providers/index";
+import type { Provider } from "next-auth/providers";
 import { User } from "@/types/user";
 import { getClientIp } from "@/lib/ip";
 import { getIsoTimestr } from "@/lib/time";
@@ -103,6 +103,19 @@ if (
   );
 }
 
+if (providers.length === 0) {
+  providers.push(
+    CredentialsProvider({
+      id: "credentials",
+      name: "credentials",
+      credentials: {},
+      async authorize() {
+        return null;
+      },
+    })
+  );
+}
+
 export const providerMap = providers
   .map((provider) => {
     if (typeof provider === "function") {
@@ -116,6 +129,8 @@ export const providerMap = providers
 
 export const authOptions: NextAuthConfig = {
   providers,
+  secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET,
+  trustHost: true,
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       const isAllowedToSignIn = true;
@@ -145,6 +160,13 @@ export const authOptions: NextAuthConfig = {
       // Persist the OAuth access_token and or the user id to the token right after signin
       try {
         if (user && user.email && account) {
+          let signin_ip = "";
+          try {
+            signin_ip = await getClientIp();
+          } catch (e) {
+            console.error("get client ip failed:", e);
+          }
+
           const dbUser: User = {
             uuid: getUuid(),
             email: user.email,
@@ -154,7 +176,7 @@ export const authOptions: NextAuthConfig = {
             signin_provider: account.provider,
             signin_openid: account.providerAccountId,
             created_at: getIsoTimestr(),
-            signin_ip: await getClientIp(),
+            signin_ip: signin_ip,
           };
 
           try {

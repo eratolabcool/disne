@@ -13,23 +13,28 @@
     "nav": {
       "items": [
         {
-          "title": "关于我们",
-          "url": "/about",
+          "title": "教程",
+          "url": "/tutorials",
+          "icon": "RiBookOpenLine"
+        },
+        {
+          "title": "更新",
+          "url": "/updates",
+          "icon": "RiNotificationBadgeLine"
+        },
+        {
+          "title": "交流区",
+          "url": "/community",
+          "icon": "RiGroupLine"
+        },
+        {
+          "title": "攻略指南",
+          "url": "/posts",
           "icon": "RiInformationFill"
         },
         {
-          "title": "官方主页",
-          "url": "https://www.superplay.co/games/disney-solitaire/",
-          "icon": "HiOutlineSparkles"
-        },
-        {
-          "title": "迪士尼角色",
-          "url": "https://www.disneystore.com/characters.html",
-          "icon": "BiUser"
-        },
-        {
-          "title": "博客",
-          "url": "/posts",
+          "title": "经典纸牌",
+          "url": "/classic-solitaire",
           "icon": "RiGamepadFill"
         }
       ]

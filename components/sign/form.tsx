@@ -57,6 +57,9 @@ export default function SignForm({
                 </Button>
               )}
             </div>
+            <p className="text-center text-xs text-muted-foreground">
+              New users will automatically create an account upon signing in.
+            </p>
 
             {false && (
               <>
