@@ -88,8 +88,17 @@ export default async function RootLayout({
         {/* Removed redundant preloads to fix console warnings */}
 
         {/* Analytics & Scripts */}
-        <script defer data-domain="disneysolitaire.net" src="https://plausible.riftrunner.art/js/script.js"></script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7627909166795192" crossOrigin="anonymous"></script>
+        <Script
+          strategy="afterInteractive"
+          data-domain="disneysolitaire.net"
+          src="https://plausible.riftrunner.art/js/script.js"
+        />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7627909166795192"
+          crossOrigin="anonymous"
+          strategy="lazyOnload"
+        />
 
         {/* JSON-LD Structured Data */}
         <script

@@ -40,6 +40,17 @@ function isBlockedPath(pathname: string): boolean {
 export default function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  // ======================== 静态资源和内部路径跳过 ========================
+  // 即使 matcher 已经过滤，这里再做一层显式跳过，确保不会被 i18n 逻辑干扰
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/_vercel") ||
+    pathname.includes(".")
+  ) {
+    return NextResponse.next();
+  }
+
   // ======================== 第一道防线：路径黑名单 ========================
   if (isBlockedPath(pathname)) {
     // 立即返回 404，不执行任何后续逻辑
@@ -53,8 +64,10 @@ export default function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
+    // 1. 匹配根路径
     "/",
-    // 排除 API、Next.js 内部路径和带扩展名的静态资源，避免 Next 16 route source 解析错误
-    "/((?!api|_next|_vercel|.*\\..*).*)",
+    // 2. 匹配所有路径，但排除静态资源和内部路径
+    // 使用更健壮的排除模式
+    "/((?!api|_next|_vercel|favicon.ico|sitemap.xml|robots.txt|.*\\..*).*)",
   ],
 };
