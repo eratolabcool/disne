@@ -99,6 +99,23 @@ export default async function RootLayout({
           crossOrigin="anonymous"
           strategy="lazyOnload"
         />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZYQWMZBW9H"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-ZYQWMZBW9H');
+            `,
+          }}
+        />
 
         {/* JSON-LD Structured Data */}
         <script
