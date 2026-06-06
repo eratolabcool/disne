@@ -370,3 +370,11 @@ small, .text-xs, .text-sm {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html:not(.dark) .network-hero h1,
+.network-hero h1 {
+  color: #ffffff !important;
+}
+
+.network-hero .network-hero-eyebrow {
+  color: #c4b5fd !important;
+}

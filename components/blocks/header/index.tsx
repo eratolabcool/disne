@@ -32,11 +32,34 @@ import { Menu } from "lucide-react";
 import SignToggle from "@/components/sign/toggle";
 import ThemeToggle from "@/components/theme/toggle";
 import { cn } from "@/lib/utils";
+import {
+  buildNetworkGameUrl,
+  gameCategoryLabels,
+  getGamesByCategory,
+} from "@/lib/game-network";
+import { NavItem } from "@/types/blocks/base";
 
 export default function Header({ header }: { header: HeaderType }) {
   if (header.disabled) {
     return null;
   }
+
+  const gameNavItems: NavItem[] = (
+    Object.keys(gameCategoryLabels) as Array<keyof typeof gameCategoryLabels>
+  ).map((category) => ({
+    title: gameCategoryLabels[category],
+    url: `/games#${category}-games`,
+    icon: "RiGamepadFill",
+    children: getGamesByCategory(category).map((game) => ({
+      title: game.title,
+      description: game.domain,
+      url: buildNetworkGameUrl(game, `top_nav_${category}`),
+      target: "_blank",
+      icon: "RiExternalLinkLine",
+    })),
+  }));
+
+  const navItems = [...(header.nav?.items || []), ...gameNavItems];
 
   return (
     <section className="py-3" aria-label="Main navigation">
@@ -72,7 +95,7 @@ export default function Header({ header }: { header: HeaderType }) {
             <div className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList>
-                  {header.nav?.items?.map((item, i) => {
+                  {navItems.map((item, i) => {
                     if (item.children && item.children.length > 0) {
                       return (
                         <NavigationMenuItem
@@ -224,7 +247,7 @@ export default function Header({ header }: { header: HeaderType }) {
                 </SheetHeader>
                 <div className="mb-8 mt-8 flex flex-col gap-4">
                   <Accordion type="single" collapsible className="w-full">
-                    {header.nav?.items?.map((item, i) => {
+                    {navItems.map((item, i) => {
                       if (item.children && item.children.length > 0) {
                         return (
                           <AccordionItem

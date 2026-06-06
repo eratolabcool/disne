@@ -8,6 +8,7 @@ import Stats from "@/components/blocks/stats";
 import FAQ from "@/components/blocks/faq";
 import CTA from "@/components/blocks/cta";
 import GameGrid from "@/components/blocks/game-grid";
+import MoreGames from "@/components/blocks/more-games";
 
 // Components that need to be Client-only are now imported via next/dynamic 
 // without ssr: false here, because this is a Server Component.
@@ -84,6 +85,7 @@ export default async function LandingPage({
       {page.introduce && <Feature1 section={page.introduce} />}
       <LocalVideo />
       {page.benefit && <Feature2 section={page.benefit} />}
+      <MoreGames />
       {/*page.usage && <Feature3 section={page.usage} />*/}
       {page.feature && <Feature section={page.feature} />}
       {/*page.showcase && <Showcase section={page.showcase} />*/}
